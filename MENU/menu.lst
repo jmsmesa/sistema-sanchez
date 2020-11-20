@@ -1,0 +1,49 @@
+
+RM/COBOL (Version 11.01) for 32-Bit Windows                      11/20/2020  08:52:39    Page 1
+Source file: menu.cbl  Options: E L
+
+Called Program Summary                                                                                MENU
+
+Program-name required          Using count
+
+  "WF090"                            5
+  "WF093"                            3
+  "WF0B4"                            2
+  "WF0BA"                            6
+  "WF0BF"                            5
+RM/COBOL (Version 11.01) for 32-Bit Windows                      11/20/2020  08:52:39    Page 2
+Source file: menu.cbl  Options: E L
+
+Program Summary Statistics                                                                            MENU
+
+
+Read only size:                    1028 (X"00000404") bytes
+Read/write size:                  10394 (X"0000289A") bytes
+Overlayable segment size:             0 (X"00000000") bytes
+
+Total generated object size:      11422 (X"00002C9E") bytes
+
+Source program used 2439 (4%) of 65534 available identifiers (T1C limit).
+Source program used 7095 (1%) of 588800 available user-defined word space (T2B limit).
+
+Maximum compilation memory used was 328K bytes (0 presses and 0 increases required).
+
+
+
+Source indicators (columns 17-19 of source listing):
+   +n+  Source was copied from copy file at copy nesting level n (level 0 indicator is suppressed).
+   [n]  Source is a COPY statement, which is logically replaced by copied library text.
+
+
+
+Errors: 0, Warnings: 0, Lines: 3002 for program MENU.
+
+
+
+Object version level: 9
+
+Options in effect:
+    C - C=2 Suppress replaced lines in listing (default)
+    E - Errors only listing
+    L - Listing file "N:\CMA\COBOL\SISTEMA-SANCHEZ\MENU\menu.lst"
+

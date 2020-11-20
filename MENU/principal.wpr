@@ -1,0 +1,52 @@
+       PRINCIPAL-EVALUATE-EVENTS.
+           EVALUATE WIN-MSG-ID
+             WHEN WM-CLOSE PERFORM PRINCIPAL-CLOSE
+             WHEN WM-SHOWWINDOW PERFORM PRINCIPAL-SHOW
+           END-EVALUATE.
+
+       PRINCIPAL-CREATE-WINDOW.
+           MOVE ALL 'N' TO WIN-STYLE.
+           CALL WOWCREATEWINDOW USING PRINCIPAL-H
+                          PRINCIPAL-DEF WIN-STYLE
+                          0
+                          PRINCIPAL-CONTROL-HANDLES.
+
+       PRINCIPAL-DESTROY-WINDOW.
+           CALL WOWDESTROYWINDOW USING WIN-RETURN PRINCIPAL-H.
+
+      *
+WOWBGN*
+      *
+       PRINCIPAL-CLOSE.
+      ******************************************************************
+      * Beginning of editable PRINCIPAL Close procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* PRINCIPAL Close
+           SET WOW-QUIT TO TRUE.
+WOWEVT*
+      * End of editable PRINCIPAL Close procedure.
+      ******************************************************************
+
+       PRINCIPAL-SHOW.
+      ******************************************************************
+      * Beginning of editable PRINCIPAL Show procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* PRINCIPAL Show
+           perform Inicio.
+WOWEVT*
+      * End of editable PRINCIPAL Show procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable menu <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* menu <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable menu <<Common>> procedure.
+      ******************************************************************
+
+      *
+WOWDNE*
+      *
