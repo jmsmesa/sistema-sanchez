@@ -2,6 +2,14 @@
            EVALUATE WIN-MSG-ID
              WHEN WM-CLOSE PERFORM PRINCIPAL-CLOSE
              WHEN WM-SHOWWINDOW PERFORM PRINCIPAL-SHOW
+             WHEN AXN-EVENT-WITH-ARGS
+               EVALUATE WIN-LPARAM-A
+                 WHEN MENU-H
+                      OF PRINCIPAL-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN 3 PERFORM PRINCIPAL-MENU-ITEMCLICK
+                   END-EVALUATE
+               END-EVALUATE
            END-EVALUATE.
 
        PRINCIPAL-CREATE-WINDOW.
@@ -35,6 +43,58 @@ WOWEVT* PRINCIPAL Show
            perform Inicio.
 WOWEVT*
       * End of editable PRINCIPAL Show procedure.
+      ******************************************************************
+
+       PRINCIPAL-MENU-ITEMCLICK.
+      ******************************************************************
+      * Beginning of editable menu ItemClick procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* menu ItemClick
+           CALL AXBINDEVENTARGUMENTS USING WIN-RETURN AXN-EVENT-HANDLE
+                AXPARAM-NITEM OF PRINCIPAL-MENU-ITEMCLICK-WS
+                  AXN-EVENT-ARG-INPUT
+                AXPARAM-BARROW OF PRINCIPAL-MENU-ITEMCLICK-WS
+                  AXN-EVENT-ARG-INPUT.
+      *      WIN-RETURN will always be zero unless the event occured
+      *        during an "unsafe" condition and has output arguments,
+      *        in which case it will be set to one and any values
+      *        stored in output arguments will be lost
+      *
+      * Add your event handling code here.
+      * Do not modify the code above
+      *   except to change the names of the local event arguments.
+      *
+      * Gets the value of an indexed property for an ActiveX control
+           Call AXGetIndexProp Using Win-Return menu-H "ItemTips"
+                programa AXPARAM-NITEM OF PRINCIPAL-MENU-ITEMCLICK-WS.
+           if programa(3:) = "Salir"
+                 SET WOW-QUIT TO TRUE
+           else if programa(3:) not = spaces
+              call programa(3:)
+           end-if
+
+      * Win-Return always receives 0
+      * ActiveXCtl-H = handle of ActiveX control
+      * Property-Name = name of property to get
+      * Property-Value receives the property value
+      * Index - index of occurrence of property value to get, multiple indexes can be specified
+
+      *
+      * End of your event handling code.
+      * Do not modify the code below
+      *   except to change the names of the local event arguments.
+      *
+           CALL AXUNBINDEVENTARGUMENTS USING WIN-RETURN AXN-EVENT-HANDLE
+                AXPARAM-NITEM OF PRINCIPAL-MENU-ITEMCLICK-WS
+                  AXN-EVENT-ARG-INPUT
+                AXPARAM-BARROW OF PRINCIPAL-MENU-ITEMCLICK-WS
+                  AXN-EVENT-ARG-INPUT.
+      *      WIN-RETURN will always be zero unless the event occured
+      *        during an "unsafe" condition and has output arguments,
+      *        in which case it will be set to one and any values
+      *        stored in output arguments will be lost
+WOWEVT*
+      * End of editable menu ItemClick procedure.
       ******************************************************************
 
       ******************************************************************

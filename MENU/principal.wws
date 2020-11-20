@@ -83,9 +83,10 @@
           03 FILLER PIC X(002) VALUE X"0001".
           03 FILLER PIC X(001) VALUE " ".
           03 FILLER PIC X(006) VALUE X"000000007F00".
-          03 FILLER PIC X(004) VALUE X"00010002".
+          03 FILLER PIC X(004) VALUE X"00010003".
           03 FILLER PIC X(010) VALUE X"00100000000000000000".
           03 FILLER PIC X(010) VALUE X"00180000000000000000".
+          03 FILLER PIC X(010) VALUE X"80680009000000100003".
           03 FILLER PIC X(004) VALUE X"FFFFFFFF".
           03 FILLER PIC X(002) VALUE X"0001".
           03 FILLER PIC X(001) VALUE " ".
@@ -769,6 +770,64 @@ WOWBGN*
            02 enumNodeType              PIC S9(10) BINARY(4).
               88 AXEnum-NodeRegular       VALUE 0.
               88 AXEnum-NodeThreeD        VALUE 1.
+
+      *
+      * Control defined enum constants
+      *
+      *   enumBorder
+       78 principal-menu-enumBorder-BorderRegular VALUE 0.
+       78 principal-menu-enumBorder-BorderNone   VALUE 1.
+       78 principal-menu-enumBorder-BorderRaised VALUE 2.
+       78 principal-menu-enumBorder-BorderLowered VALUE 3.
+       78 principal-menu-enumBorder-BorderInset  VALUE 4.
+      *   enumItemBorder
+       78 principal-menu-enumItemBorder-ItemBdrRegular VALUE 0.
+       78 principal-menu-enumItemBorder-ItemBdrNone VALUE 1.
+       78 principal-menu-enumItemBorder-ItemBdrRaised VALUE 2.
+       78 principal-menu-enumItemBorder-ItemBdrLowered VALUE 3.
+      *   enumItemBorderX
+       78 principal-menu-enumItemBorderX-ItemBorderRegular VALUE 0.
+       78 principal-menu-enumItemBorderX-ItemBorderNone VALUE 1.
+       78 principal-menu-enumItemBorderX-ItemBorderRaised VALUE 2.
+       78 principal-menu-enumItemBorderX-ItemBorderLowered VALUE 3.
+       78 principal-menu-enumItemBorderX-ItemBorderDefault VALUE 4.
+      *   enumArrowSize
+       78 principal-menu-enumArrowSize-ArrowSmall VALUE 0.
+       78 principal-menu-enumArrowSize-ArrowLarge VALUE 1.
+      *   enumDragBars
+       78 principal-menu-enumDragBars-BareNone   VALUE 0.
+       78 principal-menu-enumDragBars-BarSingle  VALUE 1.
+       78 principal-menu-enumDragBars-BarDouble  VALUE 2.
+      *   enumFillType
+       78 principal-menu-enumFillType-FillSolid  VALUE 0.
+       78 principal-menu-enumFillType-FillHorizontal VALUE 1.
+       78 principal-menu-enumFillType-FillVertical VALUE 2.
+       78 principal-menu-enumFillType-FillDiagonal VALUE 3.
+       78 principal-menu-enumFillType-FillRevDiag VALUE 4.
+       78 principal-menu-enumFillType-FillHorzBump VALUE 5.
+       78 principal-menu-enumFillType-FillVertBump VALUE 6.
+       78 principal-menu-enumFillType-FillDiamond VALUE 7.
+       78 principal-menu-enumFillType-FillPyramid VALUE 8.
+       78 principal-menu-enumFillType-FillCircle VALUE 9.
+       78 principal-menu-enumFillType-FillEllipse VALUE 10.
+
+       01 PRINCIPAL-MENU-ITEMCLICK-WS.
+      ******************************************************************
+      * Beginning of editable menu ItemClick working-storage.
+      *   You can edit code between here and the next marker.
+WOWEWS* menu ItemClick
+      *   AXParam-nItem VT_I2
+         02 AXPARAM-NITEM            PIC S9(5) BINARY(2).
+      *   AXParam-bArrow VT_BOOL
+         02 AXPARAM-BARROW           PIC S9(4) BINARY(2).
+      *
+      * Add your event handling working-storage here.
+      * Do not modify the items above
+      *   except to change the names and types of the local event arguments.
+      *
+WOWEWS*
+      * End of editable menu ItemClick working-storage.
+      ******************************************************************
 
       *
 WOWDNE*

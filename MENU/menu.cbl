@@ -52,11 +52,16 @@ WOWCOD*
       * Beginning of editable Working-Storage Section.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPWS
+       77  pos                     pic 9(04).
        77  res                     pic 9(04).
        77  tipo                    pic 9(02).
        77  nivel                   pic 9(02).
        77  texto                   pic x(40).
        77  programa                pic x(40).
+       77  eof-tabgral             pic x(01).
+       77  existe-tabgral          pic x(01).
+       77  error-tabgral           pic x(01).
+
 WOWCOD*
       * End of editable Working-Storage Section.
       ******************************************************************
@@ -142,18 +147,69 @@ WOWCOD* WOWPPR
 
        InicializarMenu.
            Call AXDoMethod Using Win-Return
-                menu-H "ClearItems" Giving res.
+                menu-H "ClearItems" Giving res
 
-       CargarMenuItem.
            Call AXDoMethod Using Win-Return
-                menu-H "AddItem" tipo texto 0 Giving res
+                lstMenu-H "ClearList" Giving res.
+       CargarMenuItem.
+           initialize reg-tabgral
+           move 1                       to tabgral-grupo
+           perform start-tabgral
+           if eof-tabgral = "n"
+              perform leer-tabgral-next
+              perform until eof-tabgral = "s" or tabgral-grupo > 1
+                 move tabgral-grupo-externo to nivel
+                 Call AXDoMethod Using Win-Return
+                      menu-H "AddItem" 0 tabgral-nombre-concepto 0
+                              Giving pos
+                              add 1 to nivel
+                 Call AXSetIndexProp Using Win-Return
+                      menu-H "ItemLevel" nivel pos
+                 Call AXSetIndexProp Using Win-Return
+                      menu-H "ItemTextPosition" 1 pos giving res
+                 Call AXSetIndexProp Using Win-Return
+                      menu-H "ItemTips" tabgral-programa pos
 
-           Call AXSetIndexProp Using Win-Return
-                menu-H "ItemLevel" nivel res
-           Call AXSetIndexProp Using Win-Return
-                menu-H "ItemTextPosition" 3 res
-           Call AXSetIndexProp Using Win-Return
-                menu-H "ItemTips" programa res.
+                 if tabgral-programa not = spaces and not = "Salir"
+                    Call AXDoMethod Using Win-Return
+                         lstMenu-H "AddItem" tabgral-nombre-concepto
+                 end-if
+
+                 perform leer-tabgral-next
+              end-perform
+           end-if.
+
+       leer-tabgral.
+           move 's' to existe-tabgral.
+           read tabgral
+                        invalid key
+                                    move 'n' to existe-tabgral.
+       start-tabgral.
+           move 'n' to eof-tabgral.
+           start tabgral
+                       key not < tabgral-key
+                             invalid key
+                                        move 's' to eof-tabgral.
+       leer-tabgral-next.
+           move 'n' to eof-tabgral.
+           read tabgral next
+                           at end
+                                 move 's' to eof-tabgral.
+       regrabar-tabgral.
+           move 'n' to error-tabgral.
+           rewrite reg-tabgral
+                             invalid key
+                                        move 's' to error-tabgral.
+       borrar-tabgral.
+           move 'n' to error-tabgral.
+           delete tabgral
+                             invalid key
+                                        move 's' to error-tabgral.
+       grabar-tabgral.
+           move 'n' to error-tabgral.
+           write reg-tabgral
+                             invalid key
+                                        move 's' to error-tabgral.
 WOWCOD*
       * End of editable Procedure Division.
       ******************************************************************

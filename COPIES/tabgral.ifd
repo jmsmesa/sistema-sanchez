@@ -1,0 +1,15 @@
+       01  reg-tabgral.
+           02  tabgral-key.
+               03 tabgral-grupo               pic 9(02).
+               03 tabgral-codigo              pic 9(08).
+           02 tabgral-nombre-concepto         pic x(30).
+           02 tabgral-nombre-abreviado        pic x(10).
+           02 tabgral-habilitado              pic x(01).
+           02 tabgral-referencia              pic s9(09)v9(03).  
+           02 tabgral-indicador               pic x(01).
+           02 tabgral-clase                   pic x(01).
+           02 tabgral-grupo-externo           pic 9(02).
+           02 tabgral-codigo-externo          pic 9(08).
+           02 tabgral-numero                  pic 9(08).
+           02 tabgral-programa                pic x(20).
+           02 tabgral-filler                  pic x(25).
