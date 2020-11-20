@@ -1,0 +1,7 @@
+           select tabgral
+                  assign to random
+                  organization is indexed
+                  access mode  is dynamic
+                  record key is tabgral-key
+                  file status st.
+       

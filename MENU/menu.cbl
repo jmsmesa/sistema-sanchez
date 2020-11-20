@@ -4,7 +4,49 @@
       *
 WOWBGN*
       *
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SPECIAL-NAMES.
+      ******************************************************************
+      * Beginning of editable Special-Names.
+      *   You can edit code between here and the next marker.
+WOWCOD* WOWSPN
+           ALPHABET UPPER-LOWER IS
+               1 THRU 65,
+               'A' ALSO 'a', 'B' ALSO 'b', 'C' ALSO 'c', 'D' ALSO 'd',
+               'E' ALSO 'e', 'F' ALSO 'f', 'G' ALSO 'g', 'H' ALSO 'h',
+               'I' ALSO 'i', 'J' ALSO 'j', 'K' ALSO 'k', 'L' ALSO 'l',
+               'M' ALSO 'm', 'N' ALSO 'n', 'O' ALSO 'o', 'P' ALSO 'p',
+               'Q' ALSO 'q', 'R' ALSO 'r', 'S' ALSO 's', 'T' ALSO 't',
+               'U' ALSO 'u', 'V' ALSO 'v', 'W' ALSO 'w', 'X' ALSO 'x',
+               'Y' ALSO 'y', 'Z' ALSO 'z',   2 THRU  7, 124 THRU 128 ;
+                    DECIMAL-POINT IS COMMA.
+WOWCOD*
+      * End of editable Special-Names.
+      ******************************************************************
+
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+      ******************************************************************
+      * Beginning of editable File-Control.
+      *   You can edit code between here and the next marker.
+WOWCOD* WOWFCT
+           copy tabgral.sel.
+WOWCOD*
+      * End of editable File-Control.
+      ******************************************************************
+
        DATA DIVISION.
+       FILE SECTION.
+      ******************************************************************
+      * Beginning of editable File Section.
+      *   You can edit code between here and the next marker.
+WOWCOD* WOWFLS
+           copy tabgral.fd.
+WOWCOD*
+      * End of editable File Section.
+      ******************************************************************
+
        WORKING-STORAGE SECTION.
       ******************************************************************
       * Beginning of editable Working-Storage Section.
@@ -40,6 +82,7 @@ WOWCOD*
               PERFORM PROCESS-EVENTS UNTIL WOW-QUIT
               PERFORM DESTROY-WINDOWS
            END-IF.
+           PERFORM PROGRAM-SHUTDOWN.
            EXIT PROGRAM.
            STOP RUN.
 
@@ -50,9 +93,21 @@ WOWCOD*
       * Beginning of editable Program-Initialization.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPPI
-           display "inicio programa".
+           open input tabgral.
 WOWCOD*
       * End of editable Program-Initialization.
+      ******************************************************************
+
+       PROGRAM-SHUTDOWN SECTION.
+
+       PROGRAM-SHUTDOWN-PARAGRAPH.
+      ******************************************************************
+      * Beginning of editable Program-Shutdown.
+      *   You can edit code between here and the next marker.
+WOWCOD* WOWPPS
+           close tabgral.
+WOWCOD*
+      * End of editable Program-Shutdown.
       ******************************************************************
 
        CREATE-WINDOWS SECTION.

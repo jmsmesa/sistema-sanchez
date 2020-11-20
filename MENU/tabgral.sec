@@ -1,0 +1,353 @@
+00 00000001 Cooperativa Mariano Acosta     PRODUCCION H  000000001,000 0                                                                   
+00 00000002 Asociacion Milenio Cooperativo DESA-TELEF H  000000002,000 0                                                                   
+01 00000001 Telefonia                      Telefonia  H  000100110,000 # T                                                                 
+01 00000002 Gas                            Gas        H  000000000,000 # G                                                                 
+01 00000003 Escuela                        Escuela    H  000000000,000 # E                                                                 
+01 00000004 Salud                          Salud      H  000000000,000 # S                                                                 
+01 00000005 Varios                         Varios     H  000000000,000 # V                                                                 
+01 00000006 Cuenta y Orden                 C y O      H  000000000,000 # C                                                                 
+01 00000007 Internet                       Internet   H  000000000,000 # I 00 00000000                                                     
+01 00000008 Personal                       Personal   H  000000000,000 # P                                                                 
+01 00000009 A.M.C.                         A.M.C.     H  000000000,000 # A                                                                 
+02 00000001 Sin IVA                        Sin IVA    H  000000000,000                                                                     
+02 00000002 IVA 10%                        IVA 10%    H  000000010,000                                                                     
+02 00000003 IVA 10,5%                      IVA 10,5%  H  000000010,500                                                                     
+02 00000004 IVA 19%                        IVA 19%    H  000000019,000                                                                     
+02 00000005 IVA 21%                        IVA 21%    H  000000021,000                                                                     
+02 00000006 IVA 27%                        IVA 27%    H  000000027,000                                                                     
+03 00000001 Pesos                          Pesos      H  000000000,000                                                                     
+03 00000002 Dolares                        Dolares    H  000000018,000        00000000                                                     
+04 00000001 Unidades                       Unidades   H  000000000,000                                                                     
+05 00000001 Contado                        Contado    H  000000000,000                                                                     
+05 00000002 Ch/orden Coop. Mariano Acosta  Ch/CMA     H  000000000,000        00000000                                                     
+05 00000003 Cuenta Coorientes              Cta.       H  000000000,000        00000000                                                     
+06 00000001 Producto                       Producto   H  000000000,000 # A                                                                 
+06 00000002 Servicio                       Servicio   H  000000001,000 # X                                                                 
+06 00000003 Telefonia                      Telefonia  H  000000001,000 # T                                                                 
+06 00000004 Personal                       Personal   H  000000001,000 # P                                                                 
+06 00000005 Saludo                         Saludo     H  000000001,000 # S                                                                 
+06 00000006 Escuela                        Escuela    H  000000001,000 # E                                                                 
+07 00000001 Efectivo                       Efectivo   H  000000001,000 #                                                                   
+07 00000002 Cheque                         Cheque     H  000000001,000 #                                                                   
+07 00000003 Cheque diferido                Ch. Dif.   H  000000001,000 #                                                                   
+07 00000004 Tarjeta de credito             T. Cred.   H  000000001,000 #                                                                   
+07 00000005 Tarjeta de debito              T. Deb.    H  000000001,000 #                                                                   
+07 00000006 Interdeposito                  Interdep   H  000000001,000 #                                                                   
+08 00000001 Clientes                       Clientes   H  000000001,000 #                                                                   
+08 00000002 Socios                         Socios     H  000000001,000 #                                                                   
+08 00000003 Cooperativas interior          Coop.int.  H  000000001,000 #                                                                   
+08 00000004 Usuario de VISA                VISA       H  000000001,000 #                                                                   
+08 00000008 C.M.A.                         C.M.A.     H  000000001,000 #                                                                   
+09 00000001 Directo                        Directo    H  000000005,000 %                                                                   
+10 00000001 Minorista                      Minorista  H  000000005,000 #                                                                   
+10 00000002 Cuenta Corrientes              Cta. Cte.  H  000000005,000 #                                                                   
+11 00000001 Capital Federal                Cap. Fed.  H  000000000,000 #                                                                   
+11 00000002 Buenos Aires                   BS. AS.    H  000000000,000 #                                                                   
+11 00000003 Catamarca                      CATAMARCA  H  000000000,000 #                                                                   
+11 00000004 Chaco                          CHACO      H  000000000,000 #                                                                   
+11 00000005 Chubut                         CHUBUT     H  000000000,000 #                                                                   
+11 00000006 Cordoba                        CORDOBA    H  000000000,000 #                                                                   
+11 00000007 Corrientes                     CORRIENTES H  000000000,000 #                                                                   
+11 00000008 Entre Rios                     ENTRE RIOS H  000000000,000 #                                                                   
+11 00000009 Formosa                        FORMOSA    H  000000000,000 #                                                                   
+11 00000010 Jujuy                          JUJUY      H  000000000,000 #                                                                   
+11 00000011 La Pampa                       LA PAMPA   H  000000000,000 #                                                                   
+11 00000012 La Rioja                       LA RIOJA   H  000000000,000 #                                                                   
+11 00000013 Mendoza                        MENDOZA    H  000000000,000 #                                                                   
+11 00000014 Misiones                       MISIONES   H  000000000,000 #                                                                   
+11 00000015 Neuquen                        NEUQUEN    H  000000000,000 #                                                                   
+11 00000016 Rio Negro                      RIO NEGRO  H  000000000,000 #                                                                   
+11 00000017 Salta                          SALTA      H  000000000,000 #                                                                   
+11 00000018 San Juan                       SAN JUAN   H  000000000,000 #                                                                   
+11 00000019 San Luis                       SAN LUIS   H  000000000,000 #                                                                   
+11 00000020 Santa Cruz                     SANTA CRUZ H  000000000,000 #                                                                   
+11 00000021 Santa Fe                       SANTA FE   H  000000000,000 #                                                                   
+11 00000022 Santiago del Estero            S. ESTERO  H  000000000,000 #                                                                   
+11 00000023 Tierra del Fuego               T. FUEGO   H  000000000,000 #                                                                   
+11 00000024 Tucuman                        TUCUMAN    H  000000000,000 #                                                                   
+12 00000001 Normal                         Normal     H  000000000,000 #                                                                   
+12 00000002 Baja                           Baja       H  000000000,000 #                                                                   
+12 00000003 Moroso                         Moroso     H  000000000,000 #                                                                   
+12 00000004 Legales                        Legales    H  000000000,000 #                                                                   
+14 00000001 Bonificaciones Telefonia       Abono+Cone H  000000000,000 #      00000000                                                     
+14 00000002 Bonificacion ADSL Abono        Abono Ads  H  000000000,000 #   00 00000000                                                     
+15 00000001 En el precio                   Precio     H  000000000,000 #                                                                   
+15 00000002 Total documento                Total      H  000000000,000 #                                                                   
+16 00000001 Familia de Prueba Nø 1         Familia 1  H  000000000,000 #   00 00000000                                                     
+16 00000002 Familia de Prueba Nø 2         Familia 2  H  000000000,000 #   00 00000000                                                     
+17 00000001 Rubro de Prueba N1             Rubro 1    H  000000000,000 #   16 00000001                                                     
+17 00000002 Rubro de Prueba Nø 2           Rubro 2    H  000000000,000 #   16 00000002                                                     
+18 00000001 Marca 1                        M 1        H  000000000,000 #   00 00000000                                                     
+19 00000001 Subrubro 1                     Sub 1      H  000000000,000 #   00 00000000                                                     
+22 00000001 Factura Servicios              Fc Srv.    H  000000000,000 # N                                                                 
+22 00000009 Nota de Cr‚dito                NC Vs A    H  000000000,000 # S                                                                 
+22 00000011 Recibo Servicios               Rec Tel    H  000000000,000 # S                                                                 
+22 00000012 Recibo Gas                     Rec Gas    H  000000000,000 # S                                                                 
+22 00000013 Recibo Varios                  Rec.Vs.    H  000000000,000 # S                                                                 
+22 00000021 Nota de D‚bito                 ND Vs B    H  000000000,000 # S                                                                 
+22 00000099 Saldo Anterior                 Sdo.Ant    H  000000000,000 # S                                                                 
+22 00000597 Ajustes no significativos      Ajustes    H  000000000,000 # S                                                                 
+23 00000001 "A"                            "A"        H  000000000,000 # A                                                                 
+23 00000002 "B"                            "B"        H  000000000,000 # B                                                                 
+24 00000001 Proceso                        Proceso    H  000000000,000 # P                                                                 
+24 00000002 Menu                           Menu       H  000000000,000 # M                                                                 
+24 00000003 Menu Inicial                   Menu Ini   H  000000000,000 # I                                                                 
+24 00000004 RMCOBOL                        RMCOBOL    H  000000000,000 # R                                                                 
+24 00000005 EJECUTABLE                     EJECUTABLE H  000000000,000 # E                                                                 
+25 00000001 Familiar                       Familiar   H  000000000,000 # F                                                                 
+25 00000002 Comercial                      Comercial  H  000000000,000                                                                     
+25 00000003 Profesional                    Profesiona H  000000000,000                                                                     
+25 00000004 Residencial                    Residencia H  000000000,000                                                                     
+25 00000005 Industrial                     Industrial H  000000000,000                                                                     
+25 00000006 Gobierno                       Gobierno   H  000000000,000                                                                     
+25 00000007 Interno                        Interno    H  000000000,000                                                                     
+26 00000001 Particular                     Particular H  000000000,000 # P                                                                 
+26 00000002 C~omodato                      Comodato   H  000000000,000                                                                     
+26 00000003 Locutorio                      Locutorio  H  000000000,000                                                                     
+26 00000004 Monedero                       Monedero   H  000000000,000                                                                     
+26 00000005 Monedero Social                Mon. Socia H  000000000,000                                                                     
+26 00000006 Cabina                         Cabina     H  000000000,000                                                                     
+26 00000007 Interno                        Interno    H  000000000,000                                                                     
+27 00000001 Mariano Acosta                 Acosta     H  000000000,000   S                                                                 
+27 00000002 Ferrari                        Ferrari    H  000000000,000   N                                                                 
+27 00000003 Marcos Paz                     M.Paz      H  000000000,000   S                                                                 
+28 00000001 ??????????                     ?????      H  000000000,000   S                                                                 
+29 00000004 Caja 4                         Caja 4     H  000000000,000   S                                                                 
+29 00000008 Caja 8                         Caja 8     H  000000000,000   S                                                                 
+29 00000020 Caja 20                        Caja 20    H  000000000,000   S                                                                 
+29 00000050 Caja 50                        Caja 50    H  000000000,000   S                                                                 
+30 00000001 PCL                            PCL        H  000000000,000   S                                                                 
+30 00000002 Windows Driver                 Drivers    H  000000000,000   S                                                                 
+31 00000001 Acosta                         Acosta     H  000000000,000   S                                                                 
+31 00000002 AMC                            AMC        H  000000000,000 #   00 00000000                                                     
+31 00000003 DEPOSITO CENTRAL               DEP CENTRA H  000000000,000 #   00 00000000                                                     
+31 00000004 CELULARES                      CELULAR    H  000000000,000 #   00 00000000                                                     
+32 00000001 Entrada                        Entrada    H  000000198,000   S    00000000                                                     
+32 00000002 Salida                         Salida     H  000000199,000   S                                                                 
+32 00000003 Anulacion Ingreso              An. Ing.   H  000000003,000   S                                                                 
+32 00000004 Anulacion Salida               An. Sal.   H  000000000,000   E                                                                 
+33 00000001 Factura A                      Factura A  H  000000003,000   E                                                                 
+33 00000002 N. Debito A                    N. Deb A   H  000000023,000   E                                                                 
+33 00000003 N. Credito A                   N. Cred A  H  000000009,000   E                                                                 
+33 00000004 N. Debito A Interna            N. Deb AI  H  000000115,000   E                                                                 
+33 00000005 N. Credito A Interna           N. Cred AI H  000000113,000   E                                                                 
+34 00000001 Factura B                      Factura B  H  000000020,000   E                                                                 
+34 00000002 N. Debito B                    N. Deb B   H  000000021,000   E                                                                 
+34 00000003 N. Credito B                   N. Cred B  H  000000022,000   E                                                                 
+34 00000004 N. Debito B Interna            N. Deb BI  H  000000116,000   E                                                                 
+34 00000005 N. Credito B Interna           N. Cred BI H  000000114,000   E                                                                 
+35 00000001 Normal                         Normal     H  000000022,000   N                                                                 
+35 00000002 I.V.A.                         I.V.A.     H  000000022,000   I                                                                 
+35 00000003 Percepcion                     Percepcion H  000000022,000   R                                                                 
+35 00000004 Proveedor                      Proveedor  H  000000022,000   P                                                                 
+36 00000001 Administracion                 Admin.     H  000000000,000   S                                                                 
+36 00000002 Cocina                         Coina      H  000000000,000   S                                                                 
+36 00000003 Idiomas                        Idiomas    H  000000000,000   S                                                                 
+36 00000004 Informatica                    Informat.  H  000000000,000   S                                                                 
+36 00000005 Oficios                        Oficios    H  000000000,000   S                                                                 
+38 00000001 Telefonia                      Telefonia  H  000000000,000                                                                     
+38 00000002 ADSL                           ADSL       H  000000000,000                                                                     
+39 00000001 Instalacion                    Instal.    H  000000000,000                                                                     
+39 00000002 Reclamo                        Reclamo    H  000000000,000                                                                     
+40 00000001 Ingresado                      Ingresado  H  000000000,000                                                                     
+40 00000002 Iniciado                       Iniciado   H  000000000,000                                                                     
+40 00000003 Suspendido                     Suspendido H  000000000,000                                                                     
+40 00000004 Anulado                        Anulado    H  000000000,000                                                                     
+40 00000005 Terminado                      Terminado  H  000000000,000                                                                     
+41 00000001 Central                        Central    H  000000000,000                                                                     
+41 00000002 Sistemas                       Sistemas   H  000000000,000                                                                     
+41 00000003 Ventas                         Ventas     H  000000000,000                                                                     
+42 00000001 Dslam 1 Mariano Acosta - 3000M Dslam 1 Ma    000000480,000                                                                     
+42 00000002 Dslam 2 Mariano Acosta 2m      Dslam 2 Ma    000000480,000                                                                     
+42 00000003 Dslam 3 Mariano Acosta         Dslam 3 Ma H  000000512,000 #   00 00000000                                                     
+42 00000005 Dslam 5 Mariano Acosta         Dslam 5 Ma H  000000480,000 #   00 00000000                                                     
+42 00000006 Dslam 6 Mariano Acosta         Dslam 6 Ma H  000000240,000 #   00 00000000                                                     
+42 00000007 Dslam 1 Ferrari - 512          Dslam 1 Fe    000000240,000                                                                     
+42 00000008 Dslam 2 Ferrari - 1024         Dslam 2 Fe    000000480,000                                                                     
+42 00000009 Dslam 3 Ferrari - 1024         Dslam 3 Fe    000000240,000                                                                     
+42 00000010 Dslam 4 Ferrari - 1024         Dslam 4 Fe    000000240,000                                                                     
+42 00000011 Dslam 5 Ferrari - 2048         Dslam 5 Fe    000000480,000                                                                     
+42 00000012 Dslam 6 Rio Alegre             Dslam 6 Ri    000000144,000                                                                     
+42 00000013 Dslam 4 Rio Alegre (Corecess)  Dslam 4 Ri    000000024,000                                                                     
+42 00000014 Dslam 6 Campanillas            Dslam 6 Ca    000000144,000                                                                     
+42 00000016 Dslam 2 Marcos Paz 2M          Dslam 2 Ma    000000480,000                                                                     
+42 00000017 Dslam 3 Rio Alegre - 512 ip 17 Dslam 3 Ri    000000024,000                                                                     
+42 00000018 Dslam 2 Campanillas -  ip 256  Dslam 2 Ca    000000016,000                                                                     
+42 00000019 Dslam 3 Campanillas - 1024 ip  Dslam 3 Ca    000000024,000                                                                     
+42 00000020 Dslam 4 Campanillas - 512      Dslam 4 Ca    000000024,000                                                                     
+42 00000021 Dslam 5 Campanillas - 512      Dslam 5 Ca    000000144,000                                                                     
+42 00000022 Dslam 1 rio alegre -1024       Dslam 1 ri    000000144,000                                                                     
+42 00000023 Dslam 2 Rio Alegre - 1024 ip 1 Dslam 2 Ri    000000024,000                                                                     
+42 00000024 Dslam 7 Mariano Acosta - 2048  Dslam 7 Ma    000000480,000                                                                     
+42 00000025 Dslam 6 Ferrari                Dslam 6 Fe    000000480,000                                                                     
+42 00000026 Dslam 8 Mariano Acosta - 2048  Dslam 8 Ma H  000000768,000 #   00 00000000                                                     
+42 00000027 Dslam 1 Marcos Paz             Dslam 1 Ma    000000480,000                                                                     
+42 00000028 Dslam 5 Rio Alegre-1024        Dslam 5 Ri    000000024,000                                                                     
+42 00000029 Dslam 7 Ferrari                Dslam 7 Fe    000000480,000                                                                     
+42 00000030 Dslam "La Castellana"          Dslam "La     000000288,000                                                                     
+42 00000031 Dslam 9 Mariano Acosta         Dslam 9 Ma    000000480,000                                                                     
+42 00000032 Dslam "Arco Iris"              Dslam "Arc    000000288,000                                                                     
+42 00000033 Dslam 10 Mariano Acosta        Dslam 10 M    000000480,000                                                                     
+42 00000034 DSLAM 8 FERRARI -480           DSLAM 8 FE    000000480,000                                                                     
+46 00000001 128 KB FAM $73.20              128 KB FAM H  000000060,500     00 00000000                                                     
+46 00000002 256KB FAM $260                 256 KB FAM H  000000214,880     00 00000000                                                     
+46 00000003 512 KB FAM $270                512 KB FAM H  000000223,140     00 00000000                                                     
+46 00000004 1 MB FAM $285                  1 MB FAM   H  000000235,540     00 00000000                                                     
+46 00000005 1 MB COM $285                  1 MB COM $ H  000000235,540     00 00000000                                                     
+46 00000006 2 MB $310                      2 MB       H  000000256,200     00 00000000                                                     
+46 00000007 3 MB $390                      3 MB FAM   H  000000322,310     00 00000000                                                     
+46 00000010 DUAL 512 KB                    DUAL 512 K H  000000000,000     00 00000000                                                     
+46 00000011 DUAL 1 MB                      DUAL 1 MB  H  000000000,000     00 00000000                                                     
+46 00000012 8 MB FAM $610                  8MB FAM    H  000000504,130     00 00000000                                                     
+46 00000013 5 MB COM $640                  5 MB COM   H  000000528,930     00 00000000                                                     
+46 00000014 3 MB COM $505                  3MB COM    H  000000417,360     00 00000000                                                     
+46 00000015 DUAL 3 MB                      DUAL 3MB   H  000000000,000     00 00000000                                                     
+46 00000016 5MB FAM $490                   5MB FAM    H  000000404,960     00 00000000                                                     
+46 00000017 8 MB COM $840                  8MB COMER  H  000000694,210     00 00000000                                                     
+46 00000018 WR 2MB RURAL $780              WR 2MB     H  000000644,630     00 00000000                                                     
+46 00000019 WR 3MB RURAL $850              WR 3MB     H  000000702,480     00 00000000                                                     
+46 00000020 WR 5MB RURAL $985              WR 5MB     H  000000814,050     00 00000000                                                     
+46 00000021 DUO WR 2MB RURAL               DUO WR 2MB H  000000000,000     00 00000000                                                     
+46 00000022 4 MB FAM $430                  4MB FAM    H  000000355,370     00 00000000                                                     
+47 00000001 Modem desconfigurado           Modem desc H  000000000,000     00 00000000                                                     
+47 00000002 Problemas placa de red         Placa de r H  000000000,000     00 00000000                                                     
+47 00000003 Cable mal conectado            Cable mal  H  000000000,000     00 00000000                                                     
+47 00000004 Configuracion de Navegador     Conf de na H  000000000,000     00 00000000                                                     
+47 00000005 Router desconfigurado          Router des H  000000000,000     00 00000000                                                     
+47 00000006 Problemas de PC                Problemas  H  000000000,000     00 00000000                                                     
+47 00000007 Testeo de Velocidad            Testeo Vel H  000000000,000     00 00000000                                                     
+47 00000008 Cambio modem por desperfecto   Cambio mod H  000000000,000     00 00000000                                                     
+47 00000009 Modem quemado por tormenta     modem quem H  000000000,000     00 00000000                                                     
+47 00000010 Modem colgado                  modem colg H  000000000,000     00 00000000                                                     
+47 00000011 No tenia Filtros               no filtros H  000000000,000     00 00000000                                                     
+47 00000012 Fecha y Hora de PC mal         Fecha mal  H  000000000,000     00 00000000                                                     
+47 00000013 Problemas de RED               Prob.de Re H  000000000,000     00 00000000                                                     
+47 00000014 No atendio nadie               No atendio H  000000000,000     00 00000000                                                     
+47 00000015 Mensaje en el Contestador      Mens.Conte H  000000000,000     00 00000000                                                     
+47 00000016 Problemas de Tension           Prob.Tensi H  000000000,000     00 00000000                                                     
+47 00000017 No se llama, conexion estable  No se llam H  000000000,000     00 00000000                                                     
+47 00000018 No se puede solucionar x tel.  No tel. Re H  000000000,000     00 00000000                                                     
+47 00000019 CAMBIO MODEM WIFI              CAMBIO MOD H  000000000,000     00 00000000                                                     
+50 00000077 Club Mariano Acosta            Club M.Aco H  000000000,000     00 00000000                                                     
+50 00000078 Bomberos Voluntarios           Bomberos   H  000000000,000     00 00000000                                                     
+50 00000079 San Jose Obrero                San Jose   H  000000000,000     00 00000000                                                     
+51 00000001 CARGO ADMINISTRATIVO           CARGO ADM  H  000000025,000     00 00000000                                                     
+51 00000002 VALOR TSH GLOBAL               TSH        H  000045000,000     00 00000000                                                     
+51 00000003 MANTENIMIENTO ADSL             MANT ADSL  H  000000014,050     00 00000000                                                     
+51 00000004 MANTENIMIENTO WIFI             MANT WIFI  H  000000028,100     00 00000000                                                     
+51 00000005 MANTENIMIENTO DOMICILIARIO     MANT DOMIC H  000000021,490     00 00000000                                                     
+51 00000006 DERECHO SUSCRIPCION            DER SUSC   H  000000270,000     00 00000000                                                     
+52 00000001 Telefonia                      Telefonia  H  000000000,000   T 00 00000000                                                     
+52 00000002 Salud Mensual                  Salud Mens H  000000000,000   S 00 00000000                                                     
+52 00000003 Varios Telefonia               Varios Tel H  000000000,000   V 00 00000000                                                     
+52 00000004 Salud Coseguros                Sal Cosegu H  000000000,000   S 00 00000000                                                     
+52 00000005 Internet                       Internet   H  000000000,000   I 00 00000000                                                     
+52 00000006 Personal                       Personal   H  000000000,000   P 00 00000000                                                     
+52 00000007 A.M.C.                         A.M.C.     H  000000000,000   A 00 00000000                                                     
+60 00000001 Factura B                      Factura B  H  000000130,000   S                                                                 
+60 00000002 N. Debito B                    N. Deb B   H  000000140,000   S                                                                 
+60 00000003 N. Credito B                   N. Cred B  H  000000139,000   S                                                                 
+60 00000004 N. Debito B Interna            N. Deb BI  H  000000116,000   S                                                                 
+60 00000005 N. Credito B Interna           N. Cred BI H  000000114,000   S                                                                 
+61 00000001 Factura B                      Factura B  H  000000131,000   C                                                                 
+61 00000002 N. Debito B                    N. Deb B   H  000000142,000   C                                                                 
+61 00000003 N. Credito B                   N. Cred B  H  000000141,000   C                                                                 
+61 00000004 N. Debito B Interna            N. Deb BI  H  000000116,000   C                                                                 
+61 00000005 N. Credito B Interna           N. Cred BI H  000000114,000   C                                                                 
+62 00000001 Factura A                      Factura A  H  000000024,000   P                                                                 
+62 00000002 N. Debito A                    N. Deb A   H  000000068,000   P                                                                 
+62 00000003 N. Credito A                   N. Cred A  H  000000059,000   P                                                                 
+62 00000004 N. Debito A Interna            N. Deb AI  H  000000115,000   P                                                                 
+62 00000005 N. Credito A Interna           N. Cred AI H  000000113,000   P                                                                 
+63 00000001 Factura B                      Factura B  H  000000045,000   P                                                                 
+63 00000002 N. Debito B                    N. Deb B   H  000000070,000   P                                                                 
+63 00000003 N. Credito B                   N. Cred B  H  000000069,000   P                                                                 
+63 00000004 N. Debito B Interna            N. Deb BI  H  000000116,000   P                                                                 
+63 00000005 N. Credito B Interna           N. Cred BI H  000000114,000   P                                                                 
+64 00000001 Factura A                      Factura A  H  000000003,000   V                                                                 
+64 00000002 N. Debito A                    N. Deb A   H  000000023,000   V                                                                 
+64 00000003 N. Credito A                   N. Cred A  H  000000009,000   V                                                                 
+64 00000004 N. Debito A Interna            N. Deb AI  H  000000115,000   V                                                                 
+64 00000005 N. Credito A Interna           N. Cred AI H  000000113,000   V                                                                 
+65 00000001 Factura B                      Factura B  H  000000020,000   V                                                                 
+65 00000002 N. Debito B                    N. Deb B   H  000000021,000   V    00000000                                                     
+65 00000003 N. Credito B                   N. Cred B  H  000000022,000   V    00000000                                                     
+65 00000004 N. Debito B Interna            N. Deb BI  H  000000116,000   V                                                                 
+65 00000005 N. Credito B Interna           N. Cred BI H  000000114,000   V                                                                 
+66 00000001 Factura A                      Factura A  H  000000088,000   T                                                                 
+66 00000002 N. Debito A                    N. Deb A   H  000000094,000   T                                                                 
+66 00000003 N. Credito A                   N. Cred A  H  000000093,000   T                                                                 
+66 00000004 N. Debito A Interna            N. Deb AI  H  000000115,000   T                                                                 
+66 00000005 N. Credito A Interna           N. Cred AI H  000000113,000   T                                                                 
+67 00000001 Factura B                      Factura B  H  000000089,000   T                                                                 
+67 00000002 N. Debito B                    N. Deb B   H  000000099,000   T                                                                 
+67 00000003 N. Credito B                   N. Cred B  H  000000095,000   T                                                                 
+67 00000004 N. Debito B Interna            N. Deb BI  H  000000116,000   T                                                                 
+67 00000005 N. Credito B Interna           N. Cred BI H  000000114,000   T                                                                 
+68 00000001 Factura A                      Factura A  H  000000107,000   I                                                                 
+68 00000002 N. Debito A                    N. Deb A   H  000000109,000   I                                                                 
+68 00000003 N. Credito A                   N. Cred A  H  000000108,000   I                                                                 
+68 00000004 N. Debito A Interna            N. Deb AI  H  000000115,000   I                                                                 
+68 00000005 N. Credito A Interna           N. Cred AI H  000000113,000   I                                                                 
+69 00000001 Factura B                      Factura B  H  000000117,000   I                                                                 
+69 00000002 N. Debito B                    N. Deb B   H  000000119,000   I                                                                 
+69 00000003 N. Credito B                   N. Cred B  H  000000118,000   I                                                                 
+69 00000004 N. Debito B Interna            N. Deb BI  H  000000116,000   I                                                                 
+69 00000005 N. Credito B Interna           N. Cred BI H  000000114,000   I                                                                 
+70 00000001 Meses                          Meses      H  000000006,000   I                                                                 
+70 00000002 Abono                          Abono      H  000000000,000   I                                                                 
+70 00000003 ADSL                           ADSL       H  000000000,000   I                                                                 
+98 00000001                                              000127638,000                                                                     
+98 00000002                                              000127629,000                                                                     
+98 00000003                                              000104968,000                                                                     
+98 00000004                                              000100001,000                                                                     
+98 00000005                                              000127624,000                                                                     
+98 00000006 Productos                      Productos  H  000043907,000 #   00 00000000                                                     
+98 00000007 Id deuda Link                  Id deuda L H  000000002,000     00 00000000                                                     
+98 00000009                                              000000003,000                                                                     
+98 00000010 Numeracion de ID de Usuario    ID Ususari H  000000502,000   T    00000000                                                     
+99 00000001 Servicios                      Servicios     000000000,000                                                                     
+99 00000002 Tipo de I.V.A.                 Tipo IVA   H  000000000,000 %                                                                   
+99 00000003 Monedas                        Monedas    H  000000000,000 $                                                                   
+99 00000004 Tipos de Medida                U. Medida  H  000000000,000 #                                                                   
+99 00000005 Formas de Pago                 F. Pago    H  000000000,000 #                                                                   
+99 00000006 Tipo de Productos              T.Producto H  000000000,000 #                                                                   
+99 00000007 Medio de Pagos                 M. Pago    H  000000000,000 #                                                                   
+99 00000008 Clase de Clientes              C. Cliente H  000000000,000 #                                                                   
+99 00000009 Vendedores                     Vendedores H  000000000,000 %                                                                   
+99 00000010 ID usuario                     User ID    H  000000500,000                                                                     
+99 00000011 Provincias                     Provincias H  000000000,000 #                                                                   
+99 00000012 Estados de Clientes            Est. Cli.  H  000000000,000 #                                                                   
+99 00000013 Cobradores                     Cobradores H  000000000,000 %                                                                   
+99 00000014 Tipo de Bonificaciones         Tipo Bon.  H  000000000,000 #                                                                   
+99 00000015 Modos de informar              Modos Info H  000000000,000 #                                                                   
+99 00000016 Familias                       Familias   H  000000000,000 #                                                                   
+99 00000017 Rubros                         Rubros     H  000000000,000 #                                                                   
+99 00000018 Marcas                         Marcas     H  000000000,000 #                                                                   
+99 00000019 Subrubros                      Subrubros  H  000000000,000 #                                                                   
+99 00000020 Detalles                       Detalles   H  000000000,000 #                                                                   
+99 00000021 Medidas                        Medidas    H  000000000,000 #                                                                   
+99 00000022 Indicadores de documentos      Ind. Doc.  H  000000000,000 #                                                                   
+99 00000023 Tipos de letras de documentos  Letras     H  000000000,000 #                                                                   
+99 00000024 Tipo de componentes            Componente H  000000000,000 #                                                                   
+99 00000025 Categorias de clientes         Categorias H  000000000,000 #                                                                   
+99 00000026 Destinos de objetos            Destinos   H  000000000,000 #                                                                   
+99 00000027 Centrales Telefonicas          Centrales  H  000000000,000 #                                                                   
+99 00000028 Areas de Escuela               Areas      H  000000000,000 #                                                                   
+99 00000029 Cajas                          Cajas      H  000000000,000 #                                                                   
+99 00000030 Tipos de Impresoras            T. Impre.  H  000000000,000 #                                                                   
+99 00000031 Depositos                      Depositos  H  000000000,000 #                                                                   
+99 00000032 Movimientos de Stock           Mov.Stock  H  000000000,000 #                                                                   
+99 00000033 Movimientos MAEMINOT A         Mov.EMINOT H  000000000,000 #                                                                   
+99 00000034 Movimientos MAEMINOT B         Mov.EMINOT H  000000000,000 #                                                                   
+99 00000035 Tipo movimiento mpinppro       Mov.EMINOT H  000000000,000 #                                                                   
+99 00000036 Areas escuela                  Areas Esc. H  000000000,000 #                                                                   
+99 00000037 Areas Telefonia                Areas Tel. H  000000000,000 #                                                                   
+99 00000038 Areas HelpDesk                 Areas Help H  000000000,000 #                                                                   
+99 00000039 Reclamos                       Reclamos   H  000000000,000 #                                                                   
+99 00000040 Estados                        Estados    H  000000000,000 #                                                                   
+99 00000041 Areas CMA                      Areas CMA  H  000000000,000 #                                                                   
+99 00000042 DSLAMS                         DSLAMS     H  000000000,000 #                                                                   
+99 00000043 Centrales Telefonicas          Centrales  H  000000000,000 #                                                                   
+99 00000044 Zonas Telefonicas              Zonas Tel  H  000000000,000 #                                                                   
+99 00000045 Equipos Telefonicos            Equipos T  H  000000000,000 #                                                                   
