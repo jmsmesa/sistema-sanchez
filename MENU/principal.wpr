@@ -9,6 +9,11 @@
                    EVALUATE AXN-DISPID
                      WHEN 3 PERFORM PRINCIPAL-MENU-ITEMCLICK
                    END-EVALUATE
+                 WHEN LSTMENU-H
+                      OF PRINCIPAL-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN 6 PERFORM PRINCIPAL-LSTMENU-ITEMDBLCLICK
+                   END-EVALUATE
                END-EVALUATE
            END-EVALUATE.
 
@@ -67,10 +72,10 @@ WOWEVT* menu ItemClick
       * Gets the value of an indexed property for an ActiveX control
            Call AXGetIndexProp Using Win-Return menu-H "ItemTips"
                 programa AXPARAM-NITEM OF PRINCIPAL-MENU-ITEMCLICK-WS.
-           if programa(3:) = "Salir"
+           if programa = "Salir"
                  SET WOW-QUIT TO TRUE
-           else if programa(3:) not = spaces
-              call programa(3:)
+           else if programa not = spaces
+              call programa
            end-if
 
       * Win-Return always receives 0
@@ -105,6 +110,71 @@ WOWEVT* menu <<Common>>
       *       otherwise insert complete COBOL paragraphs.
 WOWEVT*
       * End of editable menu <<Common>> procedure.
+      ******************************************************************
+
+       PRINCIPAL-LSTMENU-ITEMDBLCLICK.
+      ******************************************************************
+      * Beginning of editable lstMenu ItemDblClick procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* lstMenu ItemDblClick
+           CALL AXBINDEVENTARGUMENTS USING WIN-RETURN AXN-EVENT-HANDLE
+                AXPARAM-NINDEX OF PRINCIPAL-LSTMENU-ITEMDBLCLICK-WS
+                  AXN-EVENT-ARG-INPUT
+                AXPARAM-NCOLUMN OF PRINCIPAL-LSTMENU-ITEMDBLCLICK-WS
+                  AXN-EVENT-ARG-INPUT.
+      *      WIN-RETURN will always be zero unless the event occured
+      *        during an "unsafe" condition and has output arguments,
+      *        in which case it will be set to one and any values
+      *        stored in output arguments will be lost
+      *
+      * Add your event handling code here.
+      * Do not modify the code above
+      *   except to change the names of the local event arguments.
+      *
+           Call AXGetIndexProp Using Win-Return lstMenu-H "ListCargo"
+                programa AXPARAM-NINDEX OF
+                    PRINCIPAL-LSTMENU-ITEMDBLCLICK-WS.
+
+           if programa not = spaces
+              call programa
+                   on exception
+                      Move all 'N' to Message-Box-Flags
+                      Set Mb-OKCancel Mb-IconHand To True
+                      string "No se encuentra el programa "
+                             programa
+                                delimited by size
+                                    into texto
+                      end-string
+                      Call WowMessageBox Using Win-Return principal-H
+                           Texto "Error" Message-Box-Flags
+           end-if
+
+      *
+      * End of your event handling code.
+      * Do not modify the code below
+      *   except to change the names of the local event arguments.
+      *
+           CALL AXUNBINDEVENTARGUMENTS USING WIN-RETURN AXN-EVENT-HANDLE
+                AXPARAM-NINDEX OF PRINCIPAL-LSTMENU-ITEMDBLCLICK-WS
+                  AXN-EVENT-ARG-INPUT
+                AXPARAM-NCOLUMN OF PRINCIPAL-LSTMENU-ITEMDBLCLICK-WS
+                  AXN-EVENT-ARG-INPUT.
+      *      WIN-RETURN will always be zero unless the event occured
+      *        during an "unsafe" condition and has output arguments,
+      *        in which case it will be set to one and any values
+      *        stored in output arguments will be lost
+WOWEVT*
+      * End of editable lstMenu ItemDblClick procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable lstMenu <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* lstMenu <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable lstMenu <<Common>> procedure.
       ******************************************************************
 
       *

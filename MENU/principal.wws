@@ -83,10 +83,11 @@
           03 FILLER PIC X(002) VALUE X"0001".
           03 FILLER PIC X(001) VALUE " ".
           03 FILLER PIC X(006) VALUE X"000000007F00".
-          03 FILLER PIC X(004) VALUE X"00010003".
+          03 FILLER PIC X(004) VALUE X"00010004".
           03 FILLER PIC X(010) VALUE X"00100000000000000000".
           03 FILLER PIC X(010) VALUE X"00180000000000000000".
           03 FILLER PIC X(010) VALUE X"80680009000000100003".
+          03 FILLER PIC X(010) VALUE X"80680009000100100006".
           03 FILLER PIC X(004) VALUE X"FFFFFFFF".
           03 FILLER PIC X(002) VALUE X"0001".
           03 FILLER PIC X(001) VALUE " ".
@@ -827,6 +828,122 @@ WOWEWS* menu ItemClick
       *
 WOWEWS*
       * End of editable menu ItemClick working-storage.
+      ******************************************************************
+
+      *
+      * Control defined enum constants
+      *
+      *   enumBorder
+       78 principal-lstMenu-enumBorder-BorderRegular VALUE 0.
+       78 principal-lstMenu-enumBorder-BorderNone VALUE 1.
+       78 principal-lstMenu-enumBorder-BorderRaised VALUE 2.
+       78 principal-lstMenu-enumBorder-BorderLowered VALUE 3.
+       78 principal-lstMenu-enumBorder-BorderRaisedThin VALUE 4.
+       78 principal-lstMenu-enumBorder-BorderLoweredThin VALUE 5.
+       78 principal-lstMenu-enumBorder-BorderDrop VALUE 6.
+       78 principal-lstMenu-enumBorder-BorderInset VALUE 7.
+      *   enumAlign
+       78 principal-lstMenu-enumAlign-AlignLeft  VALUE 0.
+       78 principal-lstMenu-enumAlign-AlignRight VALUE 1.
+       78 principal-lstMenu-enumAlign-AlignCenter VALUE 2.
+      *   enumBorderType
+       78 principal-lstMenu-enumBorderType-btRegular VALUE 0.
+       78 principal-lstMenu-enumBorderType-btNone VALUE 1.
+       78 principal-lstMenu-enumBorderType-btRaised VALUE 2.
+       78 principal-lstMenu-enumBorderType-btLowered VALUE 3.
+       78 principal-lstMenu-enumBorderType-btRaisedThin VALUE 4.
+       78 principal-lstMenu-enumBorderType-btLoweredThin VALUE 5.
+      *   enumPreColumn
+       78 principal-lstMenu-enumPreColumn-ColumnNone VALUE 0.
+       78 principal-lstMenu-enumPreColumn-ColumnArrow VALUE 1.
+       78 principal-lstMenu-enumPreColumn-ColumnNum0 VALUE 2.
+       78 principal-lstMenu-enumPreColumn-ColumnNum1 VALUE 3.
+       78 principal-lstMenu-enumPreColumn-ColumnPicture VALUE 4.
+      *   enumTitles
+       78 principal-lstMenu-enumTitles-TitleRegular VALUE 0.
+       78 principal-lstMenu-enumTitles-TitleRaised VALUE 1.
+       78 principal-lstMenu-enumTitles-TitleLowered VALUE 2.
+      *   enumFocus
+       78 principal-lstMenu-enumFocus-FocusSolid VALUE 0.
+       78 principal-lstMenu-enumFocus-FocusRectangle VALUE 1.
+      *   enumTipsPosn
+       78 principal-lstMenu-enumTipsPosn-TipsLeft VALUE 0.
+       78 principal-lstMenu-enumTipsPosn-TipsRight VALUE 1.
+      *   enumSortDir
+       78 principal-lstMenu-enumSortDir-SortAscend VALUE 0.
+       78 principal-lstMenu-enumSortDir-SortDescend VALUE 1.
+      *   enumSelectStyle
+       78 principal-lstMenu-enumSelectStyle-SelectAll VALUE 0.
+       78 principal-lstMenu-enumSelectStyle-SelectText VALUE 1.
+      *   enumArrowAlign
+       78 principal-lstMenu-enumArrowAlign-ArrowLeft VALUE 0.
+       78 principal-lstMenu-enumArrowAlign-ArrowRight VALUE 1.
+      *   enumMousePointer
+       78 principal-lstMenu-enumMousePointer-mpDefault VALUE 0.
+       78 principal-lstMenu-enumMousePointer-mpArrow VALUE 1.
+       78 principal-lstMenu-enumMousePointer-mpCross VALUE 2.
+       78 principal-lstMenu-enumMousePointer-mpIBeam VALUE 3.
+       78 principal-lstMenu-enumMousePointer-mpIcon VALUE 4.
+       78 principal-lstMenu-enumMousePointer-mpSize VALUE 5.
+       78 principal-lstMenu-enumMousePointer-mpSizeNESW VALUE 6.
+       78 principal-lstMenu-enumMousePointer-mpSize-NS VALUE 7.
+       78 principal-lstMenu-enumMousePointer-mpSize-NW-SE VALUE 8.
+       78 principal-lstMenu-enumMousePointer-mpSize-WE VALUE 9.
+       78 principal-lstMenu-enumMousePointer-mpUp-Arrow VALUE 10.
+       78 principal-lstMenu-enumMousePointer-mpHourglass VALUE 11.
+       78 principal-lstMenu-enumMousePointer-mpNo-Drop VALUE 12.
+       78 principal-lstMenu-enumMousePointer-mpApp-Starting VALUE 13.
+       78 principal-lstMenu-enumMousePointer-mpQuestion VALUE 14.
+       78 principal-lstMenu-enumMousePointer-mpSize-All VALUE 15.
+       78 principal-lstMenu-enumMousePointer-mpCustom VALUE 99.
+      *   enumMapMode
+       78 principal-lstMenu-enumMapMode-MapText  VALUE 0.
+       78 principal-lstMenu-enumMapMode-MapLoEnglish VALUE 1.
+       78 principal-lstMenu-enumMapMode-MapHiEnglish VALUE 2.
+       78 principal-lstMenu-enumMapMode-MapLoMetric VALUE 3.
+       78 principal-lstMenu-enumMapMode-MapHiMetric VALUE 4.
+       78 principal-lstMenu-enumMapMode-MapTwips VALUE 5.
+      *   enumTipsType
+       78 principal-lstMenu-enumTipsType-TipsNone VALUE 0.
+       78 principal-lstMenu-enumTipsType-TipsScroll VALUE 1.
+       78 principal-lstMenu-enumTipsType-TipsCell VALUE 2.
+       78 principal-lstMenu-enumTipsType-TipsBoth VALUE 3.
+      *   enumDateFormat
+       78 principal-lstMenu-enumDateFormat-Format-MDY VALUE 0.
+       78 principal-lstMenu-enumDateFormat-Format-DMY VALUE 1.
+       78 principal-lstMenu-enumDateFormat-Format-YDM VALUE 2.
+      *   enumFillType
+       78 principal-lstMenu-enumFillType-FillSolid VALUE 0.
+       78 principal-lstMenu-enumFillType-FillHorizontal VALUE 1.
+       78 principal-lstMenu-enumFillType-FillVertical VALUE 2.
+       78 principal-lstMenu-enumFillType-FillDiagonal VALUE 3.
+       78 principal-lstMenu-enumFillType-FillRevDiag VALUE 4.
+       78 principal-lstMenu-enumFillType-FillHorzBump VALUE 5.
+       78 principal-lstMenu-enumFillType-FillVertBump VALUE 6.
+       78 principal-lstMenu-enumFillType-FillDiamond VALUE 7.
+       78 principal-lstMenu-enumFillType-FillPyramid VALUE 8.
+       78 principal-lstMenu-enumFillType-FillCircle VALUE 9.
+       78 principal-lstMenu-enumFillType-FillEllipse VALUE 10.
+      *   enumNodeType
+       78 principal-lstMenu-enumNodeType-NodeRegular VALUE 0.
+       78 principal-lstMenu-enumNodeType-NodeThreeD VALUE 1.
+
+       01 PRINCIPAL-LSTMENU-ITEMDBLCLICK-WS.
+      ******************************************************************
+      * Beginning of editable lstMenu ItemDblClick working-storage.
+      *   You can edit code between here and the next marker.
+WOWEWS* lstMenu ItemDblClick
+      *   AXParam-nIndex VT_I4
+         02 AXPARAM-NINDEX           PIC S9(10) BINARY(4).
+      *   AXParam-nColumn VT_I2
+         02 AXPARAM-NCOLUMN          PIC S9(5) BINARY(2).
+      *
+      * Add your event handling working-storage here.
+      * Do not modify the items above
+      *   except to change the names and types of the local event arguments.
+      *
+WOWEWS*
+      * End of editable lstMenu ItemDblClick working-storage.
       ******************************************************************
 
       *

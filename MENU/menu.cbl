@@ -56,12 +56,12 @@ WOWCOD* WOWPWS
        77  res                     pic 9(04).
        77  tipo                    pic 9(02).
        77  nivel                   pic 9(02).
-       77  texto                   pic x(40).
        77  programa                pic x(40).
        77  eof-tabgral             pic x(01).
        77  existe-tabgral          pic x(01).
        77  error-tabgral           pic x(01).
-
+       77  texto                   pic x(80).
+       77  ind                     pic 9(02).
 WOWCOD*
       * End of editable Working-Storage Section.
       ******************************************************************
@@ -157,7 +157,11 @@ WOWCOD* WOWPPR
            perform start-tabgral
            if eof-tabgral = "n"
               perform leer-tabgral-next
-              perform until eof-tabgral = "s" or tabgral-grupo > 1
+
+              perform varying ind from 1 by 1
+                 until eof-tabgral = "s" or tabgral-grupo > 1
+                 move tabgral-programa(3:) to tabgral-programa
+
                  move tabgral-grupo-externo to nivel
                  Call AXDoMethod Using Win-Return
                       menu-H "AddItem" 0 tabgral-nombre-concepto 0
@@ -169,10 +173,15 @@ WOWCOD* WOWPPR
                       menu-H "ItemTextPosition" 1 pos giving res
                  Call AXSetIndexProp Using Win-Return
                       menu-H "ItemTips" tabgral-programa pos
-
+      *           Call AXSetIndexProp Using Win-Return
+      *                menu-H "ItemShortcut" ind pos
                  if tabgral-programa not = spaces and not = "Salir"
                     Call AXDoMethod Using Win-Return
                          lstMenu-H "AddItem" tabgral-nombre-concepto
+                            giving pos
+                    Call AXSetIndexProp Using Win-Return
+                         lstMenu-H "ListCargo" tabgral-programa pos
+
                  end-if
 
                  perform leer-tabgral-next
