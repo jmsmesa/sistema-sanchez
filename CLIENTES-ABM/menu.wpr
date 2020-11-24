@@ -1,0 +1,93 @@
+       MENU-EVALUATE-EVENTS.
+           EVALUATE WIN-MSG-ID
+             WHEN WM-CLOSE PERFORM MENU-CLOSE
+             WHEN AXN-EVENT-WITH-ARGS
+               EVALUATE WIN-LPARAM-A
+                 WHEN OPALTAS-H
+                      OF MENU-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN -600 PERFORM MENU-OPALTAS-CLICK
+                   END-EVALUATE
+                 WHEN OPSALIR-H
+                      OF MENU-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN -600 PERFORM MENU-OPSALIR-CLICK
+                   END-EVALUATE
+               END-EVALUATE
+           END-EVALUATE.
+
+       MENU-CREATE-WINDOW.
+           MOVE ALL 'N' TO WIN-STYLE.
+           CALL WOWCREATEWINDOW USING MENU-H
+                          MENU-DEF WIN-STYLE
+                          0
+                          MENU-CONTROL-HANDLES.
+
+       MENU-DESTROY-WINDOW.
+           CALL WOWDESTROYWINDOW USING WIN-RETURN MENU-H.
+
+      *
+WOWBGN*
+      *
+       MENU-CLOSE.
+      ******************************************************************
+      * Beginning of editable MENU Close procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* MENU Close
+           SET WOW-QUIT TO TRUE.
+WOWEVT*
+      * End of editable MENU Close procedure.
+      ******************************************************************
+
+       MENU-OPALTAS-CLICK.
+      ******************************************************************
+      * Beginning of editable opALTAS Click procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* opALTAS Click
+      * Sets the value of one or more properties for a standard or ActiveX control
+           Call WowSetProp Using Win-Return
+                 principal-H "visible" WIN-TRUE.
+           Call WowSetProp Using Win-Return
+                 menu-H "visible" WIN-FALSE.
+      * Win-Return always receives 0
+      * WndOrActiveX-H = handle of standard or ActiveX control
+      * Property-Name = name of property to set
+      * Property-Value = value to set
+      * (Property-Name and Property-Value can be repeated for more properties)
+WOWEVT*
+      * End of editable opALTAS Click procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable opALTAS <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* opALTAS <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable opALTAS <<Common>> procedure.
+      ******************************************************************
+
+       MENU-OPSALIR-CLICK.
+      ******************************************************************
+      * Beginning of editable opSALIR Click procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* opSALIR Click
+           SET WOW-QUIT TO TRUE.
+WOWEVT*
+      * End of editable opSALIR Click procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable opSALIR <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* opSALIR <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable opSALIR <<Common>> procedure.
+      ******************************************************************
+
+      *
+WOWDNE*
+      *

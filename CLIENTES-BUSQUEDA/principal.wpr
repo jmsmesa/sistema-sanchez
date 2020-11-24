@@ -1,0 +1,87 @@
+       PRINCIPAL-EVALUATE-EVENTS.
+           EVALUATE WIN-MSG-ID
+             WHEN WM-CLOSE PERFORM PRINCIPAL-CLOSE
+             WHEN AXN-EVENT-WITH-ARGS
+               EVALUATE WIN-LPARAM-A
+                 WHEN CTTOOLBARCTRL1-H
+                      OF PRINCIPAL-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN 3 PERFORM PRINCIPAL-CTTOOLBAR-ITEMCLICK
+                   END-EVALUATE
+               END-EVALUATE
+           END-EVALUATE.
+
+       PRINCIPAL-CREATE-WINDOW.
+           MOVE ALL 'N' TO WIN-STYLE.
+           CALL WOWCREATEWINDOW USING PRINCIPAL-H
+                          PRINCIPAL-DEF WIN-STYLE
+                          0
+                          PRINCIPAL-CONTROL-HANDLES.
+
+       PRINCIPAL-DESTROY-WINDOW.
+           CALL WOWDESTROYWINDOW USING WIN-RETURN PRINCIPAL-H.
+
+      *
+WOWBGN*
+      *
+       PRINCIPAL-CLOSE.
+      ******************************************************************
+      * Beginning of editable PRINCIPAL Close procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* PRINCIPAL Close
+           SET WOW-QUIT TO TRUE.
+WOWEVT*
+      * End of editable PRINCIPAL Close procedure.
+      ******************************************************************
+
+       PRINCIPAL-CTTOOLBAR-ITEMCLICK.
+      ******************************************************************
+      * Beginning of editable ctToolBarCtrl1 ItemClick procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* ctToolBarCtrl1 ItemClick
+           CALL AXBINDEVENTARGUMENTS USING WIN-RETURN AXN-EVENT-HANDLE
+                AXPARAM-NITEM OF PRINCIPAL-CTTOOLBARCTRL1-ITEMCLICK-WS
+                  AXN-EVENT-ARG-INPUT
+                AXPARAM-BARROW OF PRINCIPAL-CTTOOLBARCTRL1-ITEMCLICK-WS
+                  AXN-EVENT-ARG-INPUT.
+      *      WIN-RETURN will always be zero unless the event occured
+      *        during an "unsafe" condition and has output arguments,
+      *        in which case it will be set to one and any values
+      *        stored in output arguments will be lost
+      *
+      * Add your event handling code here.
+      * Do not modify the code above
+      *   except to change the names of the local event arguments.
+      *
+           SET WOW-QUIT TO TRUE.
+      *
+      * End of your event handling code.
+      * Do not modify the code below
+      *   except to change the names of the local event arguments.
+      *
+           CALL AXUNBINDEVENTARGUMENTS USING WIN-RETURN AXN-EVENT-HANDLE
+                AXPARAM-NITEM OF PRINCIPAL-CTTOOLBARCTRL1-ITEMCLICK-WS
+                  AXN-EVENT-ARG-INPUT
+                AXPARAM-BARROW OF PRINCIPAL-CTTOOLBARCTRL1-ITEMCLICK-WS
+                  AXN-EVENT-ARG-INPUT.
+      *      WIN-RETURN will always be zero unless the event occured
+      *        during an "unsafe" condition and has output arguments,
+      *        in which case it will be set to one and any values
+      *        stored in output arguments will be lost
+WOWEVT*
+      * End of editable ctToolBarCtrl1 ItemClick procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable ctToolBarCtrl1 <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* ctToolBarCtrl1 <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable ctToolBarCtrl1 <<Common>> procedure.
+      ******************************************************************
+
+      *
+WOWDNE*
+      *

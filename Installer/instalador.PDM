@@ -1,0 +1,300 @@
+[Root]
+Most Recent Package=installer
+
+
+[Package|installer|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\Paquete (2)
+
+[Package|installer|Configure DAO ISAMs]
+Applicable=No
+
+[Package|installer|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|installer|Files Found]
+
+[Package|installer|Files Released]
+
+[Package|installer|Missing Dependency Information]
+C:\DBITech\Studio Controls\COM Controls\ctMEdit.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctDate.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctDropMenu.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctDEdit.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctClock.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctNavBar.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctLstBar.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctTree.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctCalendar.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctSlide.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctWave.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctSplit.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctImage.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctDropDate.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctSched.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctExplorer.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctMonth.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctButton.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctDial.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctRadio.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctGroup.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctDays.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctDigit.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctScroll.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctCPick.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctfile.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctBanner.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctFill.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctNEdit.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctVList.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctFont.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctYear.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctPrint.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctWeek.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctMenu.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctGrid.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctGauge.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctFrame.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctAlarm.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctContact.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctFold.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctCCombo.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctSize.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctMeter.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctText.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctHypLnk.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctTabs.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctTray.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctFormFX.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctList.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctToolBar.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctCButton.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctClip.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctTips.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctPush.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctCheck.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctCalc.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctMDay.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctRuler.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctPlayer.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctSpin.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctCombo.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctHtml.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctPaper.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctRotate.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctSpiral.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctColor.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctData.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctMove.ocx=
+C:\DBITech\Studio Controls\COM Controls\ctSList.ocx=
+
+[Package|installer|Out-of-Date Dependency Information]
+
+[Package|installer|Files Added]
+
+[Package|installer|Files Removed]
+
+[Package|installer|Files In Project]
+N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\install.exe=Yes
+C:\Windows\System32\msvbvm60.dll=Yes
+C:\Windows\System32\oleaut32.dll=Yes
+C:\Windows\System32\olepro32.dll=Yes
+C:\Windows\System32\asycfilt.dll=Yes
+C:\Windows\System32\stdole2.tlb=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\Windows\System32\VB6ES.DLL=Yes
+C:\DBITech\Studio Controls\COM Controls\ctSList.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctMove.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctData.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctColor.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctSpiral.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctRotate.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctPaper.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctHtml.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctCombo.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctSpin.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctPlayer.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctRuler.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctMDay.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctCalc.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctCheck.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctPush.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctTips.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctClip.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctCButton.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctToolBar.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctList.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctFormFX.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctTray.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctTabs.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctHypLnk.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctText.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctMeter.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctSize.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctCCombo.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctFold.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctContact.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctAlarm.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctFrame.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctGauge.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctGrid.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctMenu.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctWeek.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctPrint.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctYear.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctFont.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctVList.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctNEdit.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctFill.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctBanner.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctfile.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctCPick.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctScroll.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctDigit.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctDays.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctGroup.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctRadio.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctDial.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctButton.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctMonth.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctExplorer.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctSched.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctDropDate.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctImage.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctSplit.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctWave.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctSlide.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctCalendar.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctTree.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctLstBar.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctNavBar.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctClock.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctDEdit.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctDropMenu.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctDate.ocx=Yes
+C:\DBITech\Studio Controls\COM Controls\ctMEdit.ocx=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\Windows\System32\VB6STKIT.DLL=Yes
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+
+[Package|installer|Configure Registry Files]
+Applicable=No
+
+[Package|installer|Configure Remote Servers]
+Applicable=No
+
+[Package|installer|Install Locations]
+N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\install.exe=$(AppPath)
+C:\Windows\System32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Windows\System32\oleaut32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\olepro32.dll=$(WinSysPathSysFile)
+C:\Windows\System32\asycfilt.dll=$(WinSysPathSysFile)
+C:\Windows\System32\stdole2.tlb=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\Windows\System32\VB6ES.DLL=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctSList.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctMove.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctData.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctColor.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctSpiral.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctRotate.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctPaper.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctHtml.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctCombo.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctSpin.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctPlayer.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctRuler.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctMDay.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctCalc.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctCheck.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctPush.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctTips.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctClip.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctCButton.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctToolBar.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctList.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctFormFX.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctTray.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctTabs.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctHypLnk.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctText.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctMeter.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctSize.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctCCombo.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctFold.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctContact.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctAlarm.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctFrame.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctGauge.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctGrid.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctMenu.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctWeek.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctPrint.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctYear.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctFont.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctVList.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctNEdit.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctFill.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctBanner.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctfile.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctCPick.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctScroll.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctDigit.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctDays.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctGroup.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctRadio.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctDial.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctButton.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctMonth.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctExplorer.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctSched.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctDropDate.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctImage.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctSplit.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctWave.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctSlide.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctCalendar.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctTree.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctLstBar.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctNavBar.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctClock.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctDEdit.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctDropMenu.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctDate.ocx=$(WinSysPath)
+C:\DBITech\Studio Controls\COM Controls\ctMEdit.ocx=$(WinSysPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+
+[Package|installer|Configure Shared Files]
+Applicable=Yes
+N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\install.exe=No
+
+[Package|installer|Distribution]
+Type=single
+Size=
+Title=installer
+
+[Package|installer|IconGroups]
+Group0=installer
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|installer|installer]
+Icon1=install.exe
+Title1=installer
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|installer|Package]
+PackageFolder=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\Paquete (2)
+ProjectFolder=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer
+ServerSideCab=
+File1=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\Paquete (2)\setup.exe
+File2=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\Paquete (2)\Setup.Lst
+File3=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\Paquete (2)\install.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

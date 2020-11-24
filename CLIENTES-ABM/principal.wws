@@ -1,0 +1,1864 @@
+       01 PRINCIPAL-IDS.
+          02 ctToolBarCtrl1-ID           PIC 9(5) BINARY(4) VALUE 1.
+          02 ctGroupCtrl1-ID             PIC 9(5) BINARY(4) VALUE 2.
+          02 STATIC1-ID                  PIC 9(5) BINARY(4) VALUE 3.
+          02 codigo-ID                   PIC 9(5) BINARY(4) VALUE 4.
+          02 opcion-ID                   PIC 9(5) BINARY(4) VALUE 5.
+          02 ctGroupCtrl2-ID             PIC 9(5) BINARY(4) VALUE 6.
+          02 STATIC2-ID                  PIC 9(5) BINARY(4) VALUE 7.
+          02 STATIC3-ID                  PIC 9(5) BINARY(4) VALUE 8.
+          02 STATIC4-ID                  PIC 9(5) BINARY(4) VALUE 9.
+          02 STATIC5-ID                  PIC 9(5) BINARY(4) VALUE 10.
+          02 ctMEditCtrl1-ID             PIC 9(5) BINARY(4) VALUE 11.
+          02 ctComboCtrl1-ID             PIC 9(5) BINARY(4) VALUE 12.
+          02 ctDropDateCtrl1-ID          PIC 9(5) BINARY(4) VALUE 13.
+          02 ctCheckCtrl1-ID             PIC 9(5) BINARY(4) VALUE 14.
+          02 STATIC6-ID                  PIC 9(5) BINARY(4) VALUE 15.
+          02 ctMEditCtrl2-ID             PIC 9(5) BINARY(4) VALUE 16.
+
+          02 NEXT-CONTROL-ID             PIC 9(5) BINARY(4) VALUE 17.
+          02 NEXT-MENU-ID                PIC 9(5) BINARY(4) VALUE 1.
+
+       01 PRINCIPAL-CONTROL-HANDLES.
+          02 PRINCIPAL-CTL-HS.
+             03 FILLER.
+                04 ctToolBarCtrl1-H         PIC X(8)
+                                              VALUE SPACES.
+                04 ctToolBarCtrl1           PIC X(8)
+                   REDEFINES ctToolBarCtrl1-H.
+                04 FILLER                   PIC XX VALUE "AX".
+             03 FILLER.
+                04 ctGroupCtrl1-H           PIC X(8)
+                                              VALUE SPACES.
+                04 ctGroupCtrl1             PIC X(8)
+                   REDEFINES ctGroupCtrl1-H.
+                04 FILLER                   PIC XX VALUE "AX".
+             03 FILLER.
+                04 STATIC1-H                PIC 9(10) BINARY(8)
+                                              VALUE 0.
+                04 STATIC1                  PIC 9(10) BINARY(8)
+                   REDEFINES STATIC1-H.
+                04 FILLER                   PIC XX VALUE "SC".
+             03 FILLER.
+                04 codigo-H                 PIC X(8)
+                                              VALUE SPACES.
+                04 codigo                   PIC X(8)
+                   REDEFINES codigo-H.
+                04 FILLER                   PIC XX VALUE "AX".
+             03 FILLER.
+                04 opcion-H                 PIC 9(10) BINARY(8)
+                                              VALUE 0.
+                04 opcion                   PIC 9(10) BINARY(8)
+                   REDEFINES opcion-H.
+                04 FILLER                   PIC XX VALUE "SC".
+             03 FILLER.
+                04 ctGroupCtrl2-H           PIC X(8)
+                                              VALUE SPACES.
+                04 ctGroupCtrl2             PIC X(8)
+                   REDEFINES ctGroupCtrl2-H.
+                04 FILLER                   PIC XX VALUE "AX".
+             03 FILLER.
+                04 STATIC2-H                PIC 9(10) BINARY(8)
+                                              VALUE 0.
+                04 STATIC2                  PIC 9(10) BINARY(8)
+                   REDEFINES STATIC2-H.
+                04 FILLER                   PIC XX VALUE "SC".
+             03 FILLER.
+                04 STATIC3-H                PIC 9(10) BINARY(8)
+                                              VALUE 0.
+                04 STATIC3                  PIC 9(10) BINARY(8)
+                   REDEFINES STATIC3-H.
+                04 FILLER                   PIC XX VALUE "SC".
+             03 FILLER.
+                04 STATIC4-H                PIC 9(10) BINARY(8)
+                                              VALUE 0.
+                04 STATIC4                  PIC 9(10) BINARY(8)
+                   REDEFINES STATIC4-H.
+                04 FILLER                   PIC XX VALUE "SC".
+             03 FILLER.
+                04 STATIC5-H                PIC 9(10) BINARY(8)
+                                              VALUE 0.
+                04 STATIC5                  PIC 9(10) BINARY(8)
+                   REDEFINES STATIC5-H.
+                04 FILLER                   PIC XX VALUE "SC".
+             03 FILLER.
+                04 ctMEditCtrl1-H           PIC X(8)
+                                              VALUE SPACES.
+                04 ctMEditCtrl1             PIC X(8)
+                   REDEFINES ctMEditCtrl1-H.
+                04 FILLER                   PIC XX VALUE "AX".
+             03 FILLER.
+                04 ctComboCtrl1-H           PIC X(8)
+                                              VALUE SPACES.
+                04 ctComboCtrl1             PIC X(8)
+                   REDEFINES ctComboCtrl1-H.
+                04 FILLER                   PIC XX VALUE "AX".
+             03 FILLER.
+                04 ctDropDateCtrl1-H        PIC X(8)
+                                              VALUE SPACES.
+                04 ctDropDateCtrl1          PIC X(8)
+                   REDEFINES ctDropDateCtrl1-H.
+                04 FILLER                   PIC XX VALUE "AX".
+             03 FILLER.
+                04 ctCheckCtrl1-H           PIC X(8)
+                                              VALUE SPACES.
+                04 ctCheckCtrl1             PIC X(8)
+                   REDEFINES ctCheckCtrl1-H.
+                04 FILLER                   PIC XX VALUE "AX".
+             03 FILLER.
+                04 STATIC6-H                PIC 9(10) BINARY(8)
+                                              VALUE 0.
+                04 STATIC6                  PIC 9(10) BINARY(8)
+                   REDEFINES STATIC6-H.
+                04 FILLER                   PIC XX VALUE "SC".
+             03 FILLER.
+                04 ctMEditCtrl2-H           PIC X(8)
+                                              VALUE SPACES.
+                04 ctMEditCtrl2             PIC X(8)
+                   REDEFINES ctMEditCtrl2-H.
+                04 FILLER                   PIC XX VALUE "AX".
+          02 PRINCIPAL-CONTROL-HANDLES-ARRAY OCCURS 16 TIMES
+             REDEFINES PRINCIPAL-CTL-HS.
+             03 FILLER.
+                04 STANDARD-CONTROL-H       PIC 9(10) BINARY(8).
+                04 STANDARD-CONTROL         PIC 9(10) BINARY(8)
+                   REDEFINES STANDARD-CONTROL-H.
+                04 ACTIVEX-CONTROL-H        PIC X(8)
+                   REDEFINES STANDARD-CONTROL-H.
+                04 ACTIVEX-CONTROL          PIC X(8)
+                   REDEFINES ACTIVEX-CONTROL-H.
+                04 CONTROL-TYPE             PIC XX.
+                   88 CONTROL-TYPE-MAIN-MENU     VALUE "MM".
+                   88 CONTROL-TYPE-SUB-MENU      VALUE "SM".
+                   88 CONTROL-TYPE-STANDARD      VALUE "SC".
+                   88 CONTROL-TYPE-ACTIVEX       VALUE "AX".
+                   88 CONTROL-TYPE-RAW-OBJECT    VALUE "RO".
+                   88 CONTROL-TYPE-NO-CONTROLS   VALUE "  ".
+
+       01 PRINCIPAL-DEF.
+      ******************************************************************
+      *              DesignerFormVersion = 869
+      *               RuntimeFormVersion = 865
+      *                             Name = principal
+      *                   Child controls = 16
+      *                            style = WS-DLGFRAME
+      *                            style = WS-MAXIMIZEBOX
+      *                            style = WS-MINIMIZEBOX
+      *                            style = WS-OVERLAPPED
+      *                            style = WS-SYSMENU
+      *                            style = WS-THICKFRAME
+      *                            style = WS-CAPTION
+      *                            style = WS-BORDER
+      *                        BackColor = 192,192,192
+      *                             Left = -1
+      *                              Top = -1
+      *                            Width = 779
+      *                           Height = 548
+      *                         Has menu = FALSE
+      *                       Font count = 1
+      *                      Brush count = 2
+      *                            Title = ABM Clientes
+      *                              Tag = <<Blank>>
+      *                             Icon =
+      *                       SysKeyMode = 0
+      *                           Cursor = ARROW
+      *          Font Description - Name = System
+      *                             Size = -13
+      *                           Italic = False
+      *                        Underline = False
+      *                        StrikeOut = False
+      *                             Bold = True
+      *                          CharSet = 0
+      *                     OutPrecision = 1
+      *                    ClipPrecision = 2
+      *                          Quality = 1
+      *                   PitchAndFamily = 34
+      *                      Brush Color = 0xffffffff
+      *                      Brush Color = 192,192,192
+      *                           Bitmap =
+      *                            Modal = FALSE
+      *                       KeyPreview = FALSE
+      *                     WSDefinition = TRUE
+      ******************************************************************
+          03 FILLER PIC X(006) VALUE X"036100100010".
+          03 FILLER PIC X(012) VALUE X"00CF00000000000000C0C0C0".
+          03 FILLER PIC X(010) VALUE X"FFFFFFFF030B02240000".
+          03 FILLER PIC X(008) VALUE X"0365000100020001".
+          03 FILLER PIC X(002) VALUE X"0009".
+          03 FILLER PIC X(009) VALUE "principal".
+          03 FILLER PIC X(002) VALUE X"000C".
+          03 FILLER PIC X(012) VALUE "ABM Clientes".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(006) VALUE X"000000007F00".
+          03 FILLER PIC X(004) VALUE X"00010002".
+          03 FILLER PIC X(010) VALUE X"00100000000000000000".
+          03 FILLER PIC X(010) VALUE X"80680009000000100003".
+          03 FILLER PIC X(002) VALUE X"0006".
+          03 FILLER PIC X(006) VALUE "System".
+          03 FILLER PIC X(010) VALUE X"FFF300000000000002BC".
+          03 FILLER PIC X(010) VALUE X"00000001000200010022".
+          03 FILLER PIC X(008) VALUE X"FFFFFFFF00C0C0C0".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0000".
+      ******************************************************************
+      * Parent Table
+      *                            count = 16
+      *                           parent = 65535
+      *                           parent = 65535
+      *                           parent = 1
+      *                           parent = 1
+      *                           parent = 1
+      *                           parent = 65535
+      *                           parent = 5
+      *                           parent = 5
+      *                           parent = 5
+      *                           parent = 5
+      *                           parent = 5
+      *                           parent = 5
+      *                           parent = 5
+      *                           parent = 5
+      *                           parent = 5
+      *                           parent = 5
+      ******************************************************************
+          03 FILLER PIC X(002) VALUE X"0010".
+          03 FILLER PIC X(012) VALUE X"FFFFFFFF000100010001FFFF".
+          03 FILLER PIC X(012) VALUE X"000500050005000500050005".
+          03 FILLER PIC X(008) VALUE X"0005000500050005".
+      ******************************************************************
+      *                             type = Windows ActiveX Control
+      *                             Name = ctToolBarCtrl1
+      *                             Left = 0
+      *                              Top = 0
+      *                            Width = 775
+      *                           Height = 30
+      *                               ID = 1
+      *                         TabIndex = 4
+      *                              Tag = <<Blank>>
+      *                            style = WS-VISIBLE
+      *                            style = WS-TABSTOP
+      *                       Accel type = 0
+      *                      Accel value = 0
+      *       NewDoMethodArgumentPassing = TRUE
+      *            Allow Multiple Events = TRUE
+      *     Enable KeyPress For Tab Mode = FALSE
+      *                            Clsid = {43A5A355-2366-438A-AA33-1C30DA9E3686}
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"00000CE8".
+          03 FILLER PIC X(002) VALUE X"0002".
+          03 FILLER PIC X(008) VALUE X"000000000307001E".
+          03 FILLER PIC X(004) VALUE X"00010003".
+          03 FILLER PIC X(002) VALUE X"000E".
+          03 FILLER PIC X(014) VALUE "ctToolBarCtrl1".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"10010000".
+          03 FILLER PIC X(002) VALUE X"0026".
+          03 FILLER PIC X(030) VALUE "{43A5A355-2366-438A-AA33-1C30D".
+          03 FILLER PIC X(008) VALUE "A9E3686}".
+          03 FILLER PIC X(002) VALUE X"0060".
+          03 FILLER PIC X(015) VALUE X"6300740054006F006F006C00420061".
+          03 FILLER PIC X(015) VALUE X"007200200043006F00700079007200".
+          03 FILLER PIC X(015) VALUE X"690067006800740020002800630029".
+          03 FILLER PIC X(015) VALUE X"002000310039003900390020004700".
+          03 FILLER PIC X(015) VALUE X"61006D00650073006D0061006E0020".
+          03 FILLER PIC X(015) VALUE X"0049006E0063002E002E002E002000".
+          03 FILLER PIC X(006) VALUE X"710071006600".
+          03 FILLER PIC X(002) VALUE X"000E".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA80000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA70000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA30000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA20000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA10000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA60001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA40001".
+          03 FILLER PIC X(006) VALUE X"000000010000".
+          03 FILLER PIC X(006) VALUE X"000000020000".
+          03 FILLER PIC X(006) VALUE X"000000030000".
+          03 FILLER PIC X(006) VALUE X"000000040000".
+          03 FILLER PIC X(006) VALUE X"000000050000".
+          03 FILLER PIC X(006) VALUE X"000000060000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(006) VALUE X"000100010000".
+          03 FILLER PIC X(004) VALUE X"00000BC7".
+          03 FILLER PIC X(015) VALUE X"00000300195000001A0300004D0000".
+          03 FILLER PIC X(015) VALUE X"0000000000F0F0F000000352E30B91".
+          03 FILLER PIC X(015) VALUE X"8FCE119DE300AA004BB85101000000".
+          03 FILLER PIC X(015) VALUE X"9001444201000C4D53205368656C6C".
+          03 FILLER PIC X(015) VALUE X"20446C6701000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"FF000352E30B918FCE119DE300AA00".
+          03 FILLER PIC X(015) VALUE X"4BB851010000009001444201000C4D".
+          03 FILLER PIC X(015) VALUE X"53205368656C6C20446C67FF808080".
+          03 FILLER PIC X(015) VALUE X"0080808000FFFFFF000000FF008080".
+          03 FILLER PIC X(015) VALUE X"800000000000FFFFFFFF1800008017".
+          03 FILLER PIC X(015) VALUE X"00008004000080070000800D000080".
+          03 FILLER PIC X(015) VALUE X"0E000080FFFFFFFFFFFFFFFFFFFFFF".
+          03 FILLER PIC X(015) VALUE X"FFFFFFFFFFFFFFFF00FFFFFF000400".
+          03 FILLER PIC X(015) VALUE X"010003000200000002000000000003".
+          03 FILLER PIC X(015) VALUE X"0003000A0008000000000001000000".
+          03 FILLER PIC X(015) VALUE X"0000000C010000FFFF00000800434F".
+          03 FILLER PIC X(015) VALUE X"6241727261790300FFFF01000B0043".
+          03 FILLER PIC X(015) VALUE X"427574746F6E4974656D0000050000".
+          03 FILLER PIC X(015) VALUE X"000000000000000000000000000000".
+          03 FILLER PIC X(015) VALUE X"000000000100000000000000000000".
+          03 FILLER PIC X(015) VALUE X"000100000000000000000000001900".
+          03 FILLER PIC X(015) VALUE X"0000010000000000FFFFFFFFFFFFFF".
+          03 FILLER PIC X(015) VALUE X"FFFFFFFFFF0A41637475616C697A61".
+          03 FILLER PIC X(015) VALUE X"720003800200050000000000000000".
+          03 FILLER PIC X(015) VALUE X"000000000000000000000000000100".
+          03 FILLER PIC X(015) VALUE X"000000000000000000000100000000".
+          03 FILLER PIC X(015) VALUE X"000000000000001900000001000000".
+          03 FILLER PIC X(015) VALUE X"0000FFFFFFFFFFFFFFFFFFFFFFFF00".
+          03 FILLER PIC X(015) VALUE X"000380000005000000000000000000".
+          03 FILLER PIC X(015) VALUE X"000000000000000000000000010000".
+          03 FILLER PIC X(015) VALUE X"000000000000000000010000000000".
+          03 FILLER PIC X(015) VALUE X"000000000000190000000100000000".
+          03 FILLER PIC X(015) VALUE X"00FFFFFFFFFFFFFFFFFFFFFFFF0553".
+          03 FILLER PIC X(015) VALUE X"616C697200000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+          03 FILLER PIC X(015) VALUE X"000452E30B918FCE119DE300AA004B".
+          03 FILLER PIC X(015) VALUE X"B8516C74000000000000000452E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB8516C7400".
+          03 FILLER PIC X(015) VALUE X"0000000000000452E30B918FCE119D".
+          03 FILLER PIC X(015) VALUE X"E300AA004BB8516C74000000000000".
+      ******************************************************************
+      *                             type = Windows ActiveX Control
+      *                             Name = ctGroupCtrl1
+      *                             Left = 5
+      *                              Top = 40
+      *                            Width = 765
+      *                           Height = 60
+      *                               ID = 2
+      *                         TabIndex = 5
+      *                              Tag = <<Blank>>
+      *                            style = WS-VISIBLE
+      *                            style = WS-TABSTOP
+      *                       Accel type = 0
+      *                      Accel value = 0
+      *       NewDoMethodArgumentPassing = TRUE
+      *            Allow Multiple Events = TRUE
+      *     Enable KeyPress For Tab Mode = FALSE
+      *                            Clsid = {B1530FB9-BAD8-11D4-A85D-0080C8DFC881}
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"0000016B".
+          03 FILLER PIC X(002) VALUE X"0002".
+          03 FILLER PIC X(008) VALUE X"0005002802FD003C".
+          03 FILLER PIC X(004) VALUE X"00020004".
+          03 FILLER PIC X(002) VALUE X"000C".
+          03 FILLER PIC X(012) VALUE "ctGroupCtrl1".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"10010000".
+          03 FILLER PIC X(002) VALUE X"0026".
+          03 FILLER PIC X(030) VALUE "{B1530FB9-BAD8-11D4-A85D-0080C".
+          03 FILLER PIC X(008) VALUE "8DFC881}".
+          03 FILLER PIC X(002) VALUE X"0072".
+          03 FILLER PIC X(015) VALUE X"63007400470072006F007500700020".
+          03 FILLER PIC X(015) VALUE X"004F0043005800200043006F007000".
+          03 FILLER PIC X(015) VALUE X"790072006900670068007400200028".
+          03 FILLER PIC X(015) VALUE X"006300290020003100390039003700".
+          03 FILLER PIC X(015) VALUE X"200044004200490020005400650063".
+          03 FILLER PIC X(015) VALUE X"0068006E006F006C006F0067006900".
+          03 FILLER PIC X(015) VALUE X"65007300200049006E0063002E002E".
+          03 FILLER PIC X(009) VALUE X"0020006B006F006800".
+          03 FILLER PIC X(002) VALUE X"0005".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA80000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA70000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA20000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA30000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA10000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(006) VALUE X"000100010000".
+          03 FILLER PIC X(004) VALUE X"00000070".
+          03 FILLER PIC X(015) VALUE X"00000300114F000034060000460000".
+          03 FILLER PIC X(015) VALUE X"0000000352E30B918FCE119DE300AA".
+          03 FILLER PIC X(015) VALUE X"004BB851010000009001444201000C".
+          03 FILLER PIC X(015) VALUE X"4D53205368656C6C20446C67010004".
+          03 FILLER PIC X(015) VALUE X"52E30B918FCE119DE300AA004BB851".
+          03 FILLER PIC X(015) VALUE X"6C740000000000000F000080120000".
+          03 FILLER PIC X(015) VALUE X"808080800080808000000004000000".
+          03 FILLER PIC X(007) VALUE X"00000000000000".
+      ******************************************************************
+      *                             type = Standard Windows Control
+      *                             Name = STATIC1
+      *                             Left = 20
+      *                              Top = 65
+      *                            Width = 60
+      *                           Height = 20
+      *                               ID = 3
+      *                         TabIndex = 3
+      *                          Caption = Codigo
+      *                              Tag = <<Blank>>
+      *                            style = WS-CHILD
+      *                            style = WS-VISIBLE
+      *                            style = SS-LEFT
+      *                            Class = Static
+      *                      Transparent = FALSE
+      *                      Font nIndex = 1
+      *                        ForeColor = 255,255,255
+      *                        BackColor = 192,192,192
+      *                               3D = 0
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"0000004F".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(008) VALUE X"000F0019003C0014".
+          03 FILLER PIC X(004) VALUE X"00030002".
+          03 FILLER PIC X(002) VALUE X"0007".
+          03 FILLER PIC X(007) VALUE "STATIC1".
+          03 FILLER PIC X(002) VALUE X"0006".
+          03 FILLER PIC X(006) VALUE "Codigo".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"50000000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(002) VALUE X"0006".
+          03 FILLER PIC X(006) VALUE "Static".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(006) VALUE X"000100000000".
+          03 FILLER PIC X(008) VALUE X"0001000100FFFFFF".
+          03 FILLER PIC X(008) VALUE X"00C0C0C000020000".
+      ******************************************************************
+      *                             type = Windows ActiveX Control
+      *                             Name = codigo
+      *                             Left = 95
+      *                              Top = 60
+      *                            Width = 120
+      *                           Height = 25
+      *                               ID = 4
+      *                         TabIndex = 7
+      *                              Tag = <<Blank>>
+      *                            style = WS-VISIBLE
+      *                            style = WS-TABSTOP
+      *                       Accel type = 0
+      *                      Accel value = 0
+      *       NewDoMethodArgumentPassing = TRUE
+      *            Allow Multiple Events = TRUE
+      *     Enable KeyPress For Tab Mode = FALSE
+      *                            Clsid = {F604A5CF-EAA4-453C-A054-E98A19E223D1}
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"000001ED".
+          03 FILLER PIC X(002) VALUE X"0002".
+          03 FILLER PIC X(008) VALUE X"005A001400780019".
+          03 FILLER PIC X(004) VALUE X"00040006".
+          03 FILLER PIC X(002) VALUE X"0006".
+          03 FILLER PIC X(006) VALUE "codigo".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"10010000".
+          03 FILLER PIC X(002) VALUE X"0026".
+          03 FILLER PIC X(030) VALUE "{F604A5CF-EAA4-453C-A054-E98A1".
+          03 FILLER PIC X(008) VALUE "9E223D1}".
+          03 FILLER PIC X(002) VALUE X"0072".
+          03 FILLER PIC X(015) VALUE X"630074004D00450064006900740020".
+          03 FILLER PIC X(015) VALUE X"004F0043005800200043006F007000".
+          03 FILLER PIC X(015) VALUE X"790072006900670068007400200028".
+          03 FILLER PIC X(015) VALUE X"006300290020003100390039003700".
+          03 FILLER PIC X(015) VALUE X"200044004200490020005400650063".
+          03 FILLER PIC X(015) VALUE X"0068006E006F006C006F0067006900".
+          03 FILLER PIC X(015) VALUE X"65007300200049006E0063002E002E".
+          03 FILLER PIC X(009) VALUE X"002000680065006600".
+          03 FILLER PIC X(002) VALUE X"000E".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA80000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA70000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA60001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA40001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA30000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA20000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA10000".
+          03 FILLER PIC X(006) VALUE X"000000010000".
+          03 FILLER PIC X(006) VALUE X"000000020000".
+          03 FILLER PIC X(006) VALUE X"000000030000".
+          03 FILLER PIC X(006) VALUE X"000000040000".
+          03 FILLER PIC X(006) VALUE X"000000050000".
+          03 FILLER PIC X(006) VALUE X"000000060000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(006) VALUE X"000100010000".
+          03 FILLER PIC X(004) VALUE X"000000C2".
+          03 FILLER PIC X(015) VALUE X"00000400670C0000950200005D0000".
+          03 FILLER PIC X(015) VALUE X"000000000000F0F0F000000352E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB851010000".
+          03 FILLER PIC X(015) VALUE X"009001E04101000C4D53205368656C".
+          03 FILLER PIC X(015) VALUE X"6C20446C6701000452E30B918FCE11".
+          03 FILLER PIC X(015) VALUE X"9DE300AA004BB8516C740000000000".
+          03 FILLER PIC X(015) VALUE X"000500008012000080000000000F00".
+          03 FILLER PIC X(015) VALUE X"0080FFFFFF00000000000F000080FF".
+          03 FILLER PIC X(015) VALUE X"FFFF0000000000808080000000FF00".
+          03 FILLER PIC X(015) VALUE X"030000801300008009000080030000".
+          03 FILLER PIC X(015) VALUE X"000000000000000000000000000000".
+          03 FILLER PIC X(015) VALUE X"100010000100C80032000000000000".
+          03 FILLER PIC X(014) VALUE X"0005000000000000010000000000".
+      ******************************************************************
+      *                             type = Standard Windows Control
+      *                             Name = opcion
+      *                             Left = 585
+      *                              Top = 60
+      *                            Width = 170
+      *                           Height = 25
+      *                               ID = 5
+      *                         TabIndex = 2
+      *                          Caption = ???
+      *                              Tag = <<Blank>>
+      *                            style = WS-CHILD
+      *                            style = WS-VISIBLE
+      *                            style = SS-CENTER
+      *                            style = SS-LEFT
+      *                   extended style = WS-EX-CLIENTEDGE
+      *                            Class = Static
+      *                      Transparent = FALSE
+      *                      Font nIndex = 1
+      *                        ForeColor = 255,255,255
+      *                        BackColor = 192,192,192
+      *                               3D = 0
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"0000004B".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(008) VALUE X"0244001400AA0019".
+          03 FILLER PIC X(004) VALUE X"00050001".
+          03 FILLER PIC X(002) VALUE X"0006".
+          03 FILLER PIC X(006) VALUE "opcion".
+          03 FILLER PIC X(002) VALUE X"0003".
+          03 FILLER PIC X(003) VALUE "???".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"50000001".
+          03 FILLER PIC X(004) VALUE X"00000200".
+          03 FILLER PIC X(002) VALUE X"0006".
+          03 FILLER PIC X(006) VALUE "Static".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(006) VALUE X"000100000000".
+          03 FILLER PIC X(008) VALUE X"0001000100FFFFFF".
+          03 FILLER PIC X(008) VALUE X"00C0C0C000020000".
+      ******************************************************************
+      *                             type = Windows ActiveX Control
+      *                             Name = ctGroupCtrl2
+      *                             Left = 5
+      *                              Top = 110
+      *                            Width = 765
+      *                           Height = 425
+      *                               ID = 6
+      *                         TabIndex = 6
+      *                              Tag = <<Blank>>
+      *                            style = WS-VISIBLE
+      *                            style = WS-TABSTOP
+      *                       Accel type = 0
+      *                      Accel value = 0
+      *       NewDoMethodArgumentPassing = TRUE
+      *            Allow Multiple Events = TRUE
+      *     Enable KeyPress For Tab Mode = FALSE
+      *                            Clsid = {B1530FB9-BAD8-11D4-A85D-0080C8DFC881}
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"0000016B".
+          03 FILLER PIC X(002) VALUE X"0002".
+          03 FILLER PIC X(008) VALUE X"0005006E02FD01A9".
+          03 FILLER PIC X(004) VALUE X"00060005".
+          03 FILLER PIC X(002) VALUE X"000C".
+          03 FILLER PIC X(012) VALUE "ctGroupCtrl2".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"10010000".
+          03 FILLER PIC X(002) VALUE X"0026".
+          03 FILLER PIC X(030) VALUE "{B1530FB9-BAD8-11D4-A85D-0080C".
+          03 FILLER PIC X(008) VALUE "8DFC881}".
+          03 FILLER PIC X(002) VALUE X"0072".
+          03 FILLER PIC X(015) VALUE X"63007400470072006F007500700020".
+          03 FILLER PIC X(015) VALUE X"004F0043005800200043006F007000".
+          03 FILLER PIC X(015) VALUE X"790072006900670068007400200028".
+          03 FILLER PIC X(015) VALUE X"006300290020003100390039003700".
+          03 FILLER PIC X(015) VALUE X"200044004200490020005400650063".
+          03 FILLER PIC X(015) VALUE X"0068006E006F006C006F0067006900".
+          03 FILLER PIC X(015) VALUE X"65007300200049006E0063002E002E".
+          03 FILLER PIC X(009) VALUE X"0020006B006F006800".
+          03 FILLER PIC X(002) VALUE X"0005".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA80000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA70000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA20000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA30000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA10000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(006) VALUE X"000100010000".
+          03 FILLER PIC X(004) VALUE X"00000070".
+          03 FILLER PIC X(015) VALUE X"00000300114F0000ED2B0000460000".
+          03 FILLER PIC X(015) VALUE X"0000000352E30B918FCE119DE300AA".
+          03 FILLER PIC X(015) VALUE X"004BB851010000009001444201000C".
+          03 FILLER PIC X(015) VALUE X"4D53205368656C6C20446C67010004".
+          03 FILLER PIC X(015) VALUE X"52E30B918FCE119DE300AA004BB851".
+          03 FILLER PIC X(015) VALUE X"6C740000000000000F000080120000".
+          03 FILLER PIC X(015) VALUE X"808080800080808000000004000000".
+          03 FILLER PIC X(007) VALUE X"00000000000000".
+      ******************************************************************
+      *                             type = Standard Windows Control
+      *                             Name = STATIC2
+      *                             Left = 20
+      *                              Top = 135
+      *                            Width = 145
+      *                           Height = 20
+      *                               ID = 7
+      *                         TabIndex = 1
+      *                          Caption = Texto
+      *                              Tag = <<Blank>>
+      *                            style = WS-CHILD
+      *                            style = WS-VISIBLE
+      *                            style = SS-LEFT
+      *                            Class = Static
+      *                      Transparent = FALSE
+      *                      Font nIndex = 1
+      *                        ForeColor = 255,255,255
+      *                        BackColor = 192,192,192
+      *                               3D = 0
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"0000004E".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(008) VALUE X"000F001900910014".
+          03 FILLER PIC X(004) VALUE X"00070000".
+          03 FILLER PIC X(002) VALUE X"0007".
+          03 FILLER PIC X(007) VALUE "STATIC2".
+          03 FILLER PIC X(002) VALUE X"0005".
+          03 FILLER PIC X(005) VALUE "Texto".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"50000000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(002) VALUE X"0006".
+          03 FILLER PIC X(006) VALUE "Static".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(006) VALUE X"000100000000".
+          03 FILLER PIC X(008) VALUE X"0001000100FFFFFF".
+          03 FILLER PIC X(008) VALUE X"00C0C0C000020000".
+      ******************************************************************
+      *                             type = Standard Windows Control
+      *                             Name = STATIC3
+      *                             Left = 20
+      *                              Top = 165
+      *                            Width = 145
+      *                           Height = 20
+      *                               ID = 8
+      *                         TabIndex = 8
+      *                          Caption = Combo
+      *                              Tag = <<Blank>>
+      *                            style = WS-CHILD
+      *                            style = WS-VISIBLE
+      *                            style = SS-LEFT
+      *                            Class = Static
+      *                      Transparent = FALSE
+      *                      Font nIndex = 1
+      *                        ForeColor = 255,255,255
+      *                        BackColor = 192,192,192
+      *                               3D = 0
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"0000004E".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(008) VALUE X"000F003700910014".
+          03 FILLER PIC X(004) VALUE X"00080007".
+          03 FILLER PIC X(002) VALUE X"0007".
+          03 FILLER PIC X(007) VALUE "STATIC3".
+          03 FILLER PIC X(002) VALUE X"0005".
+          03 FILLER PIC X(005) VALUE "Combo".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"50000000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(002) VALUE X"0006".
+          03 FILLER PIC X(006) VALUE "Static".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(006) VALUE X"000100000000".
+          03 FILLER PIC X(008) VALUE X"0001000100FFFFFF".
+          03 FILLER PIC X(008) VALUE X"00C0C0C000020000".
+      ******************************************************************
+      *                             type = Standard Windows Control
+      *                             Name = STATIC4
+      *                             Left = 20
+      *                              Top = 195
+      *                            Width = 145
+      *                           Height = 20
+      *                               ID = 9
+      *                         TabIndex = 9
+      *                          Caption = Fecha
+      *                              Tag = <<Blank>>
+      *                            style = WS-CHILD
+      *                            style = WS-VISIBLE
+      *                            style = SS-LEFT
+      *                            Class = Static
+      *                      Transparent = FALSE
+      *                      Font nIndex = 1
+      *                        ForeColor = 255,255,255
+      *                        BackColor = 192,192,192
+      *                               3D = 0
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"0000004E".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(008) VALUE X"000F005500910014".
+          03 FILLER PIC X(004) VALUE X"00090008".
+          03 FILLER PIC X(002) VALUE X"0007".
+          03 FILLER PIC X(007) VALUE "STATIC4".
+          03 FILLER PIC X(002) VALUE X"0005".
+          03 FILLER PIC X(005) VALUE "Fecha".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"50000000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(002) VALUE X"0006".
+          03 FILLER PIC X(006) VALUE "Static".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(006) VALUE X"000100000000".
+          03 FILLER PIC X(008) VALUE X"0001000100FFFFFF".
+          03 FILLER PIC X(008) VALUE X"00C0C0C000020000".
+      ******************************************************************
+      *                             type = Standard Windows Control
+      *                             Name = STATIC5
+      *                             Left = 20
+      *                              Top = 225
+      *                            Width = 145
+      *                           Height = 20
+      *                               ID = 10
+      *                         TabIndex = 10
+      *                          Caption = Booleano
+      *                              Tag = <<Blank>>
+      *                            style = WS-CHILD
+      *                            style = WS-VISIBLE
+      *                            style = SS-LEFT
+      *                            Class = Static
+      *                      Transparent = FALSE
+      *                      Font nIndex = 1
+      *                        ForeColor = 255,255,255
+      *                        BackColor = 192,192,192
+      *                               3D = 0
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"00000051".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(008) VALUE X"000F007300910014".
+          03 FILLER PIC X(004) VALUE X"000A0009".
+          03 FILLER PIC X(002) VALUE X"0007".
+          03 FILLER PIC X(007) VALUE "STATIC5".
+          03 FILLER PIC X(002) VALUE X"0008".
+          03 FILLER PIC X(008) VALUE "Booleano".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"50000000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(002) VALUE X"0006".
+          03 FILLER PIC X(006) VALUE "Static".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(006) VALUE X"000100000000".
+          03 FILLER PIC X(008) VALUE X"0001000100FFFFFF".
+          03 FILLER PIC X(008) VALUE X"00C0C0C000020000".
+      ******************************************************************
+      *                             type = Windows ActiveX Control
+      *                             Name = ctMEditCtrl1
+      *                             Left = 180
+      *                              Top = 135
+      *                            Width = 565
+      *                           Height = 20
+      *                               ID = 11
+      *                         TabIndex = 11
+      *                              Tag = <<Blank>>
+      *                            style = WS-VISIBLE
+      *                            style = WS-TABSTOP
+      *                       Accel type = 0
+      *                      Accel value = 0
+      *       NewDoMethodArgumentPassing = TRUE
+      *            Allow Multiple Events = TRUE
+      *     Enable KeyPress For Tab Mode = FALSE
+      *                            Clsid = {F604A5CF-EAA4-453C-A054-E98A19E223D1}
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"000001F3".
+          03 FILLER PIC X(002) VALUE X"0002".
+          03 FILLER PIC X(008) VALUE X"00AF001902350014".
+          03 FILLER PIC X(004) VALUE X"000B000A".
+          03 FILLER PIC X(002) VALUE X"000C".
+          03 FILLER PIC X(012) VALUE "ctMEditCtrl1".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"10010000".
+          03 FILLER PIC X(002) VALUE X"0026".
+          03 FILLER PIC X(030) VALUE "{F604A5CF-EAA4-453C-A054-E98A1".
+          03 FILLER PIC X(008) VALUE "9E223D1}".
+          03 FILLER PIC X(002) VALUE X"0072".
+          03 FILLER PIC X(015) VALUE X"630074004D00450064006900740020".
+          03 FILLER PIC X(015) VALUE X"004F0043005800200043006F007000".
+          03 FILLER PIC X(015) VALUE X"790072006900670068007400200028".
+          03 FILLER PIC X(015) VALUE X"006300290020003100390039003700".
+          03 FILLER PIC X(015) VALUE X"200044004200490020005400650063".
+          03 FILLER PIC X(015) VALUE X"0068006E006F006C006F0067006900".
+          03 FILLER PIC X(015) VALUE X"65007300200049006E0063002E002E".
+          03 FILLER PIC X(009) VALUE X"002000680065006600".
+          03 FILLER PIC X(002) VALUE X"000E".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA80000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA70000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA60001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA40001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA30000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA20000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA10000".
+          03 FILLER PIC X(006) VALUE X"000000010000".
+          03 FILLER PIC X(006) VALUE X"000000020000".
+          03 FILLER PIC X(006) VALUE X"000000030000".
+          03 FILLER PIC X(006) VALUE X"000000040000".
+          03 FILLER PIC X(006) VALUE X"000000050000".
+          03 FILLER PIC X(006) VALUE X"000000060000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(006) VALUE X"000100010000".
+          03 FILLER PIC X(004) VALUE X"000000C2".
+          03 FILLER PIC X(015) VALUE X"00000400653A0000110200005D0000".
+          03 FILLER PIC X(015) VALUE X"000000000000F0F0F000000352E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB851010000".
+          03 FILLER PIC X(015) VALUE X"009001444201000C4D53205368656C".
+          03 FILLER PIC X(015) VALUE X"6C20446C6701000452E30B918FCE11".
+          03 FILLER PIC X(015) VALUE X"9DE300AA004BB8516C740000000000".
+          03 FILLER PIC X(015) VALUE X"000500008012000080000000000F00".
+          03 FILLER PIC X(015) VALUE X"0080FFFFFF00000000000F000080FF".
+          03 FILLER PIC X(015) VALUE X"FFFF0000000000808080000000FF00".
+          03 FILLER PIC X(015) VALUE X"030000801300008009000080030000".
+          03 FILLER PIC X(015) VALUE X"000000000000000000000000000000".
+          03 FILLER PIC X(015) VALUE X"100010000100C80032000000000000".
+          03 FILLER PIC X(014) VALUE X"0005000000000000010000000000".
+      ******************************************************************
+      *                             type = Windows ActiveX Control
+      *                             Name = ctComboCtrl1
+      *                             Left = 180
+      *                              Top = 160
+      *                            Width = 155
+      *                           Height = 25
+      *                               ID = 12
+      *                         TabIndex = 12
+      *                              Tag = <<Blank>>
+      *                            style = WS-VISIBLE
+      *                            style = WS-TABSTOP
+      *                       Accel type = 0
+      *                      Accel value = 0
+      *       NewDoMethodArgumentPassing = TRUE
+      *            Allow Multiple Events = TRUE
+      *     Enable KeyPress For Tab Mode = FALSE
+      *                            Clsid = {1B035D9E-68E3-43F4-A91A-749E40292D05}
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"00000269".
+          03 FILLER PIC X(002) VALUE X"0002".
+          03 FILLER PIC X(008) VALUE X"00AF0032009B0019".
+          03 FILLER PIC X(004) VALUE X"000C000B".
+          03 FILLER PIC X(002) VALUE X"000C".
+          03 FILLER PIC X(012) VALUE "ctComboCtrl1".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"10010000".
+          03 FILLER PIC X(002) VALUE X"0026".
+          03 FILLER PIC X(030) VALUE "{1B035D9E-68E3-43F4-A91A-749E4".
+          03 FILLER PIC X(008) VALUE "0292D05}".
+          03 FILLER PIC X(002) VALUE X"0066".
+          03 FILLER PIC X(015) VALUE X"6300740043006F006D0062006F0020".
+          03 FILLER PIC X(015) VALUE X"004F0043005800200043006F007000".
+          03 FILLER PIC X(015) VALUE X"790072006900670068007400200028".
+          03 FILLER PIC X(015) VALUE X"006300290020003100390039003800".
+          03 FILLER PIC X(015) VALUE X"2000470061006D00650073006D0061".
+          03 FILLER PIC X(015) VALUE X"006E00200049006E0063002E002E00".
+          03 FILLER PIC X(012) VALUE X"2E0020006A00640063007900".
+          03 FILLER PIC X(002) VALUE X"0010".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA80000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA70000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA60001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA40001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA30000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA20000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA10000".
+          03 FILLER PIC X(006) VALUE X"FFFFFD9F0000".
+          03 FILLER PIC X(006) VALUE X"000000010000".
+          03 FILLER PIC X(006) VALUE X"000000020000".
+          03 FILLER PIC X(006) VALUE X"000000030000".
+          03 FILLER PIC X(006) VALUE X"000000040000".
+          03 FILLER PIC X(006) VALUE X"000000050000".
+          03 FILLER PIC X(006) VALUE X"000000060000".
+          03 FILLER PIC X(006) VALUE X"000000070000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(006) VALUE X"000100010000".
+          03 FILLER PIC X(004) VALUE X"00000138".
+          03 FILLER PIC X(015) VALUE X"0000040005100000950200005C0000".
+          03 FILLER PIC X(015) VALUE X"000000000000000352E30B918FCE11".
+          03 FILLER PIC X(015) VALUE X"9DE300AA004BB851010000009001E0".
+          03 FILLER PIC X(015) VALUE X"4101000C4D53205368656C6C20446C".
+          03 FILLER PIC X(015) VALUE X"6701FF000452E30B918FCE119DE300".
+          03 FILLER PIC X(015) VALUE X"AA004BB8516C740000000000000004".
+          03 FILLER PIC X(015) VALUE X"52E30B918FCE119DE300AA004BB851".
+          03 FILLER PIC X(015) VALUE X"6C74000000000000000452E30B918F".
+          03 FILLER PIC X(015) VALUE X"CE119DE300AA004BB8516C74000000".
+          03 FILLER PIC X(015) VALUE X"0000000000000000000F000080FFFF".
+          03 FILLER PIC X(015) VALUE X"FF0012000080808080000500008012".
+          03 FILLER PIC X(015) VALUE X"0000800000FF000500008012000080".
+          03 FILLER PIC X(015) VALUE X"FFFFFF00FFFFC0000F000080FFFFFF".
+          03 FILLER PIC X(015) VALUE X"001200008080808000808080000300".
+          03 FILLER PIC X(015) VALUE X"008013000080090000800300000000".
+          03 FILLER PIC X(015) VALUE X"000000000002000000010000000000".
+          03 FILLER PIC X(015) VALUE X"000000001000000000000000000008".
+          03 FILLER PIC X(015) VALUE X"00FFFF050001000100010000000000".
+          03 FILLER PIC X(015) VALUE X"000000000A00000000000100000000".
+          03 FILLER PIC X(015) VALUE X"0000010001000010000000FFFF0000".
+          03 FILLER PIC X(012) VALUE X"0800434F6241727261790000".
+      ******************************************************************
+      *                             type = Windows ActiveX Control
+      *                             Name = ctDropDateCtrl1
+      *                             Left = 180
+      *                              Top = 190
+      *                            Width = 155
+      *                           Height = 25
+      *                               ID = 13
+      *                         TabIndex = 13
+      *                              Tag = <<Blank>>
+      *                            style = WS-VISIBLE
+      *                            style = WS-TABSTOP
+      *                       Accel type = 0
+      *                      Accel value = 0
+      *       NewDoMethodArgumentPassing = TRUE
+      *            Allow Multiple Events = TRUE
+      *     Enable KeyPress For Tab Mode = FALSE
+      *                            Clsid = {C6D143DC-D81C-47B5-BBCB-E980992FB177}
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"000002DA".
+          03 FILLER PIC X(002) VALUE X"0002".
+          03 FILLER PIC X(008) VALUE X"00AF0050009B0019".
+          03 FILLER PIC X(004) VALUE X"000D000C".
+          03 FILLER PIC X(002) VALUE X"000F".
+          03 FILLER PIC X(015) VALUE "ctDropDateCtrl1".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"10010000".
+          03 FILLER PIC X(002) VALUE X"0026".
+          03 FILLER PIC X(030) VALUE "{C6D143DC-D81C-47B5-BBCB-E9809".
+          03 FILLER PIC X(008) VALUE "92FB177}".
+          03 FILLER PIC X(002) VALUE X"0070".
+          03 FILLER PIC X(015) VALUE X"63007400440072006F007000440061".
+          03 FILLER PIC X(015) VALUE X"0074006500200043006F0070007900".
+          03 FILLER PIC X(015) VALUE X"720069006700680074002000280063".
+          03 FILLER PIC X(015) VALUE X"002900200032003000300030002000".
+          03 FILLER PIC X(015) VALUE X"640062006900200054006500630068".
+          03 FILLER PIC X(015) VALUE X"006E006F006C006F00670069006500".
+          03 FILLER PIC X(015) VALUE X"7300200049006E0063002E002E0020".
+          03 FILLER PIC X(007) VALUE X"00730078006100".
+          03 FILLER PIC X(002) VALUE X"000E".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA80000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA70000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA60001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA40001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA30000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA20000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA10000".
+          03 FILLER PIC X(006) VALUE X"000000010000".
+          03 FILLER PIC X(006) VALUE X"000000020000".
+          03 FILLER PIC X(006) VALUE X"000000030000".
+          03 FILLER PIC X(006) VALUE X"000000040000".
+          03 FILLER PIC X(006) VALUE X"000000050000".
+          03 FILLER PIC X(006) VALUE X"000000060000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(006) VALUE X"000100010000".
+          03 FILLER PIC X(004) VALUE X"000001A8".
+          03 FILLER PIC X(015) VALUE X"000003000510000095020000440000".
+          03 FILLER PIC X(015) VALUE X"00000352E30B918FCE119DE300AA00".
+          03 FILLER PIC X(015) VALUE X"4BB851010000009001E04101000C4D".
+          03 FILLER PIC X(015) VALUE X"53205368656C6C20446C6701000452".
+          03 FILLER PIC X(015) VALUE X"E30B918FCE119DE300AA004BB8516C".
+          03 FILLER PIC X(015) VALUE X"74000000000000FFFF050000801200".
+          03 FILLER PIC X(015) VALUE X"0080000000000F000080FFFFFF0012".
+          03 FILLER PIC X(015) VALUE X"0000800F000080FFFFFF0012000080".
+          03 FILLER PIC X(015) VALUE X"80808000FFFFFF0000000000000000".
+          03 FILLER PIC X(015) VALUE X"0000008000FFFFFF00000080008080".
+          03 FILLER PIC X(015) VALUE X"800080808000FFFFFFFF0F00008012".
+          03 FILLER PIC X(015) VALUE X"000080FF0000000000FF0003000000".
+          03 FILLER PIC X(015) VALUE X"000000000000000002000000040001".
+          03 FILLER PIC X(015) VALUE X"000200000001000000010002000000".
+          03 FILLER PIC X(015) VALUE X"000000001000100001009E07020000".
+          03 FILLER PIC X(015) VALUE X"000000C8003200A000B40041000000".
+          03 FILLER PIC X(015) VALUE X"010001010100000100010100000001".
+          03 FILLER PIC X(015) VALUE X"000000FFFFFFFFFFFFFFFFFFFFFFFF".
+          03 FILLER PIC X(015) VALUE X"0A5F5F2F5F5F2F5F5F5F5F012F554A".
+          03 FILLER PIC X(015) VALUE X"616E756172792C4665627275617279".
+          03 FILLER PIC X(015) VALUE X"2C4D617263682C417072696C2C4D61".
+          03 FILLER PIC X(015) VALUE X"792C4A756E652C4A756C792C417567".
+          03 FILLER PIC X(015) VALUE X"7573742C53657074656D6265722C4F".
+          03 FILLER PIC X(015) VALUE X"63746F6265722C4E6F76656D626572".
+          03 FILLER PIC X(015) VALUE X"2C446563656D6265722253756E2E2C".
+          03 FILLER PIC X(015) VALUE X"4D6F6E2E2C5475652E2C5765642E2C".
+          03 FILLER PIC X(015) VALUE X"5468722E2C4672692E2C5361742E0D".
+          03 FILLER PIC X(015) VALUE X"532C4D2C542C572C542C462C530554".
+          03 FILLER PIC X(004) VALUE X"6F646179".
+      ******************************************************************
+      *                             type = Windows ActiveX Control
+      *                             Name = ctCheckCtrl1
+      *                             Left = 180
+      *                              Top = 225
+      *                            Width = 145
+      *                           Height = 15
+      *                               ID = 14
+      *                         TabIndex = 14
+      *                              Tag = <<Blank>>
+      *                            style = WS-VISIBLE
+      *                            style = WS-TABSTOP
+      *                       Accel type = 0
+      *                      Accel value = 0
+      *       NewDoMethodArgumentPassing = TRUE
+      *            Allow Multiple Events = TRUE
+      *     Enable KeyPress For Tab Mode = FALSE
+      *                            Clsid = {2B701EA6-B8D5-11D4-A85D-0080C8DFC881}
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"00000203".
+          03 FILLER PIC X(002) VALUE X"0002".
+          03 FILLER PIC X(008) VALUE X"00AF00730091000F".
+          03 FILLER PIC X(004) VALUE X"000E000D".
+          03 FILLER PIC X(002) VALUE X"000C".
+          03 FILLER PIC X(012) VALUE "ctCheckCtrl1".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"10010000".
+          03 FILLER PIC X(002) VALUE X"0026".
+          03 FILLER PIC X(030) VALUE "{2B701EA6-B8D5-11D4-A85D-0080C".
+          03 FILLER PIC X(008) VALUE "8DFC881}".
+          03 FILLER PIC X(002) VALUE X"0072".
+          03 FILLER PIC X(015) VALUE X"6300740043006800650063006B0020".
+          03 FILLER PIC X(015) VALUE X"004F0043005800200043006F007000".
+          03 FILLER PIC X(015) VALUE X"790072006900670068007400200028".
+          03 FILLER PIC X(015) VALUE X"006300290020003100390039003700".
+          03 FILLER PIC X(015) VALUE X"200044004200490020005400650063".
+          03 FILLER PIC X(015) VALUE X"0068006E006F006C006F0067006900".
+          03 FILLER PIC X(015) VALUE X"65007300200049006E0063002E002E".
+          03 FILLER PIC X(009) VALUE X"002000670067006400".
+          03 FILLER PIC X(002) VALUE X"000A".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA80000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA70000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA20000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA30000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA10000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA60001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA40001".
+          03 FILLER PIC X(006) VALUE X"000000010000".
+          03 FILLER PIC X(006) VALUE X"000000020000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(006) VALUE X"000100010000".
+          03 FILLER PIC X(004) VALUE X"000000EA".
+          03 FILLER PIC X(015) VALUE X"00000300FC0E00008D010000460000".
+          03 FILLER PIC X(015) VALUE X"000741637469766F3F000352E30B91".
+          03 FILLER PIC X(015) VALUE X"8FCE119DE300AA004BB85101000000".
+          03 FILLER PIC X(015) VALUE X"9001444201000C4D53205368656C6C".
+          03 FILLER PIC X(015) VALUE X"20446C6701FF000452E30B918FCE11".
+          03 FILLER PIC X(015) VALUE X"9DE300AA004BB8516C740000000000".
+          03 FILLER PIC X(015) VALUE X"00000452E30B918FCE119DE300AA00".
+          03 FILLER PIC X(015) VALUE X"4BB8516C74000000000000000452E3".
+          03 FILLER PIC X(015) VALUE X"0B918FCE119DE300AA004BB8516C74".
+          03 FILLER PIC X(015) VALUE X"000000000000000452E30B918FCE11".
+          03 FILLER PIC X(015) VALUE X"9DE300AA004BB8516C740000000000".
+          03 FILLER PIC X(015) VALUE X"00000452E30B918FCE119DE300AA00".
+          03 FILLER PIC X(015) VALUE X"4BB8516C740000000000000F000080".
+          03 FILLER PIC X(015) VALUE X"1200008080808000120000800000FF".
+          03 FILLER PIC X(015) VALUE X"000000010000000000000000000000".
+          03 FILLER PIC X(009) VALUE X"000741637469766F3F".
+      ******************************************************************
+      *                             type = Standard Windows Control
+      *                             Name = STATIC6
+      *                             Left = 20
+      *                              Top = 255
+      *                            Width = 145
+      *                           Height = 20
+      *                               ID = 15
+      *                         TabIndex = 15
+      *                          Caption = Importe
+      *                              Tag = <<Blank>>
+      *                            style = WS-CHILD
+      *                            style = WS-VISIBLE
+      *                            style = SS-LEFT
+      *                            Class = Static
+      *                      Transparent = FALSE
+      *                      Font nIndex = 1
+      *                        ForeColor = 255,255,255
+      *                        BackColor = 192,192,192
+      *                               3D = 0
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"00000050".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(008) VALUE X"000F009100910014".
+          03 FILLER PIC X(004) VALUE X"000F000E".
+          03 FILLER PIC X(002) VALUE X"0007".
+          03 FILLER PIC X(007) VALUE "STATIC6".
+          03 FILLER PIC X(002) VALUE X"0007".
+          03 FILLER PIC X(007) VALUE "Importe".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"50000000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(002) VALUE X"0006".
+          03 FILLER PIC X(006) VALUE "Static".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(006) VALUE X"000100000000".
+          03 FILLER PIC X(008) VALUE X"0001000100FFFFFF".
+          03 FILLER PIC X(008) VALUE X"00C0C0C000020000".
+      ******************************************************************
+      *                             type = Windows ActiveX Control
+      *                             Name = ctMEditCtrl2
+      *                             Left = 180
+      *                              Top = 250
+      *                            Width = 150
+      *                           Height = 25
+      *                               ID = 16
+      *                         TabIndex = 16
+      *                              Tag = <<Blank>>
+      *                            style = WS-VISIBLE
+      *                            style = WS-TABSTOP
+      *                       Accel type = 0
+      *                      Accel value = 0
+      *       NewDoMethodArgumentPassing = TRUE
+      *            Allow Multiple Events = TRUE
+      *     Enable KeyPress For Tab Mode = FALSE
+      *                            Clsid = {F604A5CF-EAA4-453C-A054-E98A19E223D1}
+      ******************************************************************
+          03 FILLER PIC X(004) VALUE X"000001F3".
+          03 FILLER PIC X(002) VALUE X"0002".
+          03 FILLER PIC X(008) VALUE X"00AF008C00960019".
+          03 FILLER PIC X(004) VALUE X"0010000F".
+          03 FILLER PIC X(002) VALUE X"000C".
+          03 FILLER PIC X(012) VALUE "ctMEditCtrl2".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0000".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(002) VALUE X"0001".
+          03 FILLER PIC X(001) VALUE " ".
+          03 FILLER PIC X(004) VALUE X"10010000".
+          03 FILLER PIC X(002) VALUE X"0026".
+          03 FILLER PIC X(030) VALUE "{F604A5CF-EAA4-453C-A054-E98A1".
+          03 FILLER PIC X(008) VALUE "9E223D1}".
+          03 FILLER PIC X(002) VALUE X"0072".
+          03 FILLER PIC X(015) VALUE X"630074004D00450064006900740020".
+          03 FILLER PIC X(015) VALUE X"004F0043005800200043006F007000".
+          03 FILLER PIC X(015) VALUE X"790072006900670068007400200028".
+          03 FILLER PIC X(015) VALUE X"006300290020003100390039003700".
+          03 FILLER PIC X(015) VALUE X"200044004200490020005400650063".
+          03 FILLER PIC X(015) VALUE X"0068006E006F006C006F0067006900".
+          03 FILLER PIC X(015) VALUE X"65007300200049006E0063002E002E".
+          03 FILLER PIC X(009) VALUE X"002000680065006600".
+          03 FILLER PIC X(002) VALUE X"000E".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA80000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA70000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA60001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA40001".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA30000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA20000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA10000".
+          03 FILLER PIC X(006) VALUE X"000000010000".
+          03 FILLER PIC X(006) VALUE X"000000020000".
+          03 FILLER PIC X(006) VALUE X"000000030000".
+          03 FILLER PIC X(006) VALUE X"000000040000".
+          03 FILLER PIC X(006) VALUE X"000000050000".
+          03 FILLER PIC X(006) VALUE X"000000060000".
+          03 FILLER PIC X(006) VALUE X"FFFFFDA50000".
+          03 FILLER PIC X(004) VALUE X"00000000".
+          03 FILLER PIC X(006) VALUE X"000100010000".
+          03 FILLER PIC X(004) VALUE X"000000C2".
+          03 FILLER PIC X(015) VALUE X"00000400810F0000950200005D0000".
+          03 FILLER PIC X(015) VALUE X"000000000000F0F0F000000352E30B".
+          03 FILLER PIC X(015) VALUE X"918FCE119DE300AA004BB851010000".
+          03 FILLER PIC X(015) VALUE X"009001E04101000C4D53205368656C".
+          03 FILLER PIC X(015) VALUE X"6C20446C6701000452E30B918FCE11".
+          03 FILLER PIC X(015) VALUE X"9DE300AA004BB8516C740000000000".
+          03 FILLER PIC X(015) VALUE X"000500008012000080000000000F00".
+          03 FILLER PIC X(015) VALUE X"0080FFFFFF00000000000F000080FF".
+          03 FILLER PIC X(015) VALUE X"FFFF0000000000808080000000FF00".
+          03 FILLER PIC X(015) VALUE X"030000801300008009000080030000".
+          03 FILLER PIC X(015) VALUE X"000000010000000000000000000000".
+          03 FILLER PIC X(015) VALUE X"100010000100C80032000000000000".
+          03 FILLER PIC X(014) VALUE X"0005000000000000010000000000".
+      *
+WOWBGN*
+      *
+      *
+      * ctToolBarCtrl1 defined enum constants
+      *
+        01 ctToolBarCtrl1-Enums.
+           02 enumBorder                PIC S9(10) BINARY(4).
+              88 AXEnum-BorderRegular     VALUE 0.
+              88 AXEnum-BorderNone        VALUE 1.
+              88 AXEnum-BorderRaised      VALUE 2.
+              88 AXEnum-BorderLowered     VALUE 3.
+              88 AXEnum-BorderInset       VALUE 4.
+           02 enumItemBorder            PIC S9(10) BINARY(4).
+              88 AXEnum-ItemBdrRegular    VALUE 0.
+              88 AXEnum-ItemBdrNone       VALUE 1.
+              88 AXEnum-ItemBdrRaised     VALUE 2.
+              88 AXEnum-ItemBdrLowered    VALUE 3.
+           02 enumItemBorderX           PIC S9(10) BINARY(4).
+              88 AXEnum-ItemBorderRegular VALUE 0.
+              88 AXEnum-ItemBorderNone    VALUE 1.
+              88 AXEnum-ItemBorderRaised  VALUE 2.
+              88 AXEnum-ItemBorderLowered VALUE 3.
+              88 AXEnum-ItemBorderDefault VALUE 4.
+           02 enumArrowSize             PIC S9(10) BINARY(4).
+              88 AXEnum-ArrowSmall        VALUE 0.
+              88 AXEnum-ArrowLarge        VALUE 1.
+           02 enumDragBars              PIC S9(10) BINARY(4).
+              88 AXEnum-BareNone          VALUE 0.
+              88 AXEnum-BarSingle         VALUE 1.
+              88 AXEnum-BarDouble         VALUE 2.
+           02 enumFillType              PIC S9(10) BINARY(4).
+              88 AXEnum-FillSolid         VALUE 0.
+              88 AXEnum-FillHorizontal    VALUE 1.
+              88 AXEnum-FillVertical      VALUE 2.
+              88 AXEnum-FillDiagonal      VALUE 3.
+              88 AXEnum-FillRevDiag       VALUE 4.
+              88 AXEnum-FillHorzBump      VALUE 5.
+              88 AXEnum-FillVertBump      VALUE 6.
+              88 AXEnum-FillDiamond       VALUE 7.
+              88 AXEnum-FillPyramid       VALUE 8.
+              88 AXEnum-FillCircle        VALUE 9.
+              88 AXEnum-FillEllipse       VALUE 10.
+      *
+      * ctGroupCtrl1 defined enum constants
+      *
+        01 ctGroupCtrl1-Enums.
+           02 enumAlign                 PIC S9(10) BINARY(4).
+              88 AXEnum-AlignLeft         VALUE 0.
+              88 AXEnum-AlignRight        VALUE 1.
+              88 AXEnum-AlignCenter       VALUE 2.
+           02 enumBorderType            PIC S9(10) BINARY(4).
+              88 AXEnum-BorderRegular     VALUE 0.
+              88 AXEnum-BorderRaised      VALUE 1.
+              88 AXEnum-BorderLowered     VALUE 2.
+              88 AXEnum-BorderInRaised    VALUE 3.
+              88 AXEnum-BorderInLowered   VALUE 4.
+              88 AXEnum-BorderRounded     VALUE 5.
+           02 enumTextPosition          PIC S9(10) BINARY(4).
+              88 AXEnum-TextTop           VALUE 0.
+              88 AXEnum-TextBottom        VALUE 1.
+      *
+      * codigo defined enum constants
+      *
+        01 codigo-Enums.
+           02 enumBorder                PIC S9(10) BINARY(4).
+              88 AXEnum-BorderRegular     VALUE 0.
+              88 AXEnum-BorderNone        VALUE 1.
+              88 AXEnum-BorderRaised      VALUE 2.
+              88 AXEnum-BorderLowered     VALUE 3.
+           02 enumCaseType              PIC S9(10) BINARY(4).
+              88 AXEnum-CaseNone          VALUE 0.
+              88 AXEnum-CaseUpper         VALUE 1.
+              88 AXEnum-CaseLower         VALUE 2.
+           02 enumAlignment             PIC S9(10) BINARY(4).
+              88 AXEnum-AlignLeft         VALUE 0.
+              88 AXEnum-AlignRight        VALUE 1.
+              88 AXEnum-AlignCenter       VALUE 2.
+           02 enumDisplay               PIC S9(10) BINARY(4).
+              88 AXEnum-DisplayRegular    VALUE 0.
+              88 AXEnum-DisplayFlat       VALUE 1.
+           02 enumAuto                  PIC S9(10) BINARY(4).
+              88 AXEnum-AutoNone          VALUE 0.
+              88 AXEnum-AutoAppend        VALUE 1.
+              88 AXEnum-AutoSuggest       VALUE 2.
+              88 AXEnum-AutoBoth          VALUE 3.
+           02 enumScrollStyle           PIC S9(10) BINARY(4).
+              88 AXEnum-ScrollRegular     VALUE 0.
+              88 AXEnum-ScrollThin        VALUE 1.
+              88 AXEnum-ScrollModern      VALUE 2.
+           02 enumFillType              PIC S9(10) BINARY(4).
+              88 AXEnum-FillSolid         VALUE 0.
+              88 AXEnum-FillHorizontal    VALUE 1.
+              88 AXEnum-FillVertical      VALUE 2.
+              88 AXEnum-FillDiagonal      VALUE 3.
+              88 AXEnum-FillRevDiag       VALUE 4.
+              88 AXEnum-FillHorzBump      VALUE 5.
+              88 AXEnum-FillVertBump      VALUE 6.
+              88 AXEnum-FillDiamond       VALUE 7.
+              88 AXEnum-FillPyramid       VALUE 8.
+              88 AXEnum-FillCircle        VALUE 9.
+              88 AXEnum-FillEllipse       VALUE 10.
+           02 enumButtonStyle           PIC S9(10) BINARY(4).
+              88 AXEnum-ButtonRegular     VALUE 0.
+              88 AXEnum-ButtonModern      VALUE 1.
+           02 enumArrowType             PIC S9(10) BINARY(4).
+              88 AXEnum-ArrowSmall        VALUE 0.
+              88 AXEnum-ArrowLarge        VALUE 1.
+              88 AXEnum-ArrowLine1        VALUE 2.
+              88 AXEnum-ArrowLine2        VALUE 3.
+      *
+      * ctGroupCtrl2 defined enum constants
+      *
+        01 ctGroupCtrl2-Enums.
+           02 enumAlign                 PIC S9(10) BINARY(4).
+              88 AXEnum-AlignLeft         VALUE 0.
+              88 AXEnum-AlignRight        VALUE 1.
+              88 AXEnum-AlignCenter       VALUE 2.
+           02 enumBorderType            PIC S9(10) BINARY(4).
+              88 AXEnum-BorderRegular     VALUE 0.
+              88 AXEnum-BorderRaised      VALUE 1.
+              88 AXEnum-BorderLowered     VALUE 2.
+              88 AXEnum-BorderInRaised    VALUE 3.
+              88 AXEnum-BorderInLowered   VALUE 4.
+              88 AXEnum-BorderRounded     VALUE 5.
+           02 enumTextPosition          PIC S9(10) BINARY(4).
+              88 AXEnum-TextTop           VALUE 0.
+              88 AXEnum-TextBottom        VALUE 1.
+      *
+      * ctMEditCtrl1 defined enum constants
+      *
+        01 ctMEditCtrl1-Enums.
+           02 enumBorder                PIC S9(10) BINARY(4).
+              88 AXEnum-BorderRegular     VALUE 0.
+              88 AXEnum-BorderNone        VALUE 1.
+              88 AXEnum-BorderRaised      VALUE 2.
+              88 AXEnum-BorderLowered     VALUE 3.
+           02 enumCaseType              PIC S9(10) BINARY(4).
+              88 AXEnum-CaseNone          VALUE 0.
+              88 AXEnum-CaseUpper         VALUE 1.
+              88 AXEnum-CaseLower         VALUE 2.
+           02 enumAlignment             PIC S9(10) BINARY(4).
+              88 AXEnum-AlignLeft         VALUE 0.
+              88 AXEnum-AlignRight        VALUE 1.
+              88 AXEnum-AlignCenter       VALUE 2.
+           02 enumDisplay               PIC S9(10) BINARY(4).
+              88 AXEnum-DisplayRegular    VALUE 0.
+              88 AXEnum-DisplayFlat       VALUE 1.
+           02 enumAuto                  PIC S9(10) BINARY(4).
+              88 AXEnum-AutoNone          VALUE 0.
+              88 AXEnum-AutoAppend        VALUE 1.
+              88 AXEnum-AutoSuggest       VALUE 2.
+              88 AXEnum-AutoBoth          VALUE 3.
+           02 enumScrollStyle           PIC S9(10) BINARY(4).
+              88 AXEnum-ScrollRegular     VALUE 0.
+              88 AXEnum-ScrollThin        VALUE 1.
+              88 AXEnum-ScrollModern      VALUE 2.
+           02 enumFillType              PIC S9(10) BINARY(4).
+              88 AXEnum-FillSolid         VALUE 0.
+              88 AXEnum-FillHorizontal    VALUE 1.
+              88 AXEnum-FillVertical      VALUE 2.
+              88 AXEnum-FillDiagonal      VALUE 3.
+              88 AXEnum-FillRevDiag       VALUE 4.
+              88 AXEnum-FillHorzBump      VALUE 5.
+              88 AXEnum-FillVertBump      VALUE 6.
+              88 AXEnum-FillDiamond       VALUE 7.
+              88 AXEnum-FillPyramid       VALUE 8.
+              88 AXEnum-FillCircle        VALUE 9.
+              88 AXEnum-FillEllipse       VALUE 10.
+           02 enumButtonStyle           PIC S9(10) BINARY(4).
+              88 AXEnum-ButtonRegular     VALUE 0.
+              88 AXEnum-ButtonModern      VALUE 1.
+           02 enumArrowType             PIC S9(10) BINARY(4).
+              88 AXEnum-ArrowSmall        VALUE 0.
+              88 AXEnum-ArrowLarge        VALUE 1.
+              88 AXEnum-ArrowLine1        VALUE 2.
+              88 AXEnum-ArrowLine2        VALUE 3.
+      *
+      * ctComboCtrl1 defined enum constants
+      *
+        01 ctComboCtrl1-Enums.
+           02 enumBorder                PIC S9(10) BINARY(4).
+              88 AXEnum-BorderRegular     VALUE 0.
+              88 AXEnum-BorderNone        VALUE 1.
+              88 AXEnum-BorderRaised      VALUE 2.
+              88 AXEnum-BorderLowered     VALUE 3.
+           02 enumStyle                 PIC S9(10) BINARY(4).
+              88 AXEnum-StyleCombo        VALUE 0.
+              88 AXEnum-StyleList         VALUE 1.
+           02 enumDisplay               PIC S9(10) BINARY(4).
+              88 AXEnum-DisplayRegular    VALUE 0.
+              88 AXEnum-DisplayFlat       VALUE 1.
+           02 enumListBorder            PIC S9(10) BINARY(4).
+              88 AXEnum-lbRegular         VALUE 0.
+              88 AXEnum-lbBeveled         VALUE 1.
+           02 enumHeaderBorder          PIC S9(10) BINARY(4).
+              88 AXEnum-btRegular         VALUE 0.
+              88 AXEnum-btNone            VALUE 1.
+              88 AXEnum-btRaised          VALUE 2.
+              88 AXEnum-btLowered         VALUE 3.
+              88 AXEnum-btRaisedThin      VALUE 4.
+              88 AXEnum-btLoweredThin     VALUE 5.
+           02 enumAuto                  PIC S9(10) BINARY(4).
+              88 AXEnum-AutoNone          VALUE 0.
+              88 AXEnum-AutoAppend        VALUE 1.
+              88 AXEnum-AutoSuggest       VALUE 2.
+              88 AXEnum-AutoBoth          VALUE 3.
+           02 enumAlign                 PIC S9(10) BINARY(4).
+              88 AXEnum-AlignLeft         VALUE 0.
+              88 AXEnum-AlignRight        VALUE 1.
+           02 enumScrollStyle           PIC S9(10) BINARY(4).
+              88 AXEnum-ScrollRegular     VALUE 0.
+              88 AXEnum-ScrollThin        VALUE 1.
+              88 AXEnum-ScrollModern      VALUE 2.
+           02 enumFillType              PIC S9(10) BINARY(4).
+              88 AXEnum-FillSolid         VALUE 0.
+              88 AXEnum-FillHorizontal    VALUE 1.
+              88 AXEnum-FillVertical      VALUE 2.
+              88 AXEnum-FillDiagonal      VALUE 3.
+              88 AXEnum-FillRevDiag       VALUE 4.
+              88 AXEnum-FillHorzBump      VALUE 5.
+              88 AXEnum-FillVertBump      VALUE 6.
+              88 AXEnum-FillDiamond       VALUE 7.
+              88 AXEnum-FillPyramid       VALUE 8.
+              88 AXEnum-FillCircle        VALUE 9.
+              88 AXEnum-FillEllipse       VALUE 10.
+           02 enumArrowType             PIC S9(10) BINARY(4).
+              88 AXEnum-ArrowSmall        VALUE 0.
+              88 AXEnum-ArrowLarge        VALUE 1.
+              88 AXEnum-ArrowLine1        VALUE 2.
+              88 AXEnum-ArrowLine2        VALUE 3.
+           02 enumButtonStyle           PIC S9(10) BINARY(4).
+              88 AXEnum-ButtonRegular     VALUE 0.
+              88 AXEnum-ButtonModern      VALUE 1.
+      *
+      * ctDropDateCtrl1 defined enum constants
+      *
+        01 ctDropDateCtrl1-Enums.
+           02 enumBorder                PIC S9(10) BINARY(4).
+              88 AXEnum-BorderRegular     VALUE 0.
+              88 AXEnum-BorderNone        VALUE 1.
+              88 AXEnum-BorderRaised      VALUE 2.
+              88 AXEnum-BorderLowered     VALUE 3.
+           02 enumAlignment             PIC S9(10) BINARY(4).
+              88 AXEnum-AlignLeft         VALUE 0.
+              88 AXEnum-AlignRight        VALUE 1.
+              88 AXEnum-AlignCenter       VALUE 2.
+           02 enumTimeFormat            PIC S9(10) BINARY(4).
+              88 AXEnum-Format-MMDDYY     VALUE 0.
+              88 AXEnum-Format-DDMMYY     VALUE 1.
+              88 AXEnum-Format-YYMMDD     VALUE 2.
+           02 enumMonthFormat           PIC S9(10) BINARY(4).
+              88 AXEnum-MonthNumeric      VALUE 0.
+              88 AXEnum-MonthLong         VALUE 1.
+              88 AXEnum-MonthShort        VALUE 2.
+           02 enumFirstDay              PIC S9(10) BINARY(4).
+              88 AXEnum-DaySunday         VALUE 0.
+              88 AXEnum-DayMonday         VALUE 1.
+              88 AXEnum-DayTuesday        VALUE 2.
+              88 AXEnum-DayWednesday      VALUE 3.
+              88 AXEnum-DayThursday       VALUE 4.
+              88 AXEnum-DayFriday         VALUE 5.
+              88 AXEnum-DaySaturday       VALUE 6.
+           02 enumSelectType            PIC S9(10) BINARY(4).
+              88 AXEnum-SelectRegular     VALUE 0.
+              88 AXEnum-SelectFlat        VALUE 1.
+              88 AXEnum-SelectRaised      VALUE 2.
+              88 AXEnum-SelectLowered     VALUE 3.
+              88 AXEnum-SelectRound       VALUE 4.
+           02 enumButtonType            PIC S9(10) BINARY(4).
+              88 AXEnum-ButtonNone        VALUE 0.
+              88 AXEnum-ButtonFlat        VALUE 1.
+              88 AXEnum-ButtonThreeD      VALUE 2.
+           02 enumBorderStyle           PIC S9(10) BINARY(4).
+              88 AXEnum-BStyleNone        VALUE 0.
+              88 AXEnum-BStyleFixed       VALUE 1.
+           02 enumLevelDepth            PIC S9(10) BINARY(4).
+              88 AXEnum-LevelNone         VALUE 0.
+              88 AXEnum-LevelTitle        VALUE 1.
+              88 AXEnum-LevelHeader       VALUE 2.
+           02 enumDisplay               PIC S9(10) BINARY(4).
+              88 AXEnum-DisplayRegular    VALUE 0.
+              88 AXEnum-DisplayFlat       VALUE 1.
+           02 enumTodayFormat           PIC S9(10) BINARY(4).
+              88 AXEnum-TodayNone         VALUE 0.
+              88 AXEnum-TodayDate         VALUE 1.
+              88 AXEnum-TodayText         VALUE 2.
+           02 enumFillType              PIC S9(10) BINARY(4).
+              88 AXEnum-FillSolid         VALUE 0.
+              88 AXEnum-FillHorizontal    VALUE 1.
+              88 AXEnum-FillVertical      VALUE 2.
+              88 AXEnum-FillDiagonal      VALUE 3.
+              88 AXEnum-FillRevDiag       VALUE 4.
+              88 AXEnum-FillHorzBump      VALUE 5.
+              88 AXEnum-FillVertBump      VALUE 6.
+              88 AXEnum-FillDiamond       VALUE 7.
+              88 AXEnum-FillPyramid       VALUE 8.
+              88 AXEnum-FillCircle        VALUE 9.
+              88 AXEnum-FillEllipse       VALUE 10.
+           02 enumButtonStyle           PIC S9(10) BINARY(4).
+              88 AXEnum-ButtonRegular     VALUE 0.
+              88 AXEnum-ButtonModern      VALUE 1.
+           02 enumArrowType             PIC S9(10) BINARY(4).
+              88 AXEnum-ArrowSmall        VALUE 0.
+              88 AXEnum-ArrowLarge        VALUE 1.
+              88 AXEnum-ArrowLine1        VALUE 2.
+              88 AXEnum-ArrowLine2        VALUE 3.
+      *
+      * ctCheckCtrl1 defined enum constants
+      *
+        01 ctCheckCtrl1-Enums.
+           02 enumPicStyle              PIC S9(10) BINARY(4).
+              88 AXEnum-UserDefine        VALUE 0.
+              88 AXEnum-Style1            VALUE 1.
+              88 AXEnum-Style2            VALUE 2.
+              88 AXEnum-Style3            VALUE 3.
+              88 AXEnum-Style4            VALUE 4.
+           02 enumAlign                 PIC S9(10) BINARY(4).
+              88 AXEnum-AlignLeft         VALUE 0.
+              88 AXEnum-AlignRight        VALUE 1.
+           02 enumValue                 PIC S9(10) BINARY(4).
+              88 AXEnum-Unchecked         VALUE 0.
+              88 AXEnum-Checked           VALUE 1.
+              88 AXEnum-Greyed            VALUE 2.
+           02 enumMousePointer          PIC S9(10) BINARY(4).
+              88 AXEnum-mpDefault         VALUE 0.
+              88 AXEnum-mpArrow           VALUE 1.
+              88 AXEnum-mpCross           VALUE 2.
+              88 AXEnum-mpIBeam           VALUE 3.
+              88 AXEnum-mpIcon            VALUE 4.
+              88 AXEnum-mpSize            VALUE 5.
+              88 AXEnum-mpSizeNESW        VALUE 6.
+              88 AXEnum-mpSize-NS         VALUE 7.
+              88 AXEnum-mpSize-NW-SE      VALUE 8.
+              88 AXEnum-mpSize-WE         VALUE 9.
+              88 AXEnum-mpUp-Arrow        VALUE 10.
+              88 AXEnum-mpHourglass       VALUE 11.
+              88 AXEnum-mpNo-Drop         VALUE 12.
+              88 AXEnum-mpApp-Starting    VALUE 13.
+              88 AXEnum-mpQuestion        VALUE 14.
+              88 AXEnum-mpSize-All        VALUE 15.
+              88 AXEnum-mpFinger          VALUE 16.
+              88 AXEnum-mpCustom          VALUE 99.
+      *
+      * ctMEditCtrl2 defined enum constants
+      *
+        01 ctMEditCtrl2-Enums.
+           02 enumBorder                PIC S9(10) BINARY(4).
+              88 AXEnum-BorderRegular     VALUE 0.
+              88 AXEnum-BorderNone        VALUE 1.
+              88 AXEnum-BorderRaised      VALUE 2.
+              88 AXEnum-BorderLowered     VALUE 3.
+           02 enumCaseType              PIC S9(10) BINARY(4).
+              88 AXEnum-CaseNone          VALUE 0.
+              88 AXEnum-CaseUpper         VALUE 1.
+              88 AXEnum-CaseLower         VALUE 2.
+           02 enumAlignment             PIC S9(10) BINARY(4).
+              88 AXEnum-AlignLeft         VALUE 0.
+              88 AXEnum-AlignRight        VALUE 1.
+              88 AXEnum-AlignCenter       VALUE 2.
+           02 enumDisplay               PIC S9(10) BINARY(4).
+              88 AXEnum-DisplayRegular    VALUE 0.
+              88 AXEnum-DisplayFlat       VALUE 1.
+           02 enumAuto                  PIC S9(10) BINARY(4).
+              88 AXEnum-AutoNone          VALUE 0.
+              88 AXEnum-AutoAppend        VALUE 1.
+              88 AXEnum-AutoSuggest       VALUE 2.
+              88 AXEnum-AutoBoth          VALUE 3.
+           02 enumScrollStyle           PIC S9(10) BINARY(4).
+              88 AXEnum-ScrollRegular     VALUE 0.
+              88 AXEnum-ScrollThin        VALUE 1.
+              88 AXEnum-ScrollModern      VALUE 2.
+           02 enumFillType              PIC S9(10) BINARY(4).
+              88 AXEnum-FillSolid         VALUE 0.
+              88 AXEnum-FillHorizontal    VALUE 1.
+              88 AXEnum-FillVertical      VALUE 2.
+              88 AXEnum-FillDiagonal      VALUE 3.
+              88 AXEnum-FillRevDiag       VALUE 4.
+              88 AXEnum-FillHorzBump      VALUE 5.
+              88 AXEnum-FillVertBump      VALUE 6.
+              88 AXEnum-FillDiamond       VALUE 7.
+              88 AXEnum-FillPyramid       VALUE 8.
+              88 AXEnum-FillCircle        VALUE 9.
+              88 AXEnum-FillEllipse       VALUE 10.
+           02 enumButtonStyle           PIC S9(10) BINARY(4).
+              88 AXEnum-ButtonRegular     VALUE 0.
+              88 AXEnum-ButtonModern      VALUE 1.
+           02 enumArrowType             PIC S9(10) BINARY(4).
+              88 AXEnum-ArrowSmall        VALUE 0.
+              88 AXEnum-ArrowLarge        VALUE 1.
+              88 AXEnum-ArrowLine1        VALUE 2.
+              88 AXEnum-ArrowLine2        VALUE 3.
+
+      *
+      * Control defined enum constants
+      *
+      *   enumBorder
+       78 principal-ctToolBarCtrl1-enumBorder-BorderRegular VALUE 0.
+       78 principal-ctToolBarCtrl1-enumBorder-BorderNone VALUE 1.
+       78 principal-ctToolBarCtrl1-enumBorder-BorderRaised VALUE 2.
+       78 principal-ctToolBarCtrl1-enumBorder-BorderLowered VALUE 3.
+       78 principal-ctToolBarCtrl1-enumBorder-BorderInset VALUE 4.
+      *   enumItemBorder
+       78 principal-ctToolBarCtrl1-enumItemBorder-ItemBdrRegular
+            VALUE 0.
+       78 principal-ctToolBarCtrl1-enumItemBorder-ItemBdrNone VALUE 1.
+       78 principal-ctToolBarCtrl1-enumItemBorder-ItemBdrRaised VALUE 2.
+       78 principal-ctToolBarCtrl1-enumItemBorder-ItemBdrLowered
+            VALUE 3.
+      *   enumItemBorderX
+       78 principal-ctToolBarCtrl1-enumItemBorderX-ItemBorderRegular
+            VALUE 0.
+       78 principal-ctToolBarCtrl1-enumItemBorderX-ItemBorderNone
+            VALUE 1.
+       78 principal-ctToolBarCtrl1-enumItemBorderX-ItemBorderRaised
+            VALUE 2.
+       78 principal-ctToolBarCtrl1-enumItemBorderX-ItemBorderLowered
+            VALUE 3.
+       78 principal-ctToolBarCtrl1-enumItemBorderX-ItemBorderDefault
+            VALUE 4.
+      *   enumArrowSize
+       78 principal-ctToolBarCtrl1-enumArrowSize-ArrowSmall VALUE 0.
+       78 principal-ctToolBarCtrl1-enumArrowSize-ArrowLarge VALUE 1.
+      *   enumDragBars
+       78 principal-ctToolBarCtrl1-enumDragBars-BareNone VALUE 0.
+       78 principal-ctToolBarCtrl1-enumDragBars-BarSingle VALUE 1.
+       78 principal-ctToolBarCtrl1-enumDragBars-BarDouble VALUE 2.
+      *   enumFillType
+       78 principal-ctToolBarCtrl1-enumFillType-FillSolid VALUE 0.
+       78 principal-ctToolBarCtrl1-enumFillType-FillHorizontal VALUE 1.
+       78 principal-ctToolBarCtrl1-enumFillType-FillVertical VALUE 2.
+       78 principal-ctToolBarCtrl1-enumFillType-FillDiagonal VALUE 3.
+       78 principal-ctToolBarCtrl1-enumFillType-FillRevDiag VALUE 4.
+       78 principal-ctToolBarCtrl1-enumFillType-FillHorzBump VALUE 5.
+       78 principal-ctToolBarCtrl1-enumFillType-FillVertBump VALUE 6.
+       78 principal-ctToolBarCtrl1-enumFillType-FillDiamond VALUE 7.
+       78 principal-ctToolBarCtrl1-enumFillType-FillPyramid VALUE 8.
+       78 principal-ctToolBarCtrl1-enumFillType-FillCircle VALUE 9.
+       78 principal-ctToolBarCtrl1-enumFillType-FillEllipse VALUE 10.
+
+       01 PRINCIPAL-CTTOOLBARCTRL1-ITEMCLICK-WS.
+      ******************************************************************
+      * Beginning of editable ctToolBarCtrl1 ItemClick working-storage.
+      *   You can edit code between here and the next marker.
+WOWEWS* ctToolBarCtrl1 ItemClick
+      *   AXParam-nItem VT_I2
+         02 AXPARAM-NITEM            PIC S9(5) BINARY(2).
+      *   AXParam-bArrow VT_BOOL
+         02 AXPARAM-BARROW           PIC S9(4) BINARY(2).
+      *
+      * Add your event handling working-storage here.
+      * Do not modify the items above
+      *   except to change the names and types of the local event arguments.
+      *
+WOWEWS*
+      * End of editable ctToolBarCtrl1 ItemClick working-storage.
+      ******************************************************************
+
+      *
+WOWDNE*
+      *
