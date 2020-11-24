@@ -1,6 +1,17 @@
 [Root]
 Most Recent Package=installer
 
+[Package|installer|IconGroups]
+Group0=installer
+PrivateGroup0=True
+Parent0=$(Programs)
+
+[Package|installer|installer]
+Icon1=install.exe
+Title1=installer
+StartIn1=$(AppPath)
+Key1=Icon1
+
 
 [Package|installer|Root]
 SubWizProgID=PDWizard.SetupPkgSubWiz
@@ -88,6 +99,11 @@ C:\DBITech\Studio Controls\COM Controls\ctColor.ocx=
 C:\DBITech\Studio Controls\COM Controls\ctData.ocx=
 C:\DBITech\Studio Controls\COM Controls\ctMove.ocx=
 C:\DBITech\Studio Controls\COM Controls\ctSList.ocx=
+N:\CMA\COBOL\OCX\SendMail.ocx=
+N:\CMA\COBOL\OCX\syned01.ocx=
+N:\CMA\COBOL\OCX\msedit2.ocx=
+N:\CMA\COBOL\OCX\gdsexcel.ocx=
+N:\CMA\COBOL\OCX\GdsObjetos.ocx=
 
 [Package|installer|Out-of-Date Dependency Information]
 
@@ -96,7 +112,6 @@ C:\DBITech\Studio Controls\COM Controls\ctSList.ocx=
 [Package|installer|Files Removed]
 
 [Package|installer|Files In Project]
-N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\install.exe=Yes
 C:\Windows\System32\msvbvm60.dll=Yes
 C:\Windows\System32\oleaut32.dll=Yes
 C:\Windows\System32\olepro32.dll=Yes
@@ -178,6 +193,12 @@ C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Y
 C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
 C:\Windows\System32\VB6STKIT.DLL=Yes
 C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\instalador.exe=Yes
+N:\CMA\COBOL\OCX\GdsObjetos.ocx=Yes
+N:\CMA\COBOL\OCX\gdsexcel.ocx=Yes
+N:\CMA\COBOL\OCX\msedit2.ocx=Yes
+N:\CMA\COBOL\OCX\syned01.ocx=Yes
+N:\CMA\COBOL\OCX\SendMail.ocx=Yes
 
 [Package|installer|Configure Registry Files]
 Applicable=No
@@ -268,26 +289,22 @@ C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$
 C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
 C:\Windows\System32\VB6STKIT.DLL=$(WinSysPathSysFile)
 C:\Program Files (x86)\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\instalador.exe=$(AppPath)
+N:\CMA\COBOL\OCX\GdsObjetos.ocx=$(WinSysPath)
+N:\CMA\COBOL\OCX\gdsexcel.ocx=$(WinSysPath)
+N:\CMA\COBOL\OCX\msedit2.ocx=$(WinSysPath)
+N:\CMA\COBOL\OCX\syned01.ocx=$(WinSysPath)
+N:\CMA\COBOL\OCX\SendMail.ocx=$(WinSysPath)
 
 [Package|installer|Configure Shared Files]
 Applicable=Yes
 N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\install.exe=No
+N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\instalador.exe=No
 
 [Package|installer|Distribution]
 Type=single
 Size=
-Title=installer
-
-[Package|installer|IconGroups]
-Group0=installer
-PrivateGroup0=True
-Parent0=$(Programs)
-
-[Package|installer|installer]
-Icon1=install.exe
-Title1=installer
-StartIn1=$(AppPath)
-Key1=Icon1
+Title=instalador
 
 [Package|installer|Package]
 PackageFolder=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\Paquete (2)
@@ -295,6 +312,6 @@ ProjectFolder=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer
 ServerSideCab=
 File1=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\Paquete (2)\setup.exe
 File2=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\Paquete (2)\Setup.Lst
-File3=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\Paquete (2)\install.CAB
+File3=N:\CMA\COBOL\SISTEMA-SANCHEZ\Installer\Paquete (2)\instalador.CAB
 Handler1=PDWizard.FolderDplySubWiz
 Handler2=PDWizard.WebPostDplySubWiz
