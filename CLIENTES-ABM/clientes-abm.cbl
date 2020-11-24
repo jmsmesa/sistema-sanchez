@@ -6,6 +6,15 @@ WOWBGN*
       *
        DATA DIVISION.
        WORKING-STORAGE SECTION.
+      ******************************************************************
+      * Beginning of editable Working-Storage Section.
+      *   You can edit code between here and the next marker.
+WOWCOD* WOWPWS
+       77  mi-codigo                    pic 9(04).
+WOWCOD*
+      * End of editable Working-Storage Section.
+      ******************************************************************
+
       *
       * Generated Form Handles
       *

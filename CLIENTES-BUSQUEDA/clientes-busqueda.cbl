@@ -72,13 +72,11 @@ WOWCOD*
       *   You can edit code between here and the next marker.
 WOWCOD* WOWLNS
        01  codigo              pic 9(04).
-       01  descripcion         pic x(40).
 WOWCOD*
       * End of editable Linkage Section.
       ******************************************************************
 
-       PROCEDURE DIVISION USING codigo
-                                descripcion.
+       PROCEDURE DIVISION USING codigo.
 
        MAIN SECTION.
 

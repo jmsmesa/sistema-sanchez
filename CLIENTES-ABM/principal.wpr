@@ -8,6 +8,11 @@
                    EVALUATE AXN-DISPID
                      WHEN 3 PERFORM PRINCIPAL-CTTOOLBAR-ITEMCLICK
                    END-EVALUATE
+                 WHEN CTBUTTONCTRL1-H
+                      OF PRINCIPAL-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN -600 PERFORM PRINCIPAL-CTBUTTONCTRL1-CLICK
+                   END-EVALUATE
                END-EVALUATE
            END-EVALUATE.
 
@@ -89,6 +94,26 @@ WOWEVT* ctToolBarCtrl1 <<Common>>
       *       otherwise insert complete COBOL paragraphs.
 WOWEVT*
       * End of editable ctToolBarCtrl1 <<Common>> procedure.
+      ******************************************************************
+
+       PRINCIPAL-CTBUTTONCTRL1-CLICK.
+      ******************************************************************
+      * Beginning of editable ctButtonCtrl1 Click procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* ctButtonCtrl1 Click
+           call "clientes-busqueda" using mi-codigo.
+WOWEVT*
+      * End of editable ctButtonCtrl1 Click procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable ctButtonCtrl1 <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* ctButtonCtrl1 <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable ctButtonCtrl1 <<Common>> procedure.
       ******************************************************************
 
       *
