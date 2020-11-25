@@ -105,10 +105,14 @@
           03 FILLER PIC X(002) VALUE X"0001".
           03 FILLER PIC X(001) VALUE " ".
           03 FILLER PIC X(006) VALUE X"000000007F00".
-          03 FILLER PIC X(004) VALUE X"00010003".
+          03 FILLER PIC X(004) VALUE X"00010007".
           03 FILLER PIC X(010) VALUE X"00100000000000000000".
+          03 FILLER PIC X(010) VALUE X"00010000000000000000".
           03 FILLER PIC X(010) VALUE X"8068000900000010FDA8".
+          03 FILLER PIC X(010) VALUE X"8068000900010010FDA8".
           03 FILLER PIC X(010) VALUE X"8068000900020010FDA8".
+          03 FILLER PIC X(010) VALUE X"8068000900030010FDA8".
+          03 FILLER PIC X(010) VALUE X"8068000900040010FDA8".
           03 FILLER PIC X(004) VALUE X"FFFFFFFF".
           03 FILLER PIC X(002) VALUE X"0001".
           03 FILLER PIC X(001) VALUE " ".
@@ -446,7 +450,7 @@
       *                             type = Windows ActiveX Control
       *                             Name = opCONSULTAS
       *                             Left = 30
-      *                              Top = 200
+      *                              Top = 205
       *                            Width = 335
       *                           Height = 40
       *                               ID = 5
@@ -463,7 +467,7 @@
       ******************************************************************
           03 FILLER PIC X(004) VALUE X"0000023F".
           03 FILLER PIC X(002) VALUE X"0002".
-          03 FILLER PIC X(008) VALUE X"001E00C8014F0028".
+          03 FILLER PIC X(008) VALUE X"001E00CD014F0028".
           03 FILLER PIC X(004) VALUE X"00050004".
           03 FILLER PIC X(002) VALUE X"000B".
           03 FILLER PIC X(011) VALUE "opCONSULTAS".

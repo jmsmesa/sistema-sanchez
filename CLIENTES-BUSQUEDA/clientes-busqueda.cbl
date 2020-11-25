@@ -31,7 +31,7 @@ WOWCOD*
       * Beginning of editable File-Control.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWFCT
-           copy tabgral.sel.
+           copy operadores.sel.
 WOWCOD*
       * End of editable File-Control.
       ******************************************************************
@@ -42,7 +42,7 @@ WOWCOD*
       * Beginning of editable File Section.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWFLS
-           copy tabgral.fd.
+           copy operadores.fd.
 WOWCOD*
       * End of editable File Section.
       ******************************************************************
@@ -52,7 +52,14 @@ WOWCOD*
       * Beginning of editable Working-Storage Section.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPWS
-       77  st                    pic x(02).
+       77  st                         pic x(02).
+       77  eof-operadores             pic x(01).
+       77  existe-operadores          pic x(01).
+       77  error-operadores           pic x(01).
+       77  linea                      pic x(256).
+       77  texto                      pic x(40).
+       77  patron                     pic x(60).
+       77  descr                      pic x(40).
 WOWCOD*
       * End of editable Working-Storage Section.
       ******************************************************************
@@ -99,7 +106,7 @@ WOWCOD*
       * Beginning of editable Program-Initialization.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPPI
-           open i-o tabgral.
+           open input operadores.
 WOWCOD*
       * End of editable Program-Initialization.
       ******************************************************************
@@ -111,7 +118,7 @@ WOWCOD*
       * Beginning of editable Program-Shutdown.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPPS
-           close tabgral.
+           close operadores.
 WOWCOD*
       * End of editable Program-Shutdown.
       ******************************************************************
@@ -141,8 +148,41 @@ WOWCOD*
       * Beginning of editable Procedure Division.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPPR
-       Cargar-tabla.
-           exit.
+       BUSCAR-ITEMS.
+           initialize patron
+           Call AXDoMethod Using Win-Return lista-H "ClearList"
+
+           Call WowGetProp Using Win-Return descripcion-H "text" descr
+           string ".*" descr ".*" delimited by "  " into patron
+
+           initialize reg-operadores
+           perform start-operadores
+           if eof-operadores = "n"
+              perform leer-operadores-next
+              perform until eof-operadores = "s"
+                 IF operadores-razon-social LIKE
+                    TRIMMED CASE-INSENSITIVE patron
+                    initialize linea
+                    string operadores-codigo ";" operadores-razon-social
+                           delimited by size into linea
+                    Call AXDoMethod Using Win-Return lista-H "additem"
+                         linea
+                 end-if
+                 perform leer-operadores-next
+              end-perform
+           end-if.
+
+       start-operadores.
+           move 'n' to eof-operadores.
+           start operadores
+                       key not < operadores-key
+                             invalid key
+                                        move 's' to eof-operadores.
+       leer-operadores-next.
+           move 'n' to eof-operadores.
+           read operadores next
+                           at end
+                                 move 's' to eof-operadores.
 WOWCOD*
       * End of editable Procedure Division.
       ******************************************************************

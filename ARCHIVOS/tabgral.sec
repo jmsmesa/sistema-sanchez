@@ -1,0 +1,6 @@
+01 00000001 Clientes                       Clientes   H  000000000,0 0 # 00 00000000 0 000000 0                                              
+01 00000002 Actualizacion de clientes      Clientes   H  000000001,0 0 # 01 00000000 0 000000 0 clientes-abm                                 
+01 00000003 Buscador de clientes           Clientes   H  000000001,0 0 # 01 00000000 0 000000 0 clientes-busqueda                            
+01 00000004 Selector de opciones           Clientes   H  000000001,0 0 # 01 00000000 0 000000 0 selector                                     
+01 00000005 Otros                          Clientes   H  000000000,0 0 # 00 00000000 0 000000 0                                              
+01 00000006 Salir                          Clientes   H  000000001,0 0 # 01 00000000 0 000000 0 Salir                                        

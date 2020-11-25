@@ -1,5 +1,5 @@
        IDENTIFICATION DIVISION.
-       PROGRAM-ID. "CLIENTES-ABM".
+       PROGRAM-ID. "SELECTOR".
 
       *
 WOWBGN*
@@ -19,8 +19,8 @@ WOWCOD* WOWSPN
                'M' ALSO 'm', 'N' ALSO 'n', 'O' ALSO 'o', 'P' ALSO 'p',
                'Q' ALSO 'q', 'R' ALSO 'r', 'S' ALSO 's', 'T' ALSO 't',
                'U' ALSO 'u', 'V' ALSO 'v', 'W' ALSO 'w', 'X' ALSO 'x',
-               'Y' ALSO 'y', 'Z' ALSO 'z',   2 THRU  7, 124 THRU 128 .
-      *              DECIMAL-POINT IS COMMA.
+               'Y' ALSO 'y', 'Z' ALSO 'z',   2 THRU  7, 124 THRU 128 ;
+                    DECIMAL-POINT IS COMMA.
 WOWCOD*
       * End of editable Special-Names.
       ******************************************************************
@@ -52,18 +52,17 @@ WOWCOD*
       * Beginning of editable Working-Storage Section.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPWS
-       77  mi-codigo                  pic 9(04).
-       77  mi-opcion                  pic x(01).
-       77  eof-operadores             pic x(01).
-       77  existe-operadores          pic x(01).
-       77  error-operadores           pic x(01).
-       77  texto-fecha                pic x(10).
-       77  texto                      pic x(80).
-       01  fecha                      pic 9(08).
-       01  ff redefines fecha.
-           02 dia                     pic 9(02).
-           02 mes                     pic 9(02).
-           02 ano                     pic 9(04).
+       77  pos                     pic x(01).
+       77  res                     pic 9(04).
+       77  tipo                    pic 9(02).
+       77  nivel                   pic 9(02).
+       77  eof-operadores          pic x(01).
+       77  existe-operadores       pic x(01).
+       77  error-operadores        pic x(01).
+       77  texto                   pic x(80).
+       77  ind                     pic 9(04).
+       77  sub                     pic 9(04).
+       77  c-fila                  pic 9(04).
 WOWCOD*
       * End of editable Working-Storage Section.
       ******************************************************************
@@ -71,10 +70,8 @@ WOWCOD*
       *
       * Generated Form Handles
       *
-       01 MENU-H PIC 9(10) BINARY(8) VALUE 0.
        01 PRINCIPAL-H PIC 9(10) BINARY(8) VALUE 0.
 
-           COPY "menu.wws".
            COPY "principal.wws".
 
            COPY "WINDOWS.CPY".
@@ -102,7 +99,7 @@ WOWCOD*
       * Beginning of editable Program-Initialization.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPPI
-           open i-o operadores.
+           open input operadores.
 WOWCOD*
       * End of editable Program-Initialization.
       ******************************************************************
@@ -122,13 +119,11 @@ WOWCOD*
        CREATE-WINDOWS SECTION.
 
        CREATE-WINDOWS-PARAGRAPH.
-           PERFORM MENU-CREATE-WINDOW.
            PERFORM PRINCIPAL-CREATE-WINDOW.
 
        DESTROY-WINDOWS SECTION.
 
        DESTROY-WINDOWS-PARAGRAPH.
-           PERFORM MENU-DESTROY-WINDOW.
            PERFORM PRINCIPAL-DESTROY-WINDOW.
 
        PROCESS-EVENTS SECTION.
@@ -137,7 +132,6 @@ WOWCOD*
            CALL WOWGETMESSAGE USING WIN-RETURN WIN-MSG-WS WM-NOTIFY-WS.
            IF WIN-RETURN IS EQUAL TO 0 SET WOW-QUIT TO TRUE.
            IF NOT WOW-QUIT EVALUATE WIN-MSG-HANDLE
-             WHEN MENU-H PERFORM MENU-EVALUATE-EVENTS
              WHEN PRINCIPAL-H PERFORM PRINCIPAL-EVALUATE-EVENTS
            END-EVALUATE.
 
@@ -147,94 +141,37 @@ WOWCOD*
       * Beginning of editable Procedure Division.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPPR
-       ACTUALIZAR.
-           evaluate mi-opcion
-              when "a"
-                  perform mover-datos-al-registro
-                  perform grabar-operadores
-              when "b"
-                  perform mover-datos-al-registro
-                  perform borrar-operadores
-              when "m"
-                  perform mover-datos-al-registro
-                  perform regrabar-operadores
-           end-evaluate.
-
-       CARGAR-REGISTRO.
-           Call WowGetProp Using Win-Return codigo-H "text" mi-codigo
+       Cargar-Listas.
            initialize reg-operadores
-           move mi-codigo to operadores-codigo
+           perform start-operadores
+           if eof-operadores = "n"
+              perform leer-operadores-next
 
-           perform leer-operadores
-           if existe-operadores = "n" and mi-opcion not = "a"
-              Move all 'N' to Message-Box-Flags
-              Set Mb-OKCancel Mb-IconHand To True
-              Call WowMessageBox Using Win-Return principal-H
-                   "No existe el cliente" "Error" Message-Box-Flags
-           else if existe-operadores = "s" and mi-opcion = "a"
-              Move all 'N' to Message-Box-Flags
-              Set Mb-OKCancel Mb-IconHand To True
-              Call WowMessageBox Using Win-Return principal-H
-                   "Ya existe el cliente" "Error" Message-Box-Flags
-           else
-              perform mover-datos-al-form
+              perform varying ind from 1 by 1
+                 until eof-operadores = "s"
+                    move "0" to pos
+                    if operadores-estado = "h" or = "H"
+                       move "1" to pos
+                    end-if
+
+                    string pos ";" operadores-razon-social
+                           delimited by "  " into texto
+                    if operadores-codigo < 20
+                       Call AXDoMethod Using Win-Return
+                            lst1-H "AddItem" texto
+                    end-if
+                    if operadores-codigo > 20 and < 70
+                       Call AXDoMethod Using Win-Return
+                            lst2-H "AddItem" texto
+                    end-if
+                    if operadores-codigo > 70
+                        Call AXDoMethod Using Win-Return
+                            lst3-H "AddItem" texto
+                    end-if
+                 perform leer-operadores-next
+              end-perform
            end-if.
 
-       limpiar-form.
-
-           Call WowSetProp Using Win-Return txtNombre-H "text" " "
-           Call WowSetProp Using Win-Return cbServicio-H "text" " "
-           Call WowSetProp Using Win-Return dtFecha-H "text" " "
-           Call WowSetProp Using Win-Return chEstado-H "Value" 0
-           Call WowSetProp Using Win-Return txtImporte-H "text" " ".
-
-       mover-datos-al-form.
-           perform limpiar-form.
-           Call WowSetProp Using Win-Return txtNombre-H "text"
-                operadores-razon-social
-           Call WowSetProp Using Win-Return cbServicio-H "text"
-                "Telefonia"
-           string operadores-fecha-inicio(1:2)  "/"
-                  operadores-fecha-inicio(3:2) "/"
-                  operadores-fecha-inicio(5:)
-                      delimited by size into texto-fecha
-           Call WowSetProp Using Win-Return dtFecha-H "text" texto-fecha
-
-           if operadores-estado = "H" or = "h"
-              Call WowSetProp Using Win-Return chEstado-H "Value" 1
-           else
-              Call WowSetProp Using Win-Return chEstado-H "Value" 0
-           end-if
-           Call WowSetProp Using Win-Return txtImporte-H "text"
-           operadores-minuto-normal.
-
-       mover-datos-al-registro.
-           Call WowGetProp Using Win-Return txtNombre-H "text"
-                operadores-razon-social
-
-           Call WowGetProp Using Win-Return cbServicio-H "text"
-                operadores-Servicio
-
-           Call WowGetProp Using Win-Return chEstado-H "Value"
-                operadores-estado
-
-           if operadores-estado = 1
-              move "h" to operadores-estado
-           else
-              move "i" to operadores-estado.
-
-           Call WowGetProp Using Win-Return dtFecha-H "text" texto-fecha
-           string texto-fecha(1:2)
-                  texto-fecha(4:2)
-                  texto-fecha(7:4)
-                     delimited by size into fecha
-
-           move fecha to operadores-fecha-inicio
-
-           Call WowGetProp Using Win-Return txtImporte-H "text"
-           operadores-minuto-normal.
-
-      *
        leer-operadores.
            move 's' to existe-operadores.
            read operadores
@@ -273,8 +210,7 @@ WOWCOD*
       *
 WOWDNE*
       *
-           COPY "menu.wpr".
            COPY "principal.wpr".
 
-       END PROGRAM "CLIENTES-ABM".
+       END PROGRAM "SELECTOR".
 

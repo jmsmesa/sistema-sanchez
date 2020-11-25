@@ -1,0 +1,19 @@
+       01  REG-OPERADORES.
+           02 OPERADORES-KEY.
+              03 OPERADORES-CODIGO              PIC  9(04).
+           02 OPERADORES-RAZON-SOCIAL           PIC  X(50).
+           02 OPERADORES-ESTADO                 PIC  X(01).
+           02 OPERADORES-SERVICIO               PIC  X(01).
+           02 OPERADORES-IDENTIFICACION         PIC  X(03).
+           02 OPERADORES-CUIT                   PIC  9(11).
+           02 OPERADORES-FECHA-INICIO           PIC  9(08).
+           02 OPERADORES-MINUTO-NORMAL          PIC  9(03)V9(03).
+           02 OPERADORES-MINUTO-REDUCIDO        PIC  9(03)V9(03).
+           02 OPERADORES-MINUTO-BONFICADO       PIC  9(03)V9(03).
+           02 OPERADORES-PORCENTAJE-COMISION    PIC  9(03)V9(03).
+           02 OPERADORES-CUENTA                 PIC  9(06).
+           02                                   PIC  X(05).
+
+      * SERVICIO
+      *    "C" C.P.P. 
+      *    "N" 0600

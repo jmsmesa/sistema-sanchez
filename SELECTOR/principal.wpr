@@ -1,0 +1,80 @@
+       PRINCIPAL-EVALUATE-EVENTS.
+           EVALUATE WIN-MSG-ID
+             WHEN WM-CLOSE PERFORM PRINCIPAL-CLOSE
+             WHEN WM-SHOWWINDOW PERFORM PRINCIPAL-SHOW
+             WHEN AXN-EVENT-WITH-ARGS
+               EVALUATE WIN-LPARAM-A
+                 WHEN CTBUTTONCTRL1-H
+                      OF PRINCIPAL-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN -600 PERFORM PRINCIPAL-CTBUTTONCTRL1-CLICK
+                   END-EVALUATE
+               END-EVALUATE
+           END-EVALUATE.
+
+       PRINCIPAL-CREATE-WINDOW.
+           MOVE ALL 'N' TO WIN-STYLE.
+           CALL WOWCREATEWINDOW USING PRINCIPAL-H
+                          PRINCIPAL-DEF WIN-STYLE
+                          0
+                          PRINCIPAL-CONTROL-HANDLES.
+
+       PRINCIPAL-DESTROY-WINDOW.
+           CALL WOWDESTROYWINDOW USING WIN-RETURN PRINCIPAL-H.
+
+      *
+WOWBGN*
+      *
+       PRINCIPAL-CLOSE.
+      ******************************************************************
+      * Beginning of editable PRINCIPAL Close procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* PRINCIPAL Close
+           SET WOW-QUIT TO TRUE.
+WOWEVT*
+      * End of editable PRINCIPAL Close procedure.
+      ******************************************************************
+
+       PRINCIPAL-SHOW.
+      ******************************************************************
+      * Beginning of editable PRINCIPAL Show procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* PRINCIPAL Show
+           perform cargar-listas.
+WOWEVT*
+      * End of editable PRINCIPAL Show procedure.
+      ******************************************************************
+
+       PRINCIPAL-CTBUTTONCTRL1-CLICK.
+      ******************************************************************
+      * Beginning of editable ctButtonCtrl1 Click procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* ctButtonCtrl1 Click
+           Call AXDoMethod Using Win-Return LST2-H
+               "ItemCount" GIVING C-FILA
+
+           PERFORM VARYING IND FROM 0 BY 1 UNTIL IND > C-FILA
+             Call AXGetIndexProp Using Win-Return LST2-H
+                  "CellText" pos IND 0
+             Call AXGetIndexProp Using Win-Return LST2-H
+                  "CellText" TEXTO IND 1
+           END-PERFORM.
+
+           display c-fila.
+WOWEVT*
+      * End of editable ctButtonCtrl1 Click procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable ctButtonCtrl1 <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* ctButtonCtrl1 <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable ctButtonCtrl1 <<Common>> procedure.
+      ******************************************************************
+
+      *
+WOWDNE*
+      *

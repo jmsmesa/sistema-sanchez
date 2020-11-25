@@ -3,6 +3,16 @@
              WHEN WM-CLOSE PERFORM PRINCIPAL-CLOSE
              WHEN AXN-EVENT-WITH-ARGS
                EVALUATE WIN-LPARAM-A
+                 WHEN DESCRIPCION-H
+                      OF PRINCIPAL-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN -602 PERFORM PRINCIPAL-DESCRIPCION-KEYDOWN
+                   END-EVALUATE
+                 WHEN LISTA-H
+                      OF PRINCIPAL-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN 6 PERFORM PRINCIPAL-LISTA-ITEMDBLCLICK
+                   END-EVALUATE
                  WHEN CTTOOLBARCTRL1-H
                       OF PRINCIPAL-CONTROL-HANDLES
                    EVALUATE AXN-DISPID
@@ -32,6 +42,108 @@ WOWEVT* PRINCIPAL Close
            SET WOW-QUIT TO TRUE.
 WOWEVT*
       * End of editable PRINCIPAL Close procedure.
+      ******************************************************************
+
+       PRINCIPAL-DESCRIPCION-KEYDOWN.
+      ******************************************************************
+      * Beginning of editable descripcion KeyDown procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* descripcion KeyDown
+           CALL AXBINDEVENTARGUMENTS USING WIN-RETURN AXN-EVENT-HANDLE
+                AXPARAM-KEYCODE OF PRINCIPAL-DESCRIPCION-KEYDOWN-WS
+                  AXN-EVENT-ARG-OUTPUT
+                AXPARAM-SHIFT OF PRINCIPAL-DESCRIPCION-KEYDOWN-WS
+                  AXN-EVENT-ARG-INPUT.
+      *      WIN-RETURN will always be zero unless the event occured
+      *        during an "unsafe" condition and has output arguments,
+      *        in which case it will be set to one and any values
+      *        stored in output arguments will be lost
+      *
+      * Add your event handling code here.
+      * Do not modify the code above
+      *   except to change the names of the local event arguments.
+      *
+           IF AXPARAM-KEYCODE OF PRINCIPAL-DESCRIPCION-KEYDOWN-WS = 13
+              PERFORM BUSCAR-ITEMS
+           END-IF
+
+      *
+      * End of your event handling code.
+      * Do not modify the code below
+      *   except to change the names of the local event arguments.
+      *
+           CALL AXUNBINDEVENTARGUMENTS USING WIN-RETURN AXN-EVENT-HANDLE
+                AXPARAM-KEYCODE OF PRINCIPAL-DESCRIPCION-KEYDOWN-WS
+                  AXN-EVENT-ARG-OUTPUT
+                AXPARAM-SHIFT OF PRINCIPAL-DESCRIPCION-KEYDOWN-WS
+                  AXN-EVENT-ARG-INPUT.
+      *      WIN-RETURN will always be zero unless the event occured
+      *        during an "unsafe" condition and has output arguments,
+      *        in which case it will be set to one and any values
+      *        stored in output arguments will be lost
+WOWEVT*
+      * End of editable descripcion KeyDown procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable descripcion <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* descripcion <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable descripcion <<Common>> procedure.
+      ******************************************************************
+
+       PRINCIPAL-LISTA-ITEMDBLCLICK.
+      ******************************************************************
+      * Beginning of editable lista ItemDblClick procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* lista ItemDblClick
+           CALL AXBINDEVENTARGUMENTS USING WIN-RETURN AXN-EVENT-HANDLE
+                AXPARAM-NINDEX OF PRINCIPAL-LISTA-ITEMDBLCLICK-WS
+                  AXN-EVENT-ARG-INPUT
+                AXPARAM-NCOLUMN OF PRINCIPAL-LISTA-ITEMDBLCLICK-WS
+                  AXN-EVENT-ARG-INPUT.
+      *      WIN-RETURN will always be zero unless the event occured
+      *        during an "unsafe" condition and has output arguments,
+      *        in which case it will be set to one and any values
+      *        stored in output arguments will be lost
+      *
+      * Add your event handling code here.
+      * Do not modify the code above
+      *   except to change the names of the local event arguments.
+      *
+           Call AXgetIndexProp Using Win-Return lista-H
+                "CellText" codigo
+                AXPARAM-NINDEX OF PRINCIPAL-LISTA-ITEMDBLCLICK-WS 1
+           SET WOW-QUIT TO TRUE.
+      *
+      * End of your event handling code.
+      * Do not modify the code below
+      *   except to change the names of the local event arguments.
+      *
+           CALL AXUNBINDEVENTARGUMENTS USING WIN-RETURN AXN-EVENT-HANDLE
+                AXPARAM-NINDEX OF PRINCIPAL-LISTA-ITEMDBLCLICK-WS
+                  AXN-EVENT-ARG-INPUT
+                AXPARAM-NCOLUMN OF PRINCIPAL-LISTA-ITEMDBLCLICK-WS
+                  AXN-EVENT-ARG-INPUT.
+      *      WIN-RETURN will always be zero unless the event occured
+      *        during an "unsafe" condition and has output arguments,
+      *        in which case it will be set to one and any values
+      *        stored in output arguments will be lost
+WOWEVT*
+      * End of editable lista ItemDblClick procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable lista <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* lista <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable lista <<Common>> procedure.
       ******************************************************************
 
        PRINCIPAL-CTTOOLBAR-ITEMCLICK.

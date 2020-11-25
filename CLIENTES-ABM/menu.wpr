@@ -1,6 +1,7 @@
        MENU-EVALUATE-EVENTS.
            EVALUATE WIN-MSG-ID
              WHEN WM-CLOSE PERFORM MENU-CLOSE
+             WHEN WM-CREATE PERFORM MENU-CREATE
              WHEN AXN-EVENT-WITH-ARGS
                EVALUATE WIN-LPARAM-A
                  WHEN OPALTAS-H
@@ -8,10 +9,25 @@
                    EVALUATE AXN-DISPID
                      WHEN -600 PERFORM MENU-OPALTAS-CLICK
                    END-EVALUATE
+                 WHEN OPMODIFICACIONES-H
+                      OF MENU-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN -600 PERFORM MENU-OPMODIFICACIONES-CLICK
+                   END-EVALUATE
                  WHEN OPSALIR-H
                       OF MENU-CONTROL-HANDLES
                    EVALUATE AXN-DISPID
                      WHEN -600 PERFORM MENU-OPSALIR-CLICK
+                   END-EVALUATE
+                 WHEN OPBAJAS-H
+                      OF MENU-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN -600 PERFORM MENU-OPBAJAS-CLICK
+                   END-EVALUATE
+                 WHEN OPCONSULTAS-H
+                      OF MENU-CONTROL-HANDLES
+                   EVALUATE AXN-DISPID
+                     WHEN -600 PERFORM MENU-OPCONSULTAS-CLICK
                    END-EVALUATE
                END-EVALUATE
            END-EVALUATE.
@@ -39,21 +55,34 @@ WOWEVT*
       * End of editable MENU Close procedure.
       ******************************************************************
 
+       MENU-CREATE.
+      ******************************************************************
+      * Beginning of editable MENU Create procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* MENU Create
+      *     Call "C$SHOW" Using SW-H
+           Call AXDoMethod Using Win-Return cbServicio-H "ClearList"
+           Call AXDoMethod Using Win-Return cbServicio-H "AddItem"
+                "Telefonia".
+WOWEVT*
+      * End of editable MENU Create procedure.
+      ******************************************************************
+
        MENU-OPALTAS-CLICK.
       ******************************************************************
       * Beginning of editable opALTAS Click procedure.
       *   You can edit code between here and the next marker.
 WOWEVT* opALTAS Click
-      * Sets the value of one or more properties for a standard or ActiveX control
            Call WowSetProp Using Win-Return
-                 principal-H "visible" WIN-TRUE.
+                principal-H "visible" WIN-TRUE.
            Call WowSetProp Using Win-Return
-                 menu-H "visible" WIN-FALSE.
-      * Win-Return always receives 0
-      * WndOrActiveX-H = handle of standard or ActiveX control
-      * Property-Name = name of property to set
-      * Property-Value = value to set
-      * (Property-Name and Property-Value can be repeated for more properties)
+                menu-H "visible" WIN-FALSE.
+
+           Call WowSetProp Using Win-Return
+                grupo-H "enabled" WIN-true.
+           Call WowSetProp Using Win-Return
+                txtOpcion-H "caption" "ALTAS".
+           move "a" to mi-opcion.
 WOWEVT*
       * End of editable opALTAS Click procedure.
       ******************************************************************
@@ -66,6 +95,35 @@ WOWEVT* opALTAS <<Common>>
       *       otherwise insert complete COBOL paragraphs.
 WOWEVT*
       * End of editable opALTAS <<Common>> procedure.
+      ******************************************************************
+
+       MENU-OPMODIFICACIONES-CLICK.
+      ******************************************************************
+      * Beginning of editable opMODIFICACIONES Click procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* opMODIFICACIONES Click
+           Call WowSetProp Using Win-Return
+                principal-H "visible" WIN-TRUE.
+           Call WowSetProp Using Win-Return
+                menu-H "visible" WIN-FALSE.
+
+           Call WowSetProp Using Win-Return
+                grupo-H "enabled" WIN-true.
+           Call WowSetProp Using Win-Return
+                txtOpcion-H "caption" "MODIFICACIONES".
+           move "m" to mi-opcion.
+WOWEVT*
+      * End of editable opMODIFICACIONES Click procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable opMODIFICACIONES <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* opMODIFICACIONES <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable opMODIFICACIONES <<Common>> procedure.
       ******************************************************************
 
        MENU-OPSALIR-CLICK.
@@ -86,6 +144,64 @@ WOWEVT* opSALIR <<Common>>
       *       otherwise insert complete COBOL paragraphs.
 WOWEVT*
       * End of editable opSALIR <<Common>> procedure.
+      ******************************************************************
+
+       MENU-OPBAJAS-CLICK.
+      ******************************************************************
+      * Beginning of editable opBAJAS Click procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* opBAJAS Click
+           Call WowSetProp Using Win-Return
+                principal-H "visible" WIN-TRUE.
+           Call WowSetProp Using Win-Return
+                menu-H "visible" WIN-FALSE.
+
+           Call WowSetProp Using Win-Return
+                grupo-H "enabled" WIN-false.
+           Call WowSetProp Using Win-Return
+                txtOpcion-H "caption" "BAJAS".
+           move "b" to mi-opcion.
+WOWEVT*
+      * End of editable opBAJAS Click procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable opBAJAS <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* opBAJAS <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable opBAJAS <<Common>> procedure.
+      ******************************************************************
+
+       MENU-OPCONSULTAS-CLICK.
+      ******************************************************************
+      * Beginning of editable opCONSULTAS Click procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* opCONSULTAS Click
+           Call WowSetProp Using Win-Return
+                principal-H "visible" WIN-TRUE.
+           Call WowSetProp Using Win-Return
+                menu-H "visible" WIN-FALSE.
+
+           Call WowSetProp Using Win-Return
+                grupo-H "enabled" WIN-FALSE.
+           Call WowSetProp Using Win-Return
+                txtOpcion-H "caption" "CONSULTAS".
+           move "c" to mi-opcion.
+WOWEVT*
+      * End of editable opCONSULTAS Click procedure.
+      ******************************************************************
+
+      ******************************************************************
+      * Beginning of editable opCONSULTAS <<Common>> procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* opCONSULTAS <<Common>>
+      * TODO: When using nested programs, insert complete COBOL programs here,
+      *       otherwise insert complete COBOL paragraphs.
+WOWEVT*
+      * End of editable opCONSULTAS <<Common>> procedure.
       ******************************************************************
 
       *

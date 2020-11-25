@@ -1,0 +1,7 @@
+           SELECT OPERADORES
+                   ASSIGN TO DISC
+                   ORGANIZATION INDEXED
+                   ACCESS MODE IS DYNAMIC
+                   RECORD KEY OPERADORES-KEY
+                   FILE STATUS IS ST.
+
