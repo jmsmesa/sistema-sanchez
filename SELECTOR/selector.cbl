@@ -153,7 +153,7 @@ WOWCOD* WOWPPR
                     if operadores-estado = "h" or = "H"
                        move "1" to pos
                     end-if
-
+                    initialize texto
                     string pos ";" operadores-razon-social
                            delimited by "  " into texto
                     if operadores-codigo < 20

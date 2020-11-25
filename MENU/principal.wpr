@@ -75,6 +75,7 @@ WOWEVT* menu ItemClick
            if programa = "Salir"
                  SET WOW-QUIT TO TRUE
            else if programa not = spaces
+              Call WowSetProp Using Win-Return menu-H "ShowState" 2
               call programa
            end-if
 

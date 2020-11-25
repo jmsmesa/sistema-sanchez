@@ -45,6 +45,8 @@
       *                   Child controls = 2
       *                            style = WS-VISIBLE
       *                            style = WS-DLGFRAME
+      *                            style = WS-ICONIC
+      *                            style = WS-MINIMIZE
       *                            style = WS-MINIMIZEBOX
       *                            style = WS-OVERLAPPED
       *                            style = WS-SYSMENU
@@ -71,7 +73,7 @@
       *                     WSDefinition = TRUE
       ******************************************************************
           03 FILLER PIC X(006) VALUE X"036100020002".
-          03 FILLER PIC X(012) VALUE X"10CE00000000000000C0C0C0".
+          03 FILLER PIC X(012) VALUE X"30CE00000000000000C0C0C0".
           03 FILLER PIC X(010) VALUE X"FFFFFFFF02DF02170000".
           03 FILLER PIC X(008) VALUE X"0365000000010001".
           03 FILLER PIC X(002) VALUE X"0009".

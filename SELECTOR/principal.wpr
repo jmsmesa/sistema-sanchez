@@ -54,13 +54,15 @@ WOWEVT* ctButtonCtrl1 Click
                "ItemCount" GIVING C-FILA
 
            PERFORM VARYING IND FROM 0 BY 1 UNTIL IND > C-FILA
+             initialize pos texto
              Call AXGetIndexProp Using Win-Return LST2-H
                   "CellText" pos IND 0
              Call AXGetIndexProp Using Win-Return LST2-H
                   "CellText" TEXTO IND 1
+             display pos " " texto size 60
            END-PERFORM.
 
-           display c-fila.
+           display "Items en lista 2: " c-fila.
 WOWEVT*
       * End of editable ctButtonCtrl1 Click procedure.
       ******************************************************************
