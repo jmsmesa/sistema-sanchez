@@ -142,6 +142,8 @@ WOWCOD*
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPPR
        Cargar-Listas.
+           Call AXDoMethod Using Win-Return menu-H "ClearItems"
+
            initialize reg-operadores
            perform start-operadores
            if eof-operadores = "n"
@@ -163,6 +165,16 @@ WOWCOD* WOWPPR
                     if operadores-codigo > 20 and < 70
                        Call AXDoMethod Using Win-Return
                             lst2-H "AddItem" texto
+                       if pos = "1"
+                       Call AXDoMethod Using Win-Return
+                            menu-H "AddItem" 0 operadores-razon-social 0
+                              Giving sub
+                              add 1 to ind
+                 Call AXSetIndexProp Using Win-Return
+                      menu-H "ItemLevel" 1 sub
+                 Call AXSetIndexProp Using Win-Return
+                      menu-H "ItemTextPosition" 1 sub
+                            end-if
                     end-if
                     if operadores-codigo > 70
                         Call AXDoMethod Using Win-Return
