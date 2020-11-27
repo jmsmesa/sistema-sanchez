@@ -1,6 +1,7 @@
        PRINCIPAL-EVALUATE-EVENTS.
            EVALUATE WIN-MSG-ID
              WHEN WM-CLOSE PERFORM PRINCIPAL-CLOSE
+             WHEN WM-CREATE PERFORM PRINCIPAL-CREATE
              WHEN AXN-EVENT-WITH-ARGS
                EVALUATE WIN-LPARAM-A
                  WHEN DESCRIPCION-H
@@ -42,6 +43,16 @@ WOWEVT* PRINCIPAL Close
            SET WOW-QUIT TO TRUE.
 WOWEVT*
       * End of editable PRINCIPAL Close procedure.
+      ******************************************************************
+
+       PRINCIPAL-CREATE.
+      ******************************************************************
+      * Beginning of editable PRINCIPAL Create procedure.
+      *   You can edit code between here and the next marker.
+WOWEVT* PRINCIPAL Create
+      *     PERFORM BUSCAR-ITEMS.
+WOWEVT*
+      * End of editable PRINCIPAL Create procedure.
       ******************************************************************
 
        PRINCIPAL-DESCRIPCION-KEYDOWN.

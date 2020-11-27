@@ -6,12 +6,22 @@ WOWBGN*
       *
        ENVIRONMENT DIVISION.
        CONFIGURATION SECTION.
+      ******************************************************************
+      * Beginning of editable Configuration Section.
+      *   You can edit code between here and the next marker.
+WOWCOD* WOWCFS
+       SOURCE-COMPUTER. MULTIPLATAFORMA.
+       OBJECT-COMPUTER. MULTIPLATAFORMA
+           PROGRAM COLLATING SEQUENCE IS MAYUS-MINUS.
+WOWCOD*
+      * End of editable Configuration Section.
+      ******************************************************************
        SPECIAL-NAMES.
       ******************************************************************
       * Beginning of editable Special-Names.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWSPN
-           ALPHABET UPPER-LOWER IS
+           ALPHABET MAYUS-MINUS IS
                1 THRU 65,
                'A' ALSO 'a', 'B' ALSO 'b', 'C' ALSO 'c', 'D' ALSO 'd',
                'E' ALSO 'e', 'F' ALSO 'f', 'G' ALSO 'g', 'H' ALSO 'h',
@@ -19,7 +29,7 @@ WOWCOD* WOWSPN
                'M' ALSO 'm', 'N' ALSO 'n', 'O' ALSO 'o', 'P' ALSO 'p',
                'Q' ALSO 'q', 'R' ALSO 'r', 'S' ALSO 's', 'T' ALSO 't',
                'U' ALSO 'u', 'V' ALSO 'v', 'W' ALSO 'w', 'X' ALSO 'x',
-               'Y' ALSO 'y', 'Z' ALSO 'z',   2 THRU  7, 124 THRU 128 .
+               'Y' ALSO 'y', 'Z' ALSO 'z',  92 THRU 97, 124 THRU 128.
       *              DECIMAL-POINT IS COMMA.
 WOWCOD*
       * End of editable Special-Names.
@@ -31,7 +41,7 @@ WOWCOD*
       * Beginning of editable File-Control.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWFCT
-           copy operadores.sel.
+           copy clientsd.cpy.
 WOWCOD*
       * End of editable File-Control.
       ******************************************************************
@@ -42,7 +52,7 @@ WOWCOD*
       * Beginning of editable File Section.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWFLS
-           copy operadores.fd.
+           copy clientfd.cpy.
 WOWCOD*
       * End of editable File Section.
       ******************************************************************
@@ -52,12 +62,11 @@ WOWCOD*
       * Beginning of editable Working-Storage Section.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPWS
-       77  item-seleccionado          pic 9(04).
-       77  mi-codigo                  pic 9(04).
+       77  mi-codigo                  pic 9(06).
        77  mi-opcion                  pic x(01).
-       77  eof-operadores             pic x(01).
-       77  existe-operadores          pic x(01).
-       77  error-operadores           pic x(01).
+       77  eof-cliente                pic x(01).
+       77  existe-cliente             pic x(01).
+       77  error-cliente              pic x(01).
        77  texto-fecha                pic x(10).
        77  texto                      pic x(80).
        01  fecha                      pic 9(08).
@@ -65,6 +74,7 @@ WOWCOD* WOWPWS
            02 dia                     pic 9(02).
            02 mes                     pic 9(02).
            02 ano                     pic 9(04).
+       77  WY-STATUS-GRL              pic x(02).
 WOWCOD*
       * End of editable Working-Storage Section.
       ******************************************************************
@@ -103,7 +113,7 @@ WOWCOD*
       * Beginning of editable Program-Initialization.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPPI
-           open i-o operadores.
+           open i-o cliente.
 WOWCOD*
       * End of editable Program-Initialization.
       ******************************************************************
@@ -115,7 +125,7 @@ WOWCOD*
       * Beginning of editable Program-Shutdown.
       *   You can edit code between here and the next marker.
 WOWCOD* WOWPPS
-           close operadores.
+           close cliente.
 WOWCOD*
       * End of editable Program-Shutdown.
       ******************************************************************
@@ -152,27 +162,27 @@ WOWCOD* WOWPPR
            evaluate mi-opcion
               when "a"
                   perform mover-datos-al-registro
-                  perform grabar-operadores
+                  perform grabar-cliente
               when "b"
                   perform mover-datos-al-registro
-                  perform borrar-operadores
+                  perform borrar-cliente
               when "m"
                   perform mover-datos-al-registro
-                  perform regrabar-operadores
+                  perform regrabar-cliente
            end-evaluate.
 
        CARGAR-REGISTRO.
            Call WowGetProp Using Win-Return codigo-H "text" mi-codigo
-           initialize reg-operadores
-           move mi-codigo to operadores-codigo
+           initialize a101-reg
+           move mi-codigo to a101-cliente
 
-           perform leer-operadores
-           if existe-operadores = "n" and mi-opcion not = "a"
+           perform leer-cliente
+           if existe-cliente = "n" and mi-opcion not = "a"
               Move all 'N' to Message-Box-Flags
               Set Mb-OKCancel Mb-IconHand To True
               Call WowMessageBox Using Win-Return principal-H
                    "No existe el cliente" "Error" Message-Box-Flags
-           else if existe-operadores = "s" and mi-opcion = "a"
+           else if existe-cliente = "s" and mi-opcion = "a"
               Move all 'N' to Message-Box-Flags
               Set Mb-OKCancel Mb-IconHand To True
               Call WowMessageBox Using Win-Return principal-H
@@ -192,42 +202,37 @@ WOWCOD* WOWPPR
        mover-datos-al-form.
            perform limpiar-form.
            Call WowSetProp Using Win-Return txtNombre-H "text"
-                operadores-razon-social
-           Call WowSetProp Using Win-Return cbServicio-H "text"
-                "Telefonia"
-           string operadores-fecha-inicio(1:2)  "/"
-                  operadores-fecha-inicio(3:2) "/"
-                  operadores-fecha-inicio(5:)
+                a101-nombre
+      *     Call WowSetProp Using Win-Return cbServicio-H "text"
+      *          "Telefonia"
+           string a101-fecha-alta(1:2)  "/"
+                  a101-fecha-alta(3:2) "/"
+                  a101-fecha-alta(5:)
                       delimited by size into texto-fecha
            Call WowSetProp Using Win-Return dtFecha-H "text" texto-fecha
 
-           if operadores-estado = "H" or = "h"
+           if a101-lugar-entrega = "y"
               Call WowSetProp Using Win-Return chEstado-H "Value" 1
            else
               Call WowSetProp Using Win-Return chEstado-H "Value" 0
            end-if
            Call WowSetProp Using Win-Return txtImporte-H "text"
-           operadores-minuto-normal.
+           a101-monto-credito.
 
        mover-datos-al-registro.
            Call WowGetProp Using Win-Return txtNombre-H "text"
-                operadores-razon-social
+                a101-nombre
 
-           Call WowGetProp Using Win-Return cbServicio-H "text"
-                operadores-Servicio giving pos
-
-           Call WowGetProp Using Win-Return cbServicio-H "ListIndex" pos
-           Call AXSetIndexProp Using Win-Return cbServicio-H "ListData"
-                item-seleccionado pos
-
+      *    Call WowGetProp Using Win-Return cbServicio-H "text"
+      *         cliente-Servicio
 
            Call WowGetProp Using Win-Return chEstado-H "Value"
-                operadores-estado
+                a101-lugar-entrega
 
-           if operadores-estado = 1
-              move "h" to operadores-estado
+           if a101-lugar-entrega = "1"
+              move "Y" to a101-lugar-entrega
            else
-              move "i" to operadores-estado.
+              move "N" to a101-lugar-entrega.
 
            Call WowGetProp Using Win-Return dtFecha-H "text" texto-fecha
            string texto-fecha(1:2)
@@ -235,43 +240,43 @@ WOWCOD* WOWPPR
                   texto-fecha(7:4)
                      delimited by size into fecha
 
-           move fecha to operadores-fecha-inicio
+           move fecha to a101-fecha-alta
 
            Call WowGetProp Using Win-Return txtImporte-H "text"
-           operadores-minuto-normal.
+           a101-monto-credito.
 
       *
-       leer-operadores.
-           move 's' to existe-operadores.
-           read operadores
+       leer-cliente.
+           move 's' to existe-cliente.
+           read cliente
                         invalid key
-                                    move 'n' to existe-operadores.
-       start-operadores.
-           move 'n' to eof-operadores.
-           start operadores
-                       key not < operadores-key
+                                    move 'n' to existe-cliente.
+       start-cliente.
+           move 'n' to eof-cliente.
+           start cliente
+                       key not < a101-clave
                              invalid key
-                                        move 's' to eof-operadores.
-       leer-operadores-next.
-           move 'n' to eof-operadores.
-           read operadores next
+                                        move 's' to eof-cliente.
+       leer-cliente-next.
+           move 'n' to eof-cliente.
+           read cliente next
                            at end
-                                 move 's' to eof-operadores.
-       regrabar-operadores.
-           move 'n' to error-operadores.
-           rewrite reg-operadores
+                                 move 's' to eof-cliente.
+       regrabar-cliente.
+           move 'n' to error-cliente.
+           rewrite a101-reg
                              invalid key
-                                        move 's' to error-operadores.
-       borrar-operadores.
-           move 'n' to error-operadores.
-           delete operadores
+                                        move 's' to error-cliente.
+       borrar-cliente.
+           move 'n' to error-cliente.
+           delete cliente
                              invalid key
-                                        move 's' to error-operadores.
-       grabar-operadores.
-           move 'n' to error-operadores.
-           write reg-operadores
+                                        move 's' to error-cliente.
+       grabar-cliente.
+           move 'n' to error-cliente.
+           write a101-reg
                              invalid key
-                                        move 's' to error-operadores.
+                                        move 's' to error-cliente.
 WOWCOD*
       * End of editable Procedure Division.
       ******************************************************************
